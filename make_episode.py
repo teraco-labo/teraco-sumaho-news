@@ -90,6 +90,34 @@ def cmd_check(date: str) -> int:
     return 1 if problems else 0
 
 
+def _reuse(work: Path, old_lines, new_lines):
+    """台本を直したとき、文が同じ台詞の声は作り直さずに使い回す（ElevenLabs の利用枠を守る）。
+
+    声の作業ファイルは「何番目の台詞か」で名前が付く（t_0003.wav など）ので、
+    文を1つ足すと後ろが全部ずれて、別の台詞の声が流れてしまう。
+    前回の台本と照らし合わせ、同じ文の声を新しい番号へ付け替え、変わった台詞の分は消す。
+    """
+    if not work.exists():
+        return
+    old_at = {}
+    for i, line in enumerate(old_lines):
+        old_at.setdefault(line, []).append(i)
+    kinds = (("てらこ先生", "t_{:04d}.wav"), ("ミカ", "m_{:04d}.mp3"))
+    staged = []
+    for i, line in enumerate(new_lines):
+        name = dict(kinds)[line[0]]
+        src_i = old_at.get(line, [None]).pop(0) if old_at.get(line) else None
+        if src_i is not None and (work / name.format(src_i)).exists():
+            tmp = work / ("keep_" + name.format(i))
+            (work / name.format(src_i)).rename(tmp)
+            staged.append((tmp, work / name.format(i)))
+    for f in list(work.glob("t_*.wav")) + list(work.glob("m_*.mp3")):
+        f.unlink()                                   # 使わない（中身が変わった）台詞の声は捨てる
+    for tmp, dst in staged:
+        tmp.rename(dst)
+    print(f"声の使い回し: {len(staged)} 件／作り直し: {len(new_lines) - len(staged)} 件")
+
+
 # ─── 音声 ─────────────────────────────────────────────────
 def cmd_voice(date: str) -> int:
     ep = HERE / "episodes" / date
@@ -98,9 +126,11 @@ def cmd_voice(date: str) -> int:
         return 1
     voice_script = ep / "work" / "script.voice.txt"
     voice_script.parent.mkdir(parents=True, exist_ok=True)
-    voice_script.write_text("\n\n".join(f"[{s}] {to_voice(t)}" for s, t in
-                                        _lines((ep / "script.txt").read_text(encoding="utf-8"))) + "\n",
-                            encoding="utf-8")
+    new_lines = [(s, to_voice(t)) for s, t in _lines((ep / "script.txt").read_text(encoding="utf-8"))]
+    if voice_script.exists():
+        _reuse(ep / "work" / "podcast" / ".work" / "script.voice",
+               _lines(voice_script.read_text(encoding="utf-8")), new_lines)
+    voice_script.write_text("\n\n".join(f"[{s}] {t}" for s, t in new_lines) + "\n", encoding="utf-8")
     sys.path.insert(0, str(NEWS_REPO))
     import podcast_teraco_voice as pv          # Teraco Voice とミカの結合（AIニュースと共用）
     pv.HERE = ep / "work"                      # 台詞ごとの作業ファイルをこの回のフォルダに置く
@@ -111,6 +141,25 @@ def cmd_voice(date: str) -> int:
         pv.SIL_SAME = SOLO_PAUSE
         for f in (ep / "work" / "podcast" / ".work" / "script.voice").glob("sil_*.wav"):
             f.unlink()
+    # 1本の中で声を混ぜない。ElevenLabs で作った回の続きを、0円の声で作ることはしない。
+    engine_file = ep / "work" / "engine.txt"
+    engine = "elevenlabs" if pv._eleven() else "free"
+    if engine == "elevenlabs":                       # 残りが足りないと共用部品が途中で0円の声に切り替えるので先に見る
+        need = sum(len(pv._tidy_for_teraco(t)) for s, t in new_lines if s == "てらこ先生")
+        u = pv._eleven()[0].eleven_usage()
+        if not u.get("ok") or u.get("limit", 0) - u.get("used", 0) - need < pv.ELEVEN_RESERVE:
+            engine = "free"
+    before = engine_file.read_text().strip() if engine_file.exists() else engine
+    work = ep / "work" / "podcast" / ".work" / "script.voice"
+    if before != engine and any(work.glob("t_*.wav")):
+        if engine == "free":
+            print("！ この回は ElevenLabs（本人の声）で作り始めましたが、いまは ElevenLabs が使えません。"
+                  "声が混ざるので止めます。ElevenLabs の設定（声のID・鍵）を確かめてから作り直してください。"
+                  "全部を0円の声で作り直すなら work/ を消してから TERACO_VOICE_ENGINE=free で実行。")
+            return 1
+        for f in work.glob("t_*.wav"):              # 0円の声で作った回を本人の声へ上げるときは全部作り直す
+            f.unlink()
+    engine_file.write_text(engine + "\n")
     with open(ep / "work" / "voice.log", "a", encoding="utf-8") as log:
         pv.build(voice_script, ep / "audio.mp3", log)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
