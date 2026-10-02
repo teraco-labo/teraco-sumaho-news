@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>世界一わかりやすいスマホニュース</title>
+<meta name="description" content="ドコモの「60歳以上割」と、携帯会社を名乗る偽メッセージ">
+<link rel="icon" href="../../cover.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#F6F4EE; --card:#fff; --ink:#22251F; --ink2:#55594F; --line:#E2DED2;
+          --green:#1E4D3B; --green2:#163A2C; --orange:#E8792B; --orange-soft:#FCEBDC;
+          --teach:#E6F0EA; --mika:#FFF3E8; --now:#FFE7A8; --note:#fff; --head:#1E4D3B; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141915; --card:#1E2420; --ink:#ECEDE8;
+          --ink2:#B5B9AE; --line:#333A34; --green:#8CC7A6; --orange-soft:#3A2A1C; --teach:#1F3229; --mika:#3A2A1C;
+          --now:#5C4A12; --note:#141915; color-scheme:dark; } }
+  :root[data-theme="dark"] { --bg:#141915; --card:#1E2420; --ink:#ECEDE8; --ink2:#B5B9AE; --line:#333A34;
+          --green:#8CC7A6; --orange-soft:#3A2A1C; --teach:#1F3229; --mika:#3A2A1C; --now:#5C4A12; --note:#141915;
+          color-scheme:dark; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;
+         font-size:19px; line-height:1.75; -webkit-text-size-adjust:100%; }
+  header { background:var(--head); color:#fff; padding:22px 16px 20px; text-align:center; }
+  header .sub { font-size:15px; opacity:.85; }
+  header h1 { font-size:27px; font-weight:700; line-height:1.3; }
+  header .date { margin-top:8px; font-size:17px; }
+  main { max-width:640px; margin:0 auto; padding:0 16px 60px; }
+  .player { background:var(--card); border:2px solid var(--line); border-radius:20px; padding:18px 16px;
+            margin-top:-2px; position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; box-shadow:0 4px 14px rgba(0,0,0,.06); }
+  .ttl { font-size:18px; font-weight:700; line-height:1.45; }
+  .btn { display:flex; align-items:center; justify-content:center; gap:12px; width:100%; margin-top:12px;
+         padding:18px; border:none; border-radius:16px; background:var(--orange); color:#fff;
+         font-size:24px; font-weight:700; font-family:inherit; cursor:pointer; }
+  .btn svg { width:30px; height:30px; }
+  .row { display:flex; align-items:center; gap:10px; margin-top:12px; }
+  .back { flex:none; border:2px solid var(--line); background:var(--card); border-radius:12px; padding:8px 12px;
+          font-size:16px; font-weight:700; font-family:inherit; color:var(--ink); cursor:pointer; }
+  input[type=range] { flex:1; min-width:0; accent-color:var(--orange); height:28px; }
+  .time { font-size:15px; color:var(--ink2); text-align:right; margin-top:2px; }
+  .menu { background:var(--card); border:2px solid var(--line); border-radius:18px; padding:16px; margin-top:16px; }
+  .menu h2 { font-size:17px; color:var(--green); }
+  .menu ul { padding-left:1.2em; }
+  .menu .k { display:inline-block; font-size:14px; font-weight:700; color:#fff; background:var(--head);
+             border-radius:6px; padding:0 8px; margin-top:8px; }
+  .part h3 { margin:30px 0 10px; font-size:21px; color:var(--green); border-left:6px solid var(--orange); padding-left:10px; }
+  .line { border-radius:14px; padding:10px 14px; margin:8px 0; cursor:pointer; transition:background .2s; }
+  .line.t { background:var(--teach); margin-right:28px; }
+  .line.m { background:var(--mika); margin-left:28px; }
+  .line.now { background:var(--now); }
+  .who { font-size:13px; font-weight:700; color:var(--ink2); }
+  .term { text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:3px; text-underline-offset:4px; }
+  .note { margin-top:6px; background:var(--note); border-radius:10px; padding:6px 10px; font-size:16px; line-height:1.6; color:var(--ink2); }
+  .note b { color:var(--ink); }
+  .note-k { font-size:12px; font-weight:700; color:#fff; background:var(--orange); border-radius:5px; padding:1px 6px; margin-right:6px; }
+  .review { background:var(--orange-soft); border-radius:18px; padding:18px 16px; margin-top:28px; }
+  .review h2 { font-size:20px; }
+  .review ol { padding-left:1.4em; font-size:20px; font-weight:700; }
+  .review .hw { margin-top:12px; font-size:17px; }
+  .src { margin-top:28px; font-size:15px; color:var(--ink2); }
+  .src ul { padding-left:1.2em; }
+  .src a { color:var(--green); }
+  .foot { margin-top:28px; text-align:center; font-size:16px; color:var(--ink2); }
+  .foot a { color:var(--green); font-weight:700; }
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">てらこ先生の</div>
+  <h1>世界一わかりやすい<br>スマホニュース</h1>
+  <div class="date">10月2日（金）・第1回</div>
+</header>
+<main>
+  <div class="player">
+    <div class="ttl">ドコモの「60歳以上割」と、携帯会社を名乗る偽メッセージ</div>
+    <button class="btn" id="play"></button>
+    <div class="row">
+      <button class="back" id="back">10秒もどる</button>
+      <input type="range" id="seek" min="0" max="1000" value="0" aria-label="再生位置">
+    </div>
+    <div class="time" id="time">0:00</div>
+  </div>
+
+  <div class="menu">
+    <h2>今日の内容</h2>
+    <span class="k">ニュース</span>
+    <ul><li>ドコモの「60歳以上割」が始まりました</li><li>ソフトバンクが、空から電波を届ける実験に成功</li></ul>
+    <span class="k">レッスン</span>
+    <ul><li>携帯会社を名乗る、偽物のメッセージ</li></ul>
+  </div>
+
+<section class="part"><h3>はじめに</h3>
+<div class="line t" data-t="0.0"><div class="who">てらこ先生</div><p>みなさん、おはようございます。世界一わかりやすいスマホニュース、てらこ先生です。</p></div>
+<div class="line m" data-t="6.48"><div class="who">ミカ</div><p>おはようございます、ミカです。今日は10月2日、金曜日です。</p></div>
+<div class="line t" data-t="13.7"><div class="who">てらこ先生</div><p>この番組では、毎朝ふたつのコーナーをお届けします。</p></div>
+<div class="line m" data-t="17.64"><div class="who">ミカ</div><p>ひとつめは「今日のスマホニュース」。ふたつめは「今日のレッスン」ですね。</p></div>
+<div class="line t" data-t="25.03"><div class="who">てらこ先生</div><p>はい。耳だけで分かるように、ゆっくりお話しします。</p></div>
+</section>
+<section class="part"><h3>今日のスマホニュース</h3>
+<div class="line m" data-t="29.09"><div class="who">ミカ</div><p>では、さっそく今日のスマホニュースです。</p></div>
+<div class="line t" data-t="33.52"><div class="who">てらこ先生</div><p>今日はドコモのお話です。60歳以上の人向けの、新しい割引が始まりました。</p></div>
+<div class="line m" data-t="40.0"><div class="who">ミカ</div><p>60歳以上向けですか。教室の生徒さんにも、関係がありそうですね。</p></div>
+<div class="line t" data-t="47.61"><div class="who">てらこ先生</div><p>そうなんです。名前は「<b class="term">ドコモ MAX</b> 60歳以上割」といいます。</p><div class="note"><span class="note-k">ことば</span><b>ドコモ MAX</b>　ドコモの料金プランのひとつ。使ったデータの量で、月の料金が3段階に変わります。</div></div>
+<div class="line t" data-t="52.28"><div class="who">てらこ先生</div><p>10月1日、つまり昨日から始まっています。</p></div>
+<div class="line m" data-t="56.06"><div class="who">ミカ</div><p>どんな割引なんでしょうか。</p></div>
+<div class="line t" data-t="59.25"><div class="who">てらこ先生</div><p>ドコモ MAXという料金プランが、毎月最大2,970円安くなります。</p></div>
+<div class="line t" data-t="64.8"><div class="who">てらこ先生</div><p>それに、使えるデータの量も、27<b class="term">ギガ</b>増えます。</p><div class="note"><span class="note-k">ことば</span><b>ギガ</b>　スマホで使えるデータの量。動画を見たり写真を送ったりすると、減っていきます。</div></div>
+<div class="line m" data-t="69.18"><div class="who">ミカ</div><p>それはうれしいですね。ずっと安くなるんですか。</p></div>
+<div class="line t" data-t="74.69"><div class="who">てらこ先生</div><p>ここが大事なところです。割引があるのは、最大3か月だけなんです。</p></div>
+<div class="line m" data-t="80.07"><div class="who">ミカ</div><p>3か月だけ。そのあとは、ふつうの値段に戻るんですね。</p></div>
+<div class="line t" data-t="86.62"><div class="who">てらこ先生</div><p>そのとおりです。ドコモ MAXは、たくさん使うと月8,448円のプランです。</p></div>
+<div class="line m" data-t="93.76"><div class="who">ミカ</div><p>広告で「858円から」という数字も見かけました。</p></div>
+<div class="line t" data-t="100.0"><div class="who">てらこ先生</div><p>その数字は、ほかの割引を全部重ねたときの値段です。</p></div>
+<div class="line t" data-t="104.69"><div class="who">てらこ先生</div><p>家族で3<b class="term">回線</b>以上、<b class="term">dカード</b>で支払い、<b class="term">光回線</b>とセット。この3つがそろったときです。</p><div class="note"><span class="note-k">ことば</span><b>回線</b>　スマホ1台ぶんの契約のこと。「家族で3回線」は、家族3人ぶんです。</div><div class="note"><span class="note-k">ことば</span><b>dカード</b>　ドコモが出している、クレジットカードです。</div><div class="note"><span class="note-k">ことば</span><b>光回線</b>　家にひく、インターネットの線のことです。</div></div>
+<div class="line m" data-t="111.41"><div class="who">ミカ</div><p>条件がそろわないと、その値段にはならないんですね。</p></div>
+<div class="line t" data-t="116.61"><div class="who">てらこ先生</div><p>はい。安い数字を見たら、条件と期間を確かめる。これが合言葉です。</p></div>
+<div class="line m" data-t="122.33"><div class="who">ミカ</div><p>もうひとつ、ドコモの値上げのお話もありましたね。</p></div>
+<div class="line t" data-t="127.22"><div class="who">てらこ先生</div><p>はい。12月1日から、いくつかの料金プランが値上げになります。</p></div>
+<div class="line t" data-t="132.27"><div class="who">てらこ先生</div><p>たとえば「<b class="term">eximo</b>」というプランは、月に550円上がります。</p><div class="note"><span class="note-k">ことば</span><b>eximo</b>　ドコモの料金プランの名前です。「エクシモ」と読みます。</div></div>
+<div class="line m" data-t="137.23"><div class="who">ミカ</div><p>自分のプランが入っているか、気になりますね。</p></div>
+<div class="line t" data-t="142.0"><div class="who">てらこ先生</div><p>分からないときは、ドコモショップや教室で聞いてください。一緒に確かめましょう。</p></div>
+<div class="line m" data-t="147.56"><div class="who">ミカ</div><p>ニュースはもうひとつあります。今度はソフトバンクですね。</p></div>
+<div class="line t" data-t="153.7"><div class="who">てらこ先生</div><p>はい。空の上から、携帯電話の電波を届ける実験に成功した、と発表しました。</p></div>
+<div class="line m" data-t="160.32"><div class="who">ミカ</div><p>空の上から、ですか。</p></div>
+<div class="line t" data-t="163.39"><div class="who">てらこ先生</div><p>高知県の海の上で、無人の飛行機を、上空3,000メートルまで飛ばしました。</p></div>
+<div class="line t" data-t="169.1"><div class="who">てらこ先生</div><p>その飛行機から電波を出して、地上で通信できることを確かめたんです。</p></div>
+<div class="line m" data-t="174.32"><div class="who">ミカ</div><p>3,000メートルというと、かなり高いですね。</p></div>
+<div class="line t" data-t="178.97"><div class="who">てらこ先生</div><p>富士山の高さの、8割くらいです。電波が届いた範囲は、直径5キロ以上でした。</p></div>
+<div class="line m" data-t="185.13"><div class="who">ミカ</div><p>どうして、そんなことをするんでしょうか。</p></div>
+<div class="line t" data-t="189.26"><div class="who">てらこ先生</div><p>大きな災害のためです。地震や台風で、電波の基地が壊れることがありますよね。</p></div>
+<div class="line m" data-t="196.04"><div class="who">ミカ</div><p>スマホが<b class="term">圏外</b>になって、家族と連絡が取れなくなる。あれは不安です。</p><div class="note"><span class="note-k">ことば</span><b>圏外</b>　電波が届かず、電話もインターネットも使えない状態です。</div></div>
+<div class="line t" data-t="203.38"><div class="who">てらこ先生</div><p>そんなとき、空から電波を届けられれば、助けを呼んだり、連絡を取ったりできます。</p></div>
+<div class="line m" data-t="209.62"><div class="who">ミカ</div><p>いつから使えるようになるんですか。</p></div>
+<div class="line t" data-t="213.29"><div class="who">てらこ先生</div><p>まだ実験の段階です。ソフトバンクは、これから災害のときに使える形を目指すそうです。</p></div>
+<div class="line m" data-t="220.17"><div class="who">ミカ</div><p>宮崎も台風が多いので、早く実現してほしいですね。</p></div>
+</section>
+<section class="part"><h3>今日のレッスン</h3>
+<div class="line m" data-t="225.74"><div class="who">ミカ</div><p>ここからは、今日のレッスンです。</p></div>
+<div class="line t" data-t="229.53"><div class="who">てらこ先生</div><p>今日は、携帯会社を名乗る、偽物のメッセージのお話です。</p></div>
+<div class="line m" data-t="234.49"><div class="who">ミカ</div><p>ニュースとつながっているんですか。</p></div>
+<div class="line t" data-t="237.9"><div class="who">てらこ先生</div><p>つながっています。教室でもよく話すんですが、偽物はちょうどいい時期に来ます。</p></div>
+<div class="line t" data-t="243.31"><div class="who">てらこ先生</div><p>料金が変わる時期は、「料金の確認」と言われても、本物に見えてしまうんです。</p></div>
+<div class="line m" data-t="249.23"><div class="who">ミカ</div><p>たしかに。値上げのニュースを聞いたあとだと、信じてしまいそうです。</p></div>
+<div class="line t" data-t="255.97"><div class="who">てらこ先生</div><p>実際にドコモも、注意を呼びかけています。</p></div>
+<div class="line t" data-t="259.2"><div class="who">てらこ先生</div><p>ドコモを名乗る、偽のメールや<b class="term">SMS</b>が届いている、というお知らせです。</p><div class="note"><span class="note-k">ことば</span><b>SMS</b>　電話番号あてに届く、短いメッセージです。</div></div>
+<div class="line m" data-t="265.58"><div class="who">ミカ</div><p>SMSというのは、電話番号で届く短いメッセージのことですね。</p></div>
+<div class="line t" data-t="272.27"><div class="who">てらこ先生</div><p>そうです。偽物は「高い料金が発生しました」などと書いて、不安にさせます。</p></div>
+<div class="line m" data-t="278.25"><div class="who">ミカ</div><p>たとえば、どんな文章が届くんですか。</p></div>
+<div class="line t" data-t="282.68"><div class="who">てらこ先生</div><p>「ご利用料金が高額になっています。こちらからご確認ください」。こんな感じです。</p></div>
+<div class="line m" data-t="289.4"><div class="who">ミカ</div><p>本当に来そうな文章ですね。わたしでも、どきっとします。</p></div>
+<div class="line t" data-t="295.95"><div class="who">てらこ先生</div><p>そうでしょう。どきっとさせるのが、偽物のねらいなんです。</p></div>
+<div class="line t" data-t="300.04"><div class="who">てらこ先生</div><p>そして、メッセージの中の<b class="term">リンク</b>を押させようとします。</p><div class="note"><span class="note-k">ことば</span><b>リンク</b>　押すと、別の画面が開く文字。青い色や下線がついていることが多いです。</div></div>
+<div class="line m" data-t="304.0"><div class="who">ミカ</div><p>リンクというのは、青い文字の、押すと別の画面が開くところですね。</p></div>
+<div class="line t" data-t="310.41"><div class="who">てらこ先生</div><p>はい。押すと、本物そっくりの偽の画面が開きます。</p></div>
+<div class="line t" data-t="314.36"><div class="who">てらこ先生</div><p>そこで<b class="term">パスワード</b>やカードの番号を入れると、盗まれてしまうんです。</p><div class="note"><span class="note-k">ことば</span><b>パスワード</b>　本人だと確かめるための、秘密の合言葉です。</div></div>
+<div class="line m" data-t="319.4"><div class="who">ミカ</div><p>こわいですね。では、どうすればいいんでしょうか。</p></div>
+<div class="line t" data-t="324.96"><div class="who">てらこ先生</div><p>覚えてほしいことは、3つだけです。</p></div>
+<div class="line t" data-t="328.17"><div class="who">てらこ先生</div><p>ひとつめ。メッセージの中のリンクは、押さない。</p></div>
+<div class="line m" data-t="331.97"><div class="who">ミカ</div><p>本物かどうか分からなくても、押さないんですね。</p></div>
+<div class="line t" data-t="336.67"><div class="who">てらこ先生</div><p>はい。本物の携帯会社なら、押さなくても困ることはありません。</p></div>
+<div class="line t" data-t="341.24"><div class="who">てらこ先生</div><p>ふたつめ。確かめたいときは、自分で開く。</p></div>
+<div class="line m" data-t="345.14"><div class="who">ミカ</div><p>自分で開く、というのは。</p></div>
+<div class="line t" data-t="348.71"><div class="who">てらこ先生</div><p>いつも使っている、携帯会社の<b class="term">アプリ</b>を自分で開きます。ドコモなら「<b class="term">My docomo</b>」です。</p><div class="note"><span class="note-k">ことば</span><b>アプリ</b>　スマホに入れて使う道具。LINEやカメラもアプリです。</div><div class="note"><span class="note-k">ことば</span><b>My docomo</b>　ドコモの公式アプリ。料金や契約の内容を確かめられます。</div></div>
+<div class="line t" data-t="355.38"><div class="who">てらこ先生</div><p>または、ショップに電話します。メッセージに書いてある番号には、かけません。</p></div>
+<div class="line m" data-t="360.46"><div class="who">ミカ</div><p>メッセージの中のものは、何も使わないんですね。</p></div>
+<div class="line t" data-t="365.38"><div class="who">てらこ先生</div><p>そうです。これでほとんどの偽物は防げます。</p></div>
+<div class="line t" data-t="368.79"><div class="who">てらこ先生</div><p>みっつめ。もし入れてしまったら、すぐ相談する。</p></div>
+<div class="line m" data-t="372.81"><div class="who">ミカ</div><p>あわててしまって、つい入れてしまうこともありますよね。</p></div>
+<div class="line t" data-t="378.01"><div class="who">てらこ先生</div><p>あります。だから、はずかしがらずに、すぐショップか教室に連絡してください。</p></div>
+<div class="line t" data-t="383.38"><div class="who">てらこ先生</div><p>パスワードを変えたり、カードの<b class="term">明細</b>を確かめたりします。早いほど安心です。</p><div class="note"><span class="note-k">ことば</span><b>明細</b>　何に、いくら使ったかの一覧です。</div></div>
+<div class="line m" data-t="388.72"><div class="who">ミカ</div><p>もう一度、3つをまとめますね。</p></div>
+<div class="line m" data-t="392.36"><div class="who">ミカ</div><p>リンクは押さない。自分で開く。入れてしまったら、すぐ相談。</p></div>
+<div class="line t" data-t="399.98"><div class="who">てらこ先生</div><p>ばっちりです。今日の宿題もひとつ出しますね。</p></div>
+<div class="line t" data-t="403.11"><div class="who">てらこ先生</div><p>自分のスマホで、携帯会社のアプリがどれか、探しておいてください。</p></div>
+<div class="line m" data-t="408.15"><div class="who">ミカ</div><p>いざというとき、すぐ開けるように、ですね。</p></div>
+<div class="line t" data-t="412.71"><div class="who">てらこ先生</div><p>はい。見つからなければ、次の教室で一緒に探しましょう。</p></div>
+<div class="line m" data-t="417.03"><div class="who">ミカ</div><p>今日もありがとうございました。</p></div>
+<div class="line t" data-t="420.36"><div class="who">てらこ先生</div><p>世界一わかりやすいスマホニュース、てらこ先生と、</p></div>
+<div class="line m" data-t="424.24"><div class="who">ミカ</div><p>ミカでした。</p></div>
+<div class="line t" data-t="426.61"><div class="who">てらこ先生</div><p>また明日の朝、お会いしましょう。</p></div>
+</section>
+
+  <div class="review">
+    <h2>今日のおさらい</h2>
+    <ol><li>メッセージの中のリンクは、押さない</li><li>確かめたいときは、いつものアプリを自分で開く</li><li>入れてしまったら、すぐ相談する</li></ol>
+    <p class="hw"><b>宿題</b>　自分のスマホで、携帯会社のアプリがどれか探しておく</p>
+  </div>
+
+  <div class="src">
+    <b>今日の情報のもと</b>
+    <ul><li><a href="https://www.docomo.ne.jp/info/news_release/2026/09/25_00.html">ドコモ（2026年9月25日の発表）料金プランの変更と60歳以上割</a></li><li><a href="https://www.softbank.jp/corp/news/press/sbkk/2026/20261002_02/">ソフトバンク（2026年10月2日の発表）無人の飛行機から通信を届ける実験</a></li><li><a href="https://www.docomo.ne.jp/info/notice/page/260604_00.html">ドコモ（2026年6月4日のお知らせ）ドコモを名乗る偽メールへの注意</a></li></ul>
+  </div>
+
+  <div class="foot">
+    わからないことは、教室で一緒に確かめましょう。<br>
+    <a href="https://lin.ee/9c4pI82">スマホ教室TERACO の公式LINE</a>
+  </div>
+</main>
+<audio id="audio" src="audio.mp3" preload="metadata"></audio>
+<script>
+const a = document.getElementById('audio'), play = document.getElementById('play'),
+      seek = document.getElementById('seek'), time = document.getElementById('time');
+const PLAY  = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span>聴く</span>';
+const PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg><span>止める</span>';
+const lines = [...document.querySelectorAll('.line[data-t]')];
+function fmt(s) { s = Math.floor(s || 0); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+function ui() { play.innerHTML = a.paused ? PLAY : PAUSE; }
+ui();
+play.onclick = () => { a.paused ? a.play() : a.pause(); };
+a.onplay = a.onpause = ui;
+document.getElementById('back').onclick = () => { a.currentTime = Math.max(0, a.currentTime - 10); };
+seek.oninput = () => { if (a.duration) a.currentTime = a.duration * seek.value / 1000; };
+let now = null;
+a.ontimeupdate = () => {
+  if (a.duration) seek.value = a.currentTime / a.duration * 1000;
+  time.textContent = fmt(a.currentTime) + ' / ' + fmt(a.duration);
+  let cur = null;
+  for (const l of lines) { if (+l.dataset.t <= a.currentTime + 0.1) cur = l; else break; }
+  if (cur !== now) {
+    if (now) now.classList.remove('now');
+    now = cur;
+    if (now) {
+      now.classList.add('now');
+      const r = now.getBoundingClientRect(), top = document.querySelector('.player').offsetHeight;
+      if (r.top < top || r.bottom > innerHeight) scrollTo({ top: scrollY + r.top - top - 16, behavior: 'smooth' });
+    }
+  }
+};
+a.onloadedmetadata = () => { time.textContent = '0:00 / ' + fmt(a.duration); };
+lines.forEach(l => l.onclick = () => { a.currentTime = +l.dataset.t; a.play(); });
+</script>
+</body>
+</html>
