@@ -160,6 +160,11 @@ def cmd_voice(date: str) -> int:
         for f in work.glob("t_*.wav"):              # 0円の声で作った回を本人の声へ上げるときは全部作り直す
             f.unlink()
     engine_file.write_text(engine + "\n")
+    if engine == "elevenlabs":
+        # 共用部品は「みなさん、」を「みなさん！」に書き換える（0円の声で語尾が伸びる対策）。
+        # ElevenLabs はこの「！」を元気よく読むので、本人の口調より明るすぎた（2026-10-02 藤崎さん
+        # 「冒頭が元気すぎる。もう少し落ち着いた口調で」）。ElevenLabs のときは書き換えない。
+        pv._tidy_for_teraco = pv.preprocess_for_tts
     with open(ep / "work" / "voice.log", "a", encoding="utf-8") as log:
         pv.build(voice_script, ep / "audio.mp3", log)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
