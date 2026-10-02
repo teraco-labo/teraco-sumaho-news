@@ -68,7 +68,7 @@ def build(date: str) -> Path:
     wd = WEEK[_dt.date(y, m, d).weekday()]
     date_ja = f"{m}月{d}日（{wd}）"
 
-    body, used, idx = [], set(), 0
+    body, used, idx, solo = [], set(), 0, True
     for line in (ep / "script.txt").read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if line.startswith("## "):
@@ -84,6 +84,7 @@ def build(date: str) -> Path:
         txt, notes = _annotate(text, meta["terms"], used)
         start = times.get(idx)
         attr = f' data-t="{start}"' if start is not None else ""
+        solo = solo and spk == "てらこ先生"
         body.append(f'<div class="line {cls}"{attr}><div class="who">{spk}</div><p>{txt}</p>{notes}</div>')
         idx += 1
     body.append("</section>")
@@ -97,6 +98,8 @@ def build(date: str) -> Path:
         news=news, lesson=html.escape(meta["lesson"]), review=review,
         homework=html.escape(meta["homework"]), sources=sources,
         body="\n".join(body), audio="{AUDIO}")
+    if solo:   # 一人語りの回は名札と吹き出しを消して、ふつうの文章として読ませる
+        page = page.replace("<main>", '<main class="solo">', 1)
     (ep / "index.html").write_text(page.replace("{AUDIO}", audio_rel), encoding="utf-8")
     # いちばん上の index.html ＝ 最新回（LINE のボタンはここを開く）
     top = page.replace("{AUDIO}", f"episodes/{date}/{audio_rel}").replace('href="../../cover.jpg"', 'href="cover.jpg"')
@@ -162,6 +165,9 @@ TEMPLATE = """<!DOCTYPE html>
   .line.t {{ background:var(--teach); margin-right:28px; }}
   .line.m {{ background:var(--mika); margin-left:28px; }}
   .line.now {{ background:var(--now); }}
+  .solo .who {{ display:none; }}
+  .solo .line.t {{ margin-right:0; background:transparent; padding:8px 10px; }}
+  .solo .line.t.now {{ background:var(--now); }}
   .who {{ font-size:13px; font-weight:700; color:var(--ink2); }}
   .term {{ text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:3px; text-underline-offset:4px; }}
   .note {{ margin-top:6px; background:var(--note); border-radius:10px; padding:6px 10px; font-size:16px; line-height:1.6; color:var(--ink2); }}
@@ -207,9 +213,9 @@ TEMPLATE = """<!DOCTYPE html>
 
   <div class="menu">
     <h2>今日の内容</h2>
-    <span class="k">ニュース</span>
+    <span class="k">きっかけのニュース</span>
     <ul>{news}</ul>
-    <span class="k">レッスン</span>
+    <span class="k">今日のテーマ</span>
     <ul><li>{lesson}</li></ul>
   </div>
 

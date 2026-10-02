@@ -23,6 +23,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 NEWS_REPO = Path.home() / "Documents/Claude/ai-news-repo"
 READINGS = HERE / "readings.json"
+SOLO_PAUSE = 0.7   # 一人語りの段落の間（秒）
 
 # ─── 読み替え ─────────────────────────────────────────────
 _DIG = "〇一二三四五六七八九"
@@ -103,6 +104,13 @@ def cmd_voice(date: str) -> int:
     sys.path.insert(0, str(NEWS_REPO))
     import podcast_teraco_voice as pv          # Teraco Voice とミカの結合（AIニュースと共用）
     pv.HERE = ep / "work"                      # 台詞ごとの作業ファイルをこの回のフォルダに置く
+    # 一人語り（2026-10-02 から）は段落の間を長めにとる。シニアが聞いた内容を飲み込む間。
+    # 作り済みの声はそのまま使い回すので、ここを変えても利用枠は使わない。
+    lines = _lines((ep / "script.txt").read_text(encoding="utf-8"))
+    if all(s == "てらこ先生" for s, _ in lines):
+        pv.SIL_SAME = SOLO_PAUSE
+        for f in (ep / "work" / "podcast" / ".work" / "script.voice").glob("sil_*.wav"):
+            f.unlink()
     with open(ep / "work" / "voice.log", "a", encoding="utf-8") as log:
         pv.build(voice_script, ep / "audio.mp3", log)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",

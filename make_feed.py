@@ -42,7 +42,7 @@ def main():
             continue
         n = json.loads(notes.read_text(encoding="utf-8"))
         page = f"{base}/episodes/{d.name}/"
-        desc = ("ニュース：" + "／".join(n["news"]) + "。レッスン：" + n["lesson"] + "。")
+        desc = ("今日のテーマ：" + n["lesson"] + "。きっかけのニュース：" + "／".join(n["news"]) + "。")
         eps.append({"date": d.name, "number": n["number"], "title": f"第{n['number']}回 {n['title']}",
                     "description": desc, "page": page, "url": f"{base}/episodes/{d.name}/audio.mp3",
                     "size": mp3.stat().st_size, "duration": round(_duration(mp3))})
