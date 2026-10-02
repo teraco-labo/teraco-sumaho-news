@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>世界一わかりやすいスマホニュース｜てらこ先生</title>
+  <itunes:title>世界一わかりやすいスマホニュース｜てらこ先生</itunes:title>
+  <link>https://teraco-labo.github.io/teraco-sumaho-news/</link>
+  <atom:link href="https://teraco-labo.github.io/teraco-sumaho-news/feed.xml" rel="self" type="application/rss+xml"/>
+  <language>ja</language>
+  <description>スマホ教室のてらこ先生とミカが、毎朝7分でお届けします。携帯会社のニュースやお得な話題をきっかけに、LINE・写真・詐欺対策などのスマホの使い方を、ゆっくり、やさしくお話しします。文字で読めるページには、むずかしい言葉の説明つき。宮崎県西都市のスマホ教室TERACOから。</description>
+  <itunes:summary>スマホ教室のてらこ先生とミカが、毎朝7分でお届けします。携帯会社のニュースやお得な話題をきっかけに、LINE・写真・詐欺対策などのスマホの使い方を、ゆっくり、やさしくお話しします。文字で読めるページには、むずかしい言葉の説明つき。宮崎県西都市のスマホ教室TERACOから。</itunes:summary>
+  <itunes:author>てらこ先生</itunes:author>
+  <itunes:owner>
+    <itunes:name>てらこ先生</itunes:name>
+    <itunes:email>fujisaki@teraco-labo.com</itunes:email>
+  </itunes:owner>
+  <image><url>https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261002</url><title>世界一わかりやすいスマホニュース｜てらこ先生</title><link>https://teraco-labo.github.io/teraco-sumaho-news/</link></image>
+  <itunes:image href="https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261002"/>
+  <itunes:explicit>false</itunes:explicit>
+  <itunes:type>episodic</itunes:type>
+  <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
+  <lastBuildDate>Fri, 02 Oct 2026 13:55:39 +0900</lastBuildDate>
+  <item>
+    <title>第1回 ドコモの「60歳以上割」と、携帯会社を名乗る偽メッセージ</title>
+    <itunes:title>第1回 ドコモの「60歳以上割」と、携帯会社を名乗る偽メッセージ</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/</link>
+    <description>ニュース：ドコモの「60歳以上割」が始まりました／ソフトバンクが、空から電波を届ける実験に成功。レッスン：携帯会社を名乗る、偽物のメッセージ。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/ ／ 公式LINE → https://lin.ee/9c4pI82</description>
+    <itunes:summary>ニュース：ドコモの「60歳以上割」が始まりました／ソフトバンクが、空から電波を届ける実験に成功。レッスン：携帯会社を名乗る、偽物のメッセージ。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/ ／ 公式LINE → https://lin.ee/9c4pI82</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/audio.mp3" length="4289611" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/audio.mp3</guid>
+    <pubDate>Fri, 02 Oct 2026 07:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>1</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:07:09</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
+</channel>
+</rss>

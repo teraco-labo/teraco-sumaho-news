@@ -143,6 +143,15 @@ TEMPLATE = """<!DOCTYPE html>
           font-size:16px; font-weight:700; font-family:inherit; color:var(--ink); cursor:pointer; }}
   input[type=range] {{ flex:1; min-width:0; accent-color:var(--orange); height:28px; }}
   .time {{ font-size:15px; color:var(--ink2); text-align:right; margin-top:2px; }}
+  .speed {{ margin-top:12px; }}
+  .player.mini .ttl, .player.mini .speed, .player.mini .time {{ display:none; }}
+  .player.mini .btn {{ margin-top:0; padding:12px; font-size:20px; }}
+  .speed-k {{ display:flex; justify-content:space-between; font-size:13px; color:var(--ink2); padding:0 2px; }}
+  .speed-row {{ display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-top:2px; }}
+  .sp {{ border:2px solid var(--line); background:var(--card); color:var(--ink); border-radius:10px;
+        padding:8px 0; font-size:16px; font-weight:700; font-family:inherit; cursor:pointer; }}
+  .sp.on {{ background:var(--head); border-color:var(--head); color:#fff; }}
+  .sp:focus-visible, .btn:focus-visible, .back:focus-visible {{ outline:3px solid var(--orange); outline-offset:2px; }}
   .menu {{ background:var(--card); border:2px solid var(--line); border-radius:18px; padding:16px; margin-top:16px; }}
   .menu h2 {{ font-size:17px; color:var(--green); }}
   .menu ul {{ padding-left:1.2em; }}
@@ -184,6 +193,16 @@ TEMPLATE = """<!DOCTYPE html>
       <input type="range" id="seek" min="0" max="1000" value="0" aria-label="再生位置">
     </div>
     <div class="time" id="time">0:00</div>
+    <div class="speed">
+      <div class="speed-k"><span>ゆっくり</span><span>聴く速さ</span><span>はやく</span></div>
+      <div class="speed-row" id="speed">
+        <button class="sp" data-r="0.8">0.8倍</button>
+        <button class="sp" data-r="0.9">0.9倍</button>
+        <button class="sp" data-r="1">ふつう</button>
+        <button class="sp" data-r="1.2">1.2倍</button>
+        <button class="sp" data-r="1.4">1.4倍</button>
+      </div>
+    </div>
   </div>
 
   <div class="menu">
@@ -226,6 +245,22 @@ play.onclick = () => {{ a.paused ? a.play() : a.pause(); }};
 a.onplay = a.onpause = ui;
 document.getElementById('back').onclick = () => {{ a.currentTime = Math.max(0, a.currentTime - 10); }};
 seek.oninput = () => {{ if (a.duration) a.currentTime = a.duration * seek.value / 1000; }};
+const player = document.querySelector('.player');
+const menu = document.querySelector('.menu');
+function fold() {{ player.classList.toggle('mini', menu.getBoundingClientRect().bottom < 0); }}
+addEventListener('scroll', fold, {{ passive: true }}); fold();
+let rate = 1;
+try {{ rate = parseFloat(localStorage.getItem('rate')) || 1; }} catch (e) {{}}
+const sps = [...document.querySelectorAll('.sp')];
+function setRate(r) {{
+  rate = r; a.playbackRate = r; a.preservesPitch = true;
+  sps.forEach(b => b.classList.toggle('on', +b.dataset.r === r));
+  try {{ localStorage.setItem('rate', r); }} catch (e) {{}}
+}}
+sps.forEach(b => b.onclick = () => setRate(+b.dataset.r));
+setRate(sps.some(b => +b.dataset.r === rate) ? rate : 1);
+a.addEventListener('loadedmetadata', () => {{ a.playbackRate = rate; }});
+a.addEventListener('play', () => {{ a.playbackRate = rate; }});
 let now = null;
 a.ontimeupdate = () => {{
   if (a.duration) seek.value = a.currentTime / a.duration * 1000;
