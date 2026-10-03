@@ -13,25 +13,25 @@
     <itunes:name>てらこ先生</itunes:name>
     <itunes:email>fujisaki@teraco-labo.com</itunes:email>
   </itunes:owner>
-  <image><url>https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261002</url><title>世界一わかりやすいスマホニュース｜てらこ先生</title><link>https://teraco-labo.github.io/teraco-sumaho-news/</link></image>
-  <itunes:image href="https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261002"/>
+  <image><url>https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261004</url><title>世界一わかりやすいスマホニュース｜てらこ先生</title><link>https://teraco-labo.github.io/teraco-sumaho-news/</link></image>
+  <itunes:image href="https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261004"/>
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Fri, 02 Oct 2026 15:10:04 +0900</lastBuildDate>
+  <lastBuildDate>Sun, 04 Oct 2026 07:19:17 +0900</lastBuildDate>
   <item>
     <title>第1回 携帯会社を名乗る偽メッセージ、だまされない3つのコツ</title>
     <itunes:title>第1回 携帯会社を名乗る偽メッセージ、だまされない3つのコツ</itunes:title>
-    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/</link>
-    <description>今日のテーマ：携帯会社を名乗る偽メッセージ、だまされない3つのコツ。きっかけのニュース：ドコモの「60歳以上割」が始まり、12月には一部のプランが値上げ。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/ ／ 公式LINE → https://lin.ee/9c4pI82</description>
-    <itunes:summary>今日のテーマ：携帯会社を名乗る偽メッセージ、だまされない3つのコツ。きっかけのニュース：ドコモの「60歳以上割」が始まり、12月には一部のプランが値上げ。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/ ／ 公式LINE → https://lin.ee/9c4pI82</itunes:summary>
-    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/audio.mp3" length="3171571" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-02/audio.mp3</guid>
-    <pubDate>Fri, 02 Oct 2026 07:00:00 +0900</pubDate>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/</link>
+    <description>今日のテーマ：携帯会社を名乗る偽メッセージ、だまされない3つのコツ。きっかけのニュース：ドコモの「60歳以上割」が始まり、12月には一部のプランが値上げ。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/ ／ 公式LINE → https://lin.ee/9c4pI82</description>
+    <itunes:summary>今日のテーマ：携帯会社を名乗る偽メッセージ、だまされない3つのコツ。きっかけのニュース：ドコモの「60歳以上割」が始まり、12月には一部のプランが値上げ。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/ ／ 公式LINE → https://lin.ee/9c4pI82</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/audio.mp3" length="3122460" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/audio.mp3</guid>
+    <pubDate>Sun, 04 Oct 2026 07:00:00 +0900</pubDate>
     <itunes:author>てらこ先生</itunes:author>
     <itunes:episode>1</itunes:episode>
     <itunes:episodeType>full</itunes:episodeType>
-    <itunes:duration>00:05:17</itunes:duration>
+    <itunes:duration>00:05:12</itunes:duration>
     <itunes:explicit>false</itunes:explicit>
   </item>
 </channel>
