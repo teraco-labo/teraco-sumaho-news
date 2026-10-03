@@ -243,7 +243,11 @@ def save(date: str, ep: dict):
         rp = HERE / "readings.json"
         r = json.loads(rp.read_text(encoding="utf-8"))
         for k, v in ep["readings"].items():
-            r.setdefault(k, v)            # 既存の読みは上書きしない（人が決めた読みを守る）
+            # 辞書は文章全体を置き換えるので、日本語の言葉を足すと別の場所を壊す
+            # （試運転で「付け→づけ」が入り、「気を付けて」が「気をづけて」になるところだった）。
+            # Claude に足させるのは英字を含む言葉の読みだけ。既存の読みは上書きしない。
+            if re.search(r"[A-Za-z]", k):
+                r.setdefault(k, v)
         rp.write_text(json.dumps(r, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
