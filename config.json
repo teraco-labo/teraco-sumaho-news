@@ -4,6 +4,12 @@
   "owner_email": "fujisaki@teraco-labo.com",
   "base_url": "https://teraco-labo.github.io/teraco-sumaho-news",
   "description": "スマホ教室のてらこ先生とミカが、毎朝7分でお届けします。携帯会社のニュースやお得な話題をきっかけに、LINE・写真・詐欺対策などのスマホの使い方を、ゆっくり、やさしくお話しします。文字で読めるページには、むずかしい言葉の説明つき。宮崎県西都市のスマホ教室TERACOから。",
-  "category": ["Education", "How To"],
-  "line_url": "https://lin.ee/9c4pI82"
+  "category": [
+    "Education",
+    "How To"
+  ],
+  "line_url": "https://lin.ee/9c4pI82",
+  "spotify_url": "https://open.spotify.com/show/3jx1jEp9mOCeTlMFiGSuad",
+  "feed_url": "https://teraco-labo.github.io/teraco-sumaho-news/feed.xml",
+  "player_url": "https://teraco-labo.github.io/teraco-sumaho-news/"
 }
