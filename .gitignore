@@ -2,3 +2,4 @@ episodes/*/work/
 episodes/*/voice.out
 __pycache__/
 .DS_Store
+logs/

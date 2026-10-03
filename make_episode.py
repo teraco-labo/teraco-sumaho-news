@@ -15,13 +15,14 @@
   ~/Documents/Claude/ai-news-repo/venv/bin/python make_episode.py voice 2026-10-02
 """
 import json
+import os
 import re
 import subprocess
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-NEWS_REPO = Path.home() / "Documents/Claude/ai-news-repo"
+NEWS_REPO = Path(os.environ.get("NEWS_REPO") or Path.home() / "Documents/Claude/ai-news-repo")   # 定時実行では ~/ai-office/work の複製を渡す
 READINGS = HERE / "readings.json"
 SOLO_PAUSE = 0.7   # 一人語りの段落の間（秒）
 
@@ -151,6 +152,17 @@ def cmd_voice(date: str) -> int:
             engine = "free"
     before = engine_file.read_text().strip() if engine_file.exists() else engine
     work = ep / "work" / "podcast" / ".work" / "script.voice"
+    # 2026-10-04 藤崎さん「ElevenLabs の精度はもう信用している。無料のクローンは使わなくていい」。
+    # ElevenLabs が使えないときは0円の声で代わりに作らず、止める（その回は休み・LINE で知らせる）。
+    # 試運転だけは TERACO_VOICE_ENGINE=free を明示すれば0円の声で作れる（公開しない前提）。
+    free_ok = os.environ.get("TERACO_VOICE_ENGINE", "") == "free"
+    if engine == "free" and not free_ok:
+        print("！ ElevenLabs（本人の声）が使えません（設定・残り・接続のどれか）。0円の声では作りません。")
+        return 1
+    if not free_ok:
+        def _no_free(jobs, log):
+            raise SystemExit("ElevenLabs で作れなかった台詞があります。0円の声では埋めずに止めます")
+        pv._synth_sovits = _no_free
     if before != engine and any(work.glob("t_*.wav")):
         if engine == "free":
             print("！ この回は ElevenLabs（本人の声）で作り始めましたが、いまは ElevenLabs が使えません。"
