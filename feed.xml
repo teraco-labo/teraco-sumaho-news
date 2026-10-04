@@ -13,8 +13,8 @@
     <itunes:name>てらこ先生</itunes:name>
     <itunes:email>fujisaki@teraco-labo.com</itunes:email>
   </itunes:owner>
-  <image><url>https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261004</url><title>世界一わかりやすいスマホニュース｜てらこ先生</title><link>https://teraco-labo.github.io/teraco-sumaho-news/</link></image>
-  <itunes:image href="https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=20261004"/>
+  <image><url>https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=b2f43142</url><title>世界一わかりやすいスマホニュース｜てらこ先生</title><link>https://teraco-labo.github.io/teraco-sumaho-news/</link></image>
+  <itunes:image href="https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg?v=b2f43142"/>
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
