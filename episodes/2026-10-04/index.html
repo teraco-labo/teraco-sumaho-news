@@ -41,7 +41,7 @@
   .player.mini .ttl, .player.mini .speed, .player.mini .time { display:none; }
   .player.mini .btn { margin-top:0; padding:12px; font-size:20px; }
   .speed-k { display:flex; justify-content:space-between; font-size:13px; color:var(--ink2); padding:0 2px; }
-  .speed-row { display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-top:2px; }
+  .speed-row { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:2px; }
   .sp { border:2px solid var(--line); background:var(--card); color:var(--ink); border-radius:10px;
         padding:8px 0; font-size:16px; font-weight:700; font-family:inherit; cursor:pointer; }
   .sp.on { background:var(--head); border-color:var(--head); color:#fff; }
@@ -94,10 +94,8 @@
       <div class="speed-k"><span>ゆっくり</span><span>聴く速さ</span><span>はやく</span></div>
       <div class="speed-row" id="speed">
         <button class="sp" data-r="0.8">0.8倍</button>
-        <button class="sp" data-r="0.9">0.9倍</button>
         <button class="sp" data-r="1">ふつう</button>
         <button class="sp" data-r="1.2">1.2倍</button>
-        <button class="sp" data-r="1.4">1.4倍</button>
       </div>
     </div>
   </div>
@@ -208,16 +206,14 @@ const player = document.querySelector('.player');
 const menu = document.querySelector('.menu');
 function fold() { player.classList.toggle('mini', menu.getBoundingClientRect().bottom < 0); }
 addEventListener('scroll', fold, { passive: true }); fold();
-let rate = 1;
-try { rate = parseFloat(localStorage.getItem('rate')) || 1; } catch (e) {}
+let rate = 1;   // 開くたびに「ふつう」から（2026-10-04 藤崎さん：1倍を既定に、前後に1段ずつ）
 const sps = [...document.querySelectorAll('.sp')];
 function setRate(r) {
   rate = r; a.playbackRate = r; a.preservesPitch = true;
   sps.forEach(b => b.classList.toggle('on', +b.dataset.r === r));
-  try { localStorage.setItem('rate', r); } catch (e) {}
 }
 sps.forEach(b => b.onclick = () => setRate(+b.dataset.r));
-setRate(sps.some(b => +b.dataset.r === rate) ? rate : 1);
+setRate(1);
 a.addEventListener('loadedmetadata', () => { a.playbackRate = rate; });
 a.addEventListener('play', () => { a.playbackRate = rate; });
 let now = null;
