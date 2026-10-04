@@ -1,0 +1,336 @@
+{
+  "_説明": "スマホニュースの用語辞書（シニア向け）。形は AIニュースの glossary.json と同じ。short=触れると出る短い説明、detail=解説ページの「もう少しくわしく」",
+  "terms": [
+    {
+      "slug": "keitai-gaisha",
+      "term": "携帯会社",
+      "reading": "けいたいがいしゃ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホの電話やインターネットを使えるようにしている会社です。ドコモ・au・ソフトバンク・楽天モバイルなどがあります。",
+      "detail": "スマホで電話をかけたり、インターネットを使ったりできるのは、携帯会社と契約しているからです。毎月の料金は、この会社に払っています。料金プランの変更や、困ったときの相談先も携帯会社です。",
+      "related": [
+        "plan",
+        "docomo"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "nisemono-message",
+      "term": "偽物のメッセージ",
+      "reading": "にせもののメッセージ",
+      "aliases": [
+        "フィッシング詐欺"
+      ],
+      "category": "安全",
+      "short": "本物の会社のふりをして、パスワードやカードの番号を盗もうとするメッセージです。「フィッシング詐欺」と呼ばれます。",
+      "detail": "銀行や携帯会社、通販の会社などを名乗って「料金が高額です」「確認してください」と不安にさせ、偽の画面に案内します。そこでパスワードやカードの番号を入れると、盗まれてしまいます。メッセージの中のリンクは押さず、いつものアプリを自分で開いて確かめるのが基本です。",
+      "related": [
+        "link",
+        "password",
+        "sms"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "docomo",
+      "term": "ドコモ",
+      "reading": "",
+      "aliases": [
+        "NTTドコモ"
+      ],
+      "category": "携帯会社",
+      "short": "日本の大きな携帯会社のひとつです。正式な名前は「NTTドコモ」です。",
+      "detail": "日本の大手の携帯会社のひとつで、正式な名前は「株式会社NTTドコモ」です。全国に「ドコモショップ」というお店があり、契約や相談ができます。",
+      "related": [
+        "docomo-shop",
+        "my-docomo",
+        "keitai-gaisha"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "koushiki",
+      "term": "公式",
+      "reading": "こうしき",
+      "aliases": [],
+      "category": "ことば",
+      "short": "その会社自身が出している、という意味です。うわさや、ほかの人の話ではない、本物の情報です。",
+      "detail": "「公式発表」は、会社や役所が自分で出したお知らせのことです。ニュースや人のうわさは、まちがっていることもあります。大事なことは、公式のホームページやアプリで確かめると安心です。",
+      "related": [
+        "homepage"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "docomo-max",
+      "term": "ドコモ MAX",
+      "reading": "ドコモマックス",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "ドコモの料金プランのひとつです。使ったデータの量で、月の料金が3段階に変わります。",
+      "detail": "ドコモの発表では、割引を使う前の月の料金は、1GB以下なら税込5,698円、3GBまでなら6,798円、それより多く使うと8,448円です。2026年10月1日から、60歳以上の人向けの割引も始まりました。",
+      "related": [
+        "plan",
+        "docomo"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "plan",
+      "term": "プラン",
+      "reading": "",
+      "aliases": [
+        "料金プラン"
+      ],
+      "category": "スマホの基本",
+      "short": "料金の決まり方の種類です。どれだけ使えて、月にいくらかかるかが決まっています。",
+      "detail": "携帯会社には、いくつもの料金プランがあります。たくさん使う人向け、あまり使わない人向けなど、使い方に合わせて選びます。自分のプランは、携帯会社のアプリやお店で確かめられます。",
+      "related": [
+        "keitai-gaisha",
+        "my-docomo"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "docomo-shop",
+      "term": "ドコモショップ",
+      "reading": "",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "ドコモのお店です。契約や料金の相談ができます。",
+      "detail": "全国にあるドコモのお店です。機種の買いかえ、料金プランの変更、困ったときの相談ができます。行く前に来店の予約をしておくと、待ち時間が短くなります。",
+      "related": [
+        "docomo",
+        "plan"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "eximo",
+      "term": "eximo",
+      "reading": "エクシモ",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "ドコモの料金プランの名前です。「エクシモ」と読みます。",
+      "detail": "ドコモの料金プランのひとつです。ドコモの発表では、2026年12月1日から、月に550円の値上げになります。",
+      "related": [
+        "plan",
+        "docomo"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "homepage",
+      "term": "ホームページ",
+      "reading": "",
+      "aliases": [
+        "ウェブサイト"
+      ],
+      "category": "インターネット",
+      "short": "会社などがインターネットに出しているページです。お知らせや説明が載っています。",
+      "detail": "「ウェブサイト」と呼ぶことも多いです。会社のホームページには、公式のお知らせや、問い合わせ先が載っています。検索して開くときは、名前がよく似た偽のページに気をつけましょう。",
+      "related": [
+        "koushiki",
+        "link"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "app",
+      "term": "アプリ",
+      "reading": "",
+      "aliases": [
+        "アプリケーション"
+      ],
+      "category": "スマホの基本",
+      "short": "スマホに入れて使う道具。画面に並んでいる、小さな絵のボタンです。",
+      "detail": "「アプリケーション」を短くした言葉です。LINE、カメラ、地図など、使いたい道具ごとにアプリがあります。新しいアプリは、iPhoneなら「App Store」、Androidなら「Google Play」から入れます。",
+      "related": [
+        "line",
+        "my-docomo"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "kougaku",
+      "term": "高額",
+      "reading": "こうがく",
+      "aliases": [],
+      "category": "ことば",
+      "short": "金額が高いことです。",
+      "detail": "偽物のメッセージは「高額の請求があります」などと書いて、不安にさせることがよくあります。あわてずに、いつものアプリで確かめましょう。",
+      "related": [
+        "nisemono-message"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "mail",
+      "term": "メール",
+      "reading": "",
+      "aliases": [
+        "Eメール"
+      ],
+      "category": "インターネット",
+      "short": "インターネットで届く、手紙のようなものです。",
+      "detail": "メールアドレスあてに届く、インターネットの手紙です。SMSと違って、長い文章や写真も送れます。知らない相手から届いたメールのリンクは、押さないようにしましょう。",
+      "related": [
+        "sms",
+        "link"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "sms",
+      "term": "SMS",
+      "reading": "エスエムエス",
+      "aliases": [
+        "ショートメッセージ"
+      ],
+      "category": "スマホの基本",
+      "short": "電話番号あてに届く、短いメッセージです。",
+      "detail": "「ショートメッセージサービス」の略です。メールアドレスではなく、電話番号あてに届きます。「メッセージ」アプリなどで見ます。宅配便や携帯会社を名乗る偽物も、よく届きます。",
+      "related": [
+        "mail",
+        "nisemono-message"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "link",
+      "term": "リンク",
+      "reading": "",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "押すと、別の画面が開く文字。青い色や下線がついていることが多いです。",
+      "detail": "ほかのページへの入り口です。押すと、別の画面やホームページが開きます。メッセージの中のリンクは、偽のページにつながっていることがあるので注意が必要です。",
+      "related": [
+        "nisemono-message",
+        "homepage"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "gamen",
+      "term": "画面",
+      "reading": "がめん",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホの、絵や文字が表示される部分です。指でさわって操作します。",
+      "detail": "スマホの表の、光っている部分です。指で軽くさわる、なぞるなどして操作します。軽くさわることを「タップ」、なぞることを「スワイプ」と呼びます。",
+      "related": [
+        "button"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "button",
+      "term": "ボタン",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "押すと何かが動く場所です。スマホでは、画面を指で軽くさわって押します。",
+      "detail": "画面の中のボタンは、指で軽くさわると押せます。スマホ本体の横にも、電源や音量の「本物のボタン」があります。",
+      "related": [
+        "gamen"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "mark",
+      "term": "マーク",
+      "reading": "",
+      "aliases": [
+        "ロゴ"
+      ],
+      "category": "ことば",
+      "short": "会社の目じるしになる絵や文字です。「ロゴ」とも言います。",
+      "detail": "偽のページは、本物の会社のマークや色をまねて作られます。マークが本物そっくりでも、それだけで安心はできません。",
+      "related": [
+        "nisemono-message"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "password",
+      "term": "パスワード",
+      "reading": "",
+      "aliases": [],
+      "category": "安全",
+      "short": "本人だと確かめるための、秘密の合言葉です。",
+      "detail": "アプリやサービスに入るときに使う、本人だけが知っている文字や数字の組み合わせです。人に教えない、ほかのサービスと同じにしない、が基本です。",
+      "related": [
+        "nisemono-message"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "card",
+      "term": "カード",
+      "reading": "",
+      "aliases": [
+        "クレジットカード"
+      ],
+      "category": "安全",
+      "short": "ここではクレジットカードのことです。番号を知られると、勝手に買い物をされるおそれがあります。",
+      "detail": "クレジットカードの番号や、裏の3けたの数字を知られると、勝手にインターネットで買い物をされるおそれがあります。入れてしまったときは、すぐカード会社に連絡しましょう。",
+      "related": [
+        "meisai",
+        "nisemono-message"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "my-docomo",
+      "term": "My docomo",
+      "reading": "マイドコモ",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "ドコモの公式アプリ。料金や契約の内容を確かめられます。",
+      "detail": "ドコモの公式アプリです。毎月の料金や、使ったデータの量、契約しているプランを確かめられます。料金のお知らせが本当かどうかも、このアプリで確かめられます。",
+      "related": [
+        "docomo",
+        "app"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "line",
+      "term": "LINE",
+      "reading": "ライン",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "家族や友だちと、メッセージや電話ができるアプリです。",
+      "detail": "日本で多くの人が使っている連絡用のアプリです。文字のやりとり（トーク）、通話、写真の送りあいができます。",
+      "related": [
+        "app"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "meisai",
+      "term": "明細",
+      "reading": "めいさい",
+      "aliases": [],
+      "category": "ことば",
+      "short": "何に、いくら使ったかの一覧です。",
+      "detail": "クレジットカードや携帯電話の料金の「いつ、何に、いくら」が書いてある一覧です。覚えのない使い道がないか、ときどき確かめると安心です。",
+      "related": [
+        "card"
+      ],
+      "status": "published"
+    },
+    {
+      "slug": "follow",
+      "term": "フォロー",
+      "reading": "",
+      "aliases": [],
+      "category": "ことば",
+      "short": "Spotify などで、番組を登録しておくことです。新しい回が出たときに、すぐ見つけられます。",
+      "detail": "Spotifyなどで番組をフォローしておくと、新しい回が出たときに見つけやすくなります。フォローは無料で、いつでもやめられます。",
+      "related": [],
+      "status": "published"
+    }
+  ]
+}

@@ -135,6 +135,7 @@ RULES = """\
 
 # 言葉の説明（terms）
 - AIニュースと同じく「分からないかもしれない言葉にはすべて説明を付ける」。目安は20〜30語
+- 用語集にすでにある言葉（下の一覧）は terms に書かなくてよい（自動で説明が付く）
 - カタカナ語・英字の名前（サービス名・プラン名・アプリ名）・専門用語に加えて、耳で聞くと分かりにくい漢語（公式・高額・明細など）も入れる
 - 見出しの言葉は台本に出てくる表記と一字一句同じにする（ページで、その言葉の初めて出たところに説明が付く）
 - 説明は事実だけ。分からないことは書かない
@@ -154,7 +155,7 @@ FORMAT = """\
  "script": "台本。見出し行は『## 見出し』、話す行は『[てらこ先生] 本文』。段落ごとに空行",
  "review": ["おさらい1", "おさらい2", "おさらい3"],
  "homework": "今日やってみること（1行）",
- "terms": {"台本に出てくる言葉（台本の表記そのまま）": "シニア向けのやさしい説明（1〜2文・敬体）"},
+ "terms": {"台本に出てくる言葉（台本の表記そのまま）": {"slug": "英小文字とハイフンの名前（例 docomo-shop）", "reading": "読み（ひらがな/カタカナ・不要なら空）", "category": "スマホの基本／安全／携帯会社／インターネット／アプリ／ことば のどれか", "short": "触れると出るやさしい説明（1〜2文・敬体）", "detail": "解説ページの『もう少しくわしく』（2〜3文・敬体・事実だけ）"}},
  "sources": [{"label": "出どころ（会社名・日付・何の発表か）", "url": "公式のURL"}],
  "fact_check": ["確かめた事実と、確かめた先"],
  "readings": {"英字や読み間違えやすい言葉": "カタカナの読み"}
@@ -184,6 +185,7 @@ def write(date: str, news: list) -> dict:
 - ここ数日のニュース候補（専門サイトの見出し）：
 {json.dumps(news, ensure_ascii=False, indent=0)}
 - 教室のナレッジ（実際の教室の記録。今いるフォルダにある。Read で読める）：{kfiles}
+- 用語集にすでにある言葉（terms に書かなくてよい）：{"、".join(t["term"] for t in json.loads((HERE / "glossary.json").read_text(encoding="utf-8"))["terms"])}
 
 # やること
 1. 候補の中から、シニアの生徒さんに役立つ「スマホの使い方・安全・お得」につながるニュースを1つ選ぶ。
@@ -242,7 +244,9 @@ def save(date: str, ep: dict):
     (d / "script.txt").write_text(ep["script"].strip() + "\n", encoding="utf-8")
     nums = [json.loads(p.read_text(encoding="utf-8")).get("number", 0)
             for p in (HERE / "episodes").glob("*/notes.json") if p.parent.name != date]
-    notes = {k: ep.get(k) for k in ("title", "news", "lesson", "review", "homework", "terms", "sources", "fact_check")}
+    notes = {k: ep.get(k) for k in ("title", "news", "lesson", "review", "homework", "sources", "fact_check")}
+    notes["terms"] = {k: (v.get("short") if isinstance(v, dict) else v) for k, v in (ep.get("terms") or {}).items()}
+    _merge_glossary(ep.get("terms") or {})
     notes.update({"number": max(nums or [0]) + 1, "date": date, "format": "一人語り・自動作成"})
     (d / "notes.json").write_text(json.dumps(notes, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if ep.get("readings"):
@@ -255,6 +259,25 @@ def save(date: str, ep: dict):
             if re.search(r"[A-Za-z]", k):
                 r.setdefault(k, v)
         rp.write_text(json.dumps(r, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def _merge_glossary(terms: dict):
+    """新しい言葉を用語辞書（glossary.json）に足す。すでにある言葉・名前は上書きしない（人が直した説明を守る）。"""
+    gp = HERE / "glossary.json"
+    g = json.loads(gp.read_text(encoding="utf-8"))
+    have_terms = {t["term"] for t in g["terms"]} | {a for t in g["terms"] for a in t.get("aliases", [])}
+    have_slugs = {t["slug"] for t in g["terms"]}
+    for word, v in terms.items():
+        if not isinstance(v, dict) or word in have_terms or not v.get("short"):
+            continue
+        slug = re.sub(r"[^a-z0-9-]", "", (v.get("slug") or "").lower()) or f"term-{len(have_slugs) + 1}"
+        while slug in have_slugs:
+            slug += "-2"
+        g["terms"].append({"slug": slug, "term": word, "reading": v.get("reading", ""), "aliases": [],
+                           "category": v.get("category") or "ことば", "short": v["short"],
+                           "detail": v.get("detail") or v["short"], "related": [], "status": "published"})
+        have_slugs.add(slug); have_terms.add(word)
+    gp.write_text(json.dumps(g, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 # ─── 本体 ───────────────────────────────────────────────────
@@ -298,7 +321,7 @@ def publish(date: str) -> int:
         log(f"{date} の音声が無いので公開しません")
         return 1
     git = ["git", "-C", str(HERE)]
-    subprocess.run(git + ["add", "episodes", "index.html", "feed.xml", "episodes.json", "readings.json"], check=True)
+    subprocess.run(git + ["add", "episodes", "terms", "glossary.json", "index.html", "feed.xml", "episodes.json", "readings.json"], check=True)
     if subprocess.run(git + ["diff", "--cached", "--quiet"]).returncode == 0:
         log(f"{date} は公開済み")
         return 0

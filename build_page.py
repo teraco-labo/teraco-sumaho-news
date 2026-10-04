@@ -97,13 +97,15 @@ def build(date: str) -> Path:
         title=html.escape(meta["title"]), date_ja=date_ja, num=meta["number"],
         news=news, lesson=html.escape(meta["lesson"]), review=review,
         homework=html.escape(meta["homework"]), sources=sources,
-        body="\n".join(body), audio="{AUDIO}")
+        audio="{AUDIO}", read="{READ}")
     if solo:   # 一人語りの回は名札と吹き出しを消して、ふつうの文章として読ませる
         page = page.replace("<main>", '<main class="solo">', 1)
-    (ep / "index.html").write_text(page.replace("{AUDIO}", audio_rel), encoding="utf-8")
+    (ep / "index.html").write_text(page.replace("{AUDIO}", audio_rel).replace("{READ}", "yomu.html"), encoding="utf-8")
     # いちばん上の index.html ＝ 最新回（LINE のボタンはここを開く）
-    top = page.replace("{AUDIO}", f"episodes/{date}/{audio_rel}").replace('href="../../cover.jpg"', 'href="cover.jpg"')
+    top = page.replace("{AUDIO}", f"episodes/{date}/{audio_rel}").replace("{READ}", f"episodes/{date}/yomu.html").replace('href="../../cover.jpg"', 'href="cover.jpg"')
     (HERE / "index.html").write_text(top, encoding="utf-8")
+    import text_pages                      # 文字で読むページ・言葉の解説ページ（AIニュースの用語の部品を使う）
+    text_pages.build(date)
     return ep / "index.html"
 
 
@@ -198,7 +200,7 @@ TEMPLATE = """<!DOCTYPE html>
   <div class="player">
     <div class="ttl">{title}</div>
     <button class="btn" id="play"></button>
-    <a class="btn read" id="read" href="#yomu"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4z"/></svg><span>文字で読む</span></a>
+    <a class="btn read" id="read" href="{read}"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4z"/></svg><span>文字で読む</span></a>
     <div class="row">
       <button class="back" id="back">10秒もどる</button>
       <input type="range" id="seek" min="0" max="1000" value="0" aria-label="再生位置">
@@ -222,8 +224,6 @@ TEMPLATE = """<!DOCTYPE html>
     <ul><li>{lesson}</li></ul>
   </div>
 
-  <h2 class="yomu-h" id="yomu">文字で読む<small>むずかしい言葉には、すぐ下に説明があります</small></h2>
-{body}
 
   <div class="review">
     <h2>今日のおさらい</h2>
@@ -259,14 +259,6 @@ const player = document.querySelector('.player');
 const menu = document.querySelector('.menu');
 function fold() {{ player.classList.toggle('mini', menu.getBoundingClientRect().bottom < 0); }}
 addEventListener('scroll', fold, {{ passive: true }}); fold();
-// 「文字で読む」：パネルを先にたたんでから、見出しがパネルのすぐ下に来るように動かす（隠れないように）
-function toYomu(smooth) {{
-  player.classList.add('mini');
-  const y = document.getElementById('yomu').getBoundingClientRect().top + scrollY - player.offsetHeight - 16;
-  scrollTo({{ top: Math.max(0, y), behavior: smooth ? 'smooth' : 'auto' }});
-}}
-document.getElementById('read').onclick = e => {{ e.preventDefault(); history.replaceState(null, '', '#yomu'); toYomu(true); }};
-if (location.hash === '#yomu') addEventListener('load', () => setTimeout(() => toYomu(false), 50));
 let rate = 1;   // 開くたびに「ふつう」から（2026-10-04 藤崎さん：1倍を既定に、前後に1段ずつ）
 const sps = [...document.querySelectorAll('.sp')];
 function setRate(r) {{
