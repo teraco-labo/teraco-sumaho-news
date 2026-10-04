@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 【2026-10-04 から表紙は assets/cover_source.png（gpt-image-2.5 のポップ案）を3000pxにしたもの。このスクリプトは旧表紙用で、動かすと上書きされるので使わない】
+# 【2026-10-04 から表紙は assets/cover_source.png（gpt-image-2.5 のクリーム×オレンジ案）を3000pxにしたもの。このスクリプトは旧表紙用で、動かすと上書きされるので使わない】
 """番組の表紙（3000×3000）。AIニュースの表紙と同じ配置で、色だけ緑＋オレンジに変えた兄弟版。
 キャラは ~/ai-office/advisors/lecture/character/bust/center-plain-point-wide.png（メガネなし）を
 白背景だけ抜いた terako_cutout.png。"""
