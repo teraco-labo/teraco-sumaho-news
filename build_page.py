@@ -149,6 +149,10 @@ TEMPLATE = """<!DOCTYPE html>
   .speed {{ margin-top:12px; }}
   .player.mini .ttl, .player.mini .speed, .player.mini .time {{ display:none; }}
   .player.mini .btn {{ margin-top:0; padding:12px; font-size:20px; }}
+  .btn.read {{ background:var(--card); color:var(--head); border:3px solid var(--head); text-decoration:none; padding:14px; font-size:22px; }}
+  .player.mini .btn.read {{ display:none; }}
+  .yomu-h {{ margin-top:30px; font-size:22px; color:var(--green); scroll-margin-top:170px; }}
+  .yomu-h small {{ display:block; font-size:15px; color:var(--ink2); font-weight:500; }}
   .speed-k {{ display:flex; justify-content:space-between; font-size:13px; color:var(--ink2); padding:0 2px; }}
   .speed-row {{ display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:2px; }}
   .sp {{ border:2px solid var(--line); background:var(--card); color:var(--ink); border-radius:10px;
@@ -194,6 +198,7 @@ TEMPLATE = """<!DOCTYPE html>
   <div class="player">
     <div class="ttl">{title}</div>
     <button class="btn" id="play"></button>
+    <a class="btn read" id="read" href="#yomu"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4z"/></svg><span>文字で読む</span></a>
     <div class="row">
       <button class="back" id="back">10秒もどる</button>
       <input type="range" id="seek" min="0" max="1000" value="0" aria-label="再生位置">
@@ -217,6 +222,7 @@ TEMPLATE = """<!DOCTYPE html>
     <ul><li>{lesson}</li></ul>
   </div>
 
+  <h2 class="yomu-h" id="yomu">文字で読む<small>むずかしい言葉には、すぐ下に説明があります</small></h2>
 {body}
 
   <div class="review">
@@ -239,7 +245,7 @@ TEMPLATE = """<!DOCTYPE html>
 <script>
 const a = document.getElementById('audio'), play = document.getElementById('play'),
       seek = document.getElementById('seek'), time = document.getElementById('time');
-const PLAY  = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span>聴く</span>';
+const PLAY  = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span>音声で聴く</span>';
 const PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg><span>止める</span>';
 const lines = [...document.querySelectorAll('.line[data-t]')];
 function fmt(s) {{ s = Math.floor(s || 0); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }}
@@ -253,6 +259,14 @@ const player = document.querySelector('.player');
 const menu = document.querySelector('.menu');
 function fold() {{ player.classList.toggle('mini', menu.getBoundingClientRect().bottom < 0); }}
 addEventListener('scroll', fold, {{ passive: true }}); fold();
+// 「文字で読む」：パネルを先にたたんでから、見出しがパネルのすぐ下に来るように動かす（隠れないように）
+function toYomu(smooth) {{
+  player.classList.add('mini');
+  const y = document.getElementById('yomu').getBoundingClientRect().top + scrollY - player.offsetHeight - 16;
+  scrollTo({{ top: Math.max(0, y), behavior: smooth ? 'smooth' : 'auto' }});
+}}
+document.getElementById('read').onclick = e => {{ e.preventDefault(); history.replaceState(null, '', '#yomu'); toYomu(true); }};
+if (location.hash === '#yomu') addEventListener('load', () => setTimeout(() => toYomu(false), 50));
 let rate = 1;   // 開くたびに「ふつう」から（2026-10-04 藤崎さん：1倍を既定に、前後に1段ずつ）
 const sps = [...document.querySelectorAll('.sp')];
 function setRate(r) {{
