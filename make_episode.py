@@ -74,6 +74,8 @@ def cmd_check(date: str) -> int:
                 problems.append(f"{i}行目 40字超（{len(s)}字）: {s}")
         if re.search(r"(この|その|あの|どの|若い|年配の|ご高齢の|お)方[がはにをもの]", text):
             problems.append(f"{i}行目 人を指す「方」: {text}")
+        if "本物のニュース" in text or "本当のニュース" in text:
+            problems.append(f"{i}行目 「本物のニュース」とは言わない（番組のニュースが本物でないように聞こえる）: {text}")
         if text in seen:
             problems.append(f"{i}行目 同じ台詞の繰り返し: {text}")
         seen.add(text)
