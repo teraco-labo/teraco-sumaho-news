@@ -356,6 +356,226 @@
         "nisemono-message"
       ],
       "status": "published"
+    },
+    {
+      "slug": "ly-corporation",
+      "term": "LINEヤフー",
+      "reading": "ラインヤフー",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEのアプリを作っている会社です。",
+      "detail": "LINEのほか、Yahoo! JAPANなどのサービスも手がけている会社です。LINEの変更のお知らせは、この会社が公式に出しています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "help",
+      "term": "ヘルプ",
+      "reading": "ヘルプ",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "使い方や困ったときの答えをまとめた、公式の案内のページです。",
+      "detail": "LINEにも公式のヘルプがあり、新しい機能や変更の説明が載っています。画面が変わって迷ったときに確かめる場所です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "renewal",
+      "term": "リニューアル",
+      "reading": "リニューアル",
+      "aliases": [],
+      "category": "ことば",
+      "short": "見た目や中身を新しく作り直すことです。",
+      "detail": "アプリのリニューアルでは、ボタンの場所や画面の並びが変わることがあります。使っていた機能が別の場所に移ることもあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "line-voom",
+      "term": "LINE VOOM",
+      "reading": "ラインブーム",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEの中にあったサービスです。2026年9月30日で終わりました。",
+      "detail": "LINEヤフーの公式ヘルプによると、LINE VOOMは2026年9月30日で提供を終えました。あわせて、ストーリーとバースデーカードも使えなくなりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "service",
+      "term": "サービス",
+      "reading": "サービス",
+      "aliases": [],
+      "category": "ことば",
+      "short": "アプリやインターネットで使える、ひとまとまりの機能のことです。",
+      "detail": "LINEの中には、トークのほかにも、いろいろなサービスが入っています。サービスごとに始まったり終わったりすることがあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "line-story",
+      "term": "ストーリー",
+      "reading": "ストーリー",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINE VOOMの終了にあわせて、使えなくなったLINEの機能です。",
+      "detail": "LINEヤフーの公式ヘルプによると、LINE VOOMの終了にともない、ストーリーは使えなくなりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "birthday-card",
+      "term": "バースデーカード",
+      "reading": "バースデーカード",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINE VOOMの終了にあわせて、使えなくなったLINEの機能です。",
+      "detail": "LINEヤフーの公式ヘルプによると、LINE VOOMの終了にともない、バースデーカードは使えなくなりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "menu",
+      "term": "メニュー",
+      "reading": "メニュー",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "選べるものが並んでいる場所のことです。",
+      "detail": "LINEでは、画面のいちばん下に、ホームやトークなどが並んだメニューがあります。押すと、それぞれの画面に切りかわります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "line-shopping",
+      "term": "ショッピング",
+      "reading": "ショッピング",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "買い物のことです。LINEの下のメニューに、新しく加わりました。",
+      "detail": "LINEヤフーの公式ヘルプによると、下のメニューからVOOMが消えて、ショッピングが加わりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "line-talk",
+      "term": "トーク",
+      "reading": "トーク",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、文字やスタンプでやりとりをする画面のことです。",
+      "detail": "下のメニューのトークを押すと、やりとりしている相手の一覧が出ます。新しい画面では、その上に「友だち」への切りかえが加わりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "friends-tab",
+      "term": "友だちタブ",
+      "reading": "ともだちタブ",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "トークの画面のいちばん上にある、友だちの一覧に切りかえる場所です。",
+      "detail": "タブは、押すと画面が切りかわる見出しのことです。LINEヤフーの発表では、トークの画面の上の「トーク」と「友だち」を押して切りかえられます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "line-home",
+      "term": "ホーム",
+      "reading": "ホーム",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEの下のメニューにある、いろいろな情報をまとめた画面です。",
+      "detail": "LINEヤフーの公式ヘルプによると、友だちに関するお知らせや、よく使うサービス、話題の情報などをまとめて見られます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "kotsu",
+      "term": "コツ",
+      "reading": "コツ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "うまくやるための、ちょっとしたやり方のことです。",
+      "detail": "カタカナで書きますが、もともと日本の言葉です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "line-friends",
+      "term": "友だち",
+      "reading": "ともだち",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、やりとりできるように登録した相手のことです。",
+      "detail": "家族や知り合いなど、登録した相手が並びます。新しい画面では、トークの画面の上から一覧を見られます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "talk-room",
+      "term": "トークルーム",
+      "reading": "トークルーム",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、相手とのやりとりが並ぶ、ひとつひとつのお部屋のことです。",
+      "detail": "相手ごと、グループごとにトークルームができます。LINEヤフーの発表では、作成は「＋ボタン」からできるようになりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "line-group",
+      "term": "グループ",
+      "reading": "グループ",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、何人かでまとめてやりとりできる集まりです。",
+      "detail": "家族や仲間でグループを作ると、ひとつのトークでみんなに同じ連絡ができます。LINEヤフーの発表では、作成は「＋ボタン」にまとめられました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "add-friends",
+      "term": "友だち追加",
+      "reading": "ともだちついか",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、新しい相手を友だちとして登録することです。",
+      "detail": "LINEヤフーの2025年9月24日の発表で、友だち追加は「＋ボタン」にまとめられたと説明されています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "feature",
+      "term": "機能",
+      "reading": "きのう",
+      "aliases": [],
+      "category": "ことば",
+      "short": "アプリの中でできること、ひとつひとつのことです。",
+      "detail": "たとえば、グループを作る、友だちを追加する、などがLINEの機能です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "plus-button",
+      "term": "＋ボタン",
+      "reading": "プラスボタン",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "「＋」の印がついたボタンです。LINEでは、新しく何かを始めるときに使います。",
+      "detail": "LINEヤフーの2025年9月24日の発表では、トークルームの作成、グループの作成、友だち追加などが、ここにまとめられました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "version",
+      "term": "バージョン",
+      "reading": "バージョン",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "アプリの新しさを表す番号のことです。",
+      "detail": "アプリは新しくなるたびに、バージョンの番号が上がります。LINEヤフーの発表では、新しいトークの画面はバージョン15.16.0以上が対象です。",
+      "related": [],
+      "status": "published"
     }
   ]
 }
