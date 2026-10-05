@@ -96,6 +96,26 @@
   .list .n { font-weight:700; }
   .list .s { font-size:15px; color:var(--ink2); line-height:1.6; }
   :focus-visible { outline:3px solid var(--orange); outline-offset:2px; }
+
+  .follow { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:30px;
+            padding:16px; border:none; border-radius:16px; background:var(--head); color:#fff;
+            font-size:21px; font-weight:700; font-family:inherit; cursor:pointer; }
+  .follow svg { width:26px; height:26px; }
+  #fveil { position:fixed; inset:0; z-index:80; background:rgba(0,0,0,.4); display:none; }
+  #fsheet { position:fixed; left:0; right:0; bottom:0; z-index:81; max-width:680px; margin:0 auto;
+            background:var(--card); color:var(--ink); border-radius:18px 18px 0 0; padding:22px 18px 28px;
+            box-shadow:0 -8px 30px rgba(0,0,0,.25); display:none; max-height:88vh; overflow:auto; }
+  #fveil.on, #fsheet.on { display:block; }
+  #fsheet h3 { font-size:22px; margin-bottom:6px; }
+  #fsheet .way { margin-top:16px; padding:14px; border:1px solid var(--line); border-radius:14px; }
+  #fsheet .way b { display:block; font-size:19px; }
+  #fsheet .way p { font-size:17px; color:var(--ink2); margin-top:4px; line-height:1.7; }
+  #fsheet .go { display:block; margin-top:10px; padding:13px; border-radius:12px; text-align:center;
+                font-size:19px; font-weight:700; text-decoration:none; color:#fff; }
+  #fsheet .go.line { background:#06C755; }
+  #fsheet .go.spotify { background:#1DB954; }
+  #fsheet .close { display:block; width:100%; margin-top:16px; padding:12px; border:1px solid var(--line);
+                   border-radius:12px; background:transparent; color:var(--ink); font-size:18px; font-family:inherit; cursor:pointer; }
 </style>
 </head>
 <body>
@@ -108,7 +128,7 @@
   <p class="hint">番組に出てきた言葉を、やさしく説明しています。</p>
 <section class="cat"><h2>ことば</h2><div class="list"><a href="follow.html"><div class="n">フォロー</div><div class="s">Spotify などで、番組を登録しておくことです。新しい回が出たときに、すぐ見つけられます。</div></a><a href="mark.html"><div class="n">マーク</div><div class="s">会社の目じるしになる絵や文字です。「ロゴ」とも言います。</div></a></div></section><section class="cat"><h2>アプリ</h2><div class="list"><a href="line.html"><div class="n">LINE</div><div class="s">家族や友だちと、メッセージや電話ができるアプリです。</div></a></div></section><section class="cat"><h2>インターネット</h2><div class="list"><a href="homepage.html"><div class="n">ホームページ</div><div class="s">会社などがインターネットに出しているページです。お知らせや説明が載っています。</div></a><a href="mail.html"><div class="n">メール</div><div class="s">インターネットで届く、手紙のようなものです。</div></a><a href="link.html"><div class="n">リンク</div><div class="s">押すと、別の画面が開く文字。青い色や下線がついていることが多いです。</div></a></div></section><section class="cat"><h2>スマホの基本</h2><div class="list"><a href="app.html"><div class="n">アプリ</div><div class="s">スマホに入れて使う道具。画面に並んでいる、小さな絵のボタンです。</div></a><a href="sms.html"><div class="n">SMS</div><div class="s">電話番号あてに届く、短いメッセージです。</div></a><a href="sumaho.html"><div class="n">スマホ</div><div class="s">「スマートフォン」を短くした言葉です。電話やメール、インターネットが使える、画面をさわって操作する携帯電話です。</div></a><a href="plan.html"><div class="n">プラン</div><div class="s">料金の決まり方の種類です。どれだけ使えて、月にいくらかかるかが決まっています。</div></a><a href="button.html"><div class="n">ボタン</div><div class="s">押すと何かが動く場所です。スマホでは、画面を指で軽くさわって押します。</div></a><a href="message.html"><div class="n">メッセージ</div><div class="s">文字で送る、短いお知らせや連絡のことです。</div></a></div></section><section class="cat"><h2>安全</h2><div class="list"><a href="nisemono-message.html"><div class="n">偽物のメッセージ</div><div class="s">本物の会社のふりをして、パスワードやカードの番号を盗もうとするメッセージです。「フィッシング詐欺」と呼ばれます。</div></a><a href="card.html"><div class="n">カード</div><div class="s">ここではクレジットカードのことです。番号を知られると、勝手に買い物をされるおそれがあります。</div></a><a href="password.html"><div class="n">パスワード</div><div class="s">本人だと確かめるための、秘密の合言葉です。</div></a></div></section><section class="cat"><h2>携帯会社</h2><div class="list"><a href="eximo.html"><div class="n">eximo</div><div class="s">ドコモの料金プランの名前です。「エクシモ」と読みます。</div></a><a href="docomo.html"><div class="n">ドコモ</div><div class="s">日本の大きな携帯会社のひとつです。正式な名前は「NTTドコモ」です。</div></a><a href="docomo-shop.html"><div class="n">ドコモショップ</div><div class="s">ドコモのお店です。契約や料金の相談ができます。</div></a><a href="docomo-max.html"><div class="n">ドコモ MAX</div><div class="s">ドコモの料金プランのひとつです。使ったデータの量で、月の料金が3段階に変わります。</div></a><a href="my-docomo.html"><div class="n">My docomo</div><div class="s">ドコモの公式アプリ。料金や契約の内容を確かめられます。</div></a></div></section>
   <div class="foot">わからないことは、教室で一緒に確かめましょう。<br>
-    <a href="https://lin.ee/9c4pI82">スマホ教室TERACO の公式LINE</a></div>
+    <a href="https://lin.ee/tkYJ7Cw">スマホ教室TERACO の公式LINE</a></div>
 </main>
 </body>
 </html>

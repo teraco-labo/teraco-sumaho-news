@@ -98,6 +98,8 @@ def build(date: str) -> Path:
         news=news, lesson=html.escape(meta["lesson"]), review=review,
         homework=html.escape(meta["homework"]), sources=sources,
         audio="{AUDIO}", read="{READ}")
+    import follow_box                      # 「この番組を毎回聴く」（JS に波かっこを含むので format の後で差し込む）
+    page = page.replace("<!--FOLLOW-->", follow_box.html()).replace("/*FOLLOW_CSS*/", follow_box.CSS)
     if solo:   # 一人語りの回は名札と吹き出しを消して、ふつうの文章として読ませる
         page = page.replace("<main>", '<main class="solo">', 1)
     (ep / "index.html").write_text(page.replace("{AUDIO}", audio_rel).replace("{READ}", "yomu.html"), encoding="utf-8")
@@ -188,7 +190,7 @@ TEMPLATE = """<!DOCTYPE html>
   .src a {{ color:var(--green); }}
   .foot {{ margin-top:28px; text-align:center; font-size:16px; color:var(--ink2); }}
   .foot a {{ color:var(--green); font-weight:700; }}
-</style>
+/*FOLLOW_CSS*/</style>
 </head>
 <body>
 <header>
@@ -230,6 +232,7 @@ TEMPLATE = """<!DOCTYPE html>
     <ol>{review}</ol>
     <p class="hw"><b>宿題</b>　{homework}</p>
   </div>
+<!--FOLLOW-->
 
   <div class="src">
     <b>今日の情報のもと</b>
@@ -238,7 +241,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <div class="foot">
     わからないことは、教室で一緒に確かめましょう。<br>
-    <a href="https://lin.ee/9c4pI82">スマホ教室TERACO の公式LINE</a>
+    <a href="https://lin.ee/tkYJ7Cw">スマホ教室TERACO の公式LINE</a>
   </div>
 </main>
 <audio id="audio" src="{audio}" preload="metadata"></audio>

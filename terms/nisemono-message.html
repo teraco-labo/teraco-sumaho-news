@@ -96,6 +96,26 @@
   .list .n { font-weight:700; }
   .list .s { font-size:15px; color:var(--ink2); line-height:1.6; }
   :focus-visible { outline:3px solid var(--orange); outline-offset:2px; }
+
+  .follow { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:30px;
+            padding:16px; border:none; border-radius:16px; background:var(--head); color:#fff;
+            font-size:21px; font-weight:700; font-family:inherit; cursor:pointer; }
+  .follow svg { width:26px; height:26px; }
+  #fveil { position:fixed; inset:0; z-index:80; background:rgba(0,0,0,.4); display:none; }
+  #fsheet { position:fixed; left:0; right:0; bottom:0; z-index:81; max-width:680px; margin:0 auto;
+            background:var(--card); color:var(--ink); border-radius:18px 18px 0 0; padding:22px 18px 28px;
+            box-shadow:0 -8px 30px rgba(0,0,0,.25); display:none; max-height:88vh; overflow:auto; }
+  #fveil.on, #fsheet.on { display:block; }
+  #fsheet h3 { font-size:22px; margin-bottom:6px; }
+  #fsheet .way { margin-top:16px; padding:14px; border:1px solid var(--line); border-radius:14px; }
+  #fsheet .way b { display:block; font-size:19px; }
+  #fsheet .way p { font-size:17px; color:var(--ink2); margin-top:4px; line-height:1.7; }
+  #fsheet .go { display:block; margin-top:10px; padding:13px; border-radius:12px; text-align:center;
+                font-size:19px; font-weight:700; text-decoration:none; color:#fff; }
+  #fsheet .go.line { background:#06C755; }
+  #fsheet .go.spotify { background:#1DB954; }
+  #fsheet .close { display:block; width:100%; margin-top:16px; padding:12px; border:1px solid var(--line);
+                   border-radius:12px; background:transparent; color:var(--ink); font-size:18px; font-family:inherit; cursor:pointer; }
 </style>
 </head>
 <body>
@@ -111,7 +131,7 @@
   <div class="detail"><span class="lbl">この言葉が出てきた回</span><div class="seen"><a href="../episodes/2026-10-04/yomu.html">10月4日（日）　携帯会社を名乗る偽メッセージ、だまされない3つのコツ</a></div></div>
   <div class="more"><a href="./">用語集へ</a><a href="../">最新の回へ</a></div>
   <div class="foot">わからないことは、教室で一緒に確かめましょう。<br>
-    <a href="https://lin.ee/9c4pI82">スマホ教室TERACO の公式LINE</a></div>
+    <a href="https://lin.ee/tkYJ7Cw">スマホ教室TERACO の公式LINE</a></div>
 </main>
 <script type="application/json" id="glossary-data">{"app": {"n": "アプリ", "r": "", "s": "スマホに入れて使う道具。画面に並んでいる、小さな絵のボタンです。", "u": "../terms/app.html"}, "card": {"n": "カード", "r": "", "s": "ここではクレジットカードのことです。番号を知られると、勝手に買い物をされるおそれがあります。", "u": "../terms/card.html"}, "link": {"n": "リンク", "r": "", "s": "押すと、別の画面が開く文字。青い色や下線がついていることが多いです。", "u": "../terms/link.html"}, "message": {"n": "メッセージ", "r": "", "s": "文字で送る、短いお知らせや連絡のことです。", "u": "../terms/message.html"}, "password": {"n": "パスワード", "r": "", "s": "本人だと確かめるための、秘密の合言葉です。", "u": "../terms/password.html"}}</script>
 

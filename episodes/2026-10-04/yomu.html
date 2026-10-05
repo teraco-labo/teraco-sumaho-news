@@ -96,6 +96,26 @@
   .list .n { font-weight:700; }
   .list .s { font-size:15px; color:var(--ink2); line-height:1.6; }
   :focus-visible { outline:3px solid var(--orange); outline-offset:2px; }
+
+  .follow { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:30px;
+            padding:16px; border:none; border-radius:16px; background:var(--head); color:#fff;
+            font-size:21px; font-weight:700; font-family:inherit; cursor:pointer; }
+  .follow svg { width:26px; height:26px; }
+  #fveil { position:fixed; inset:0; z-index:80; background:rgba(0,0,0,.4); display:none; }
+  #fsheet { position:fixed; left:0; right:0; bottom:0; z-index:81; max-width:680px; margin:0 auto;
+            background:var(--card); color:var(--ink); border-radius:18px 18px 0 0; padding:22px 18px 28px;
+            box-shadow:0 -8px 30px rgba(0,0,0,.25); display:none; max-height:88vh; overflow:auto; }
+  #fveil.on, #fsheet.on { display:block; }
+  #fsheet h3 { font-size:22px; margin-bottom:6px; }
+  #fsheet .way { margin-top:16px; padding:14px; border:1px solid var(--line); border-radius:14px; }
+  #fsheet .way b { display:block; font-size:19px; }
+  #fsheet .way p { font-size:17px; color:var(--ink2); margin-top:4px; line-height:1.7; }
+  #fsheet .go { display:block; margin-top:10px; padding:13px; border-radius:12px; text-align:center;
+                font-size:19px; font-weight:700; text-decoration:none; color:#fff; }
+  #fsheet .go.line { background:#06C755; }
+  #fsheet .go.spotify { background:#1DB954; }
+  #fsheet .close { display:block; width:100%; margin-top:16px; padding:12px; border:1px solid var(--line);
+                   border-radius:12px; background:transparent; color:var(--ink); font-size:18px; font-family:inherit; cursor:pointer; }
 </style>
 </head>
 <body>
@@ -168,10 +188,35 @@
   </article>
   <div class="review"><h2>今日のおさらい</h2><ol><li>メッセージの中のリンクは、押さない</li><li>確かめたいときは、いつものアプリを自分で開く</li><li>入れてしまったら、すぐ相談する</li></ol>
     <p class="hw"><b>今日やってみること</b>　自分のスマホで、携帯会社のアプリがどこにあるか探しておく</p></div>
+
+  <button class="follow" id="follow" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>この番組を毎回聴く</span></button>
+  <div id="fveil"></div>
+  <div id="fsheet" role="dialog" aria-modal="true" aria-labelledby="fsheet-h">
+    <h3 id="fsheet-h">毎回聴くには</h3>
+    <div class="way"><b>LINE から</b>
+      <p>スマホ教室TERACO のトーク画面で、下のメニューの「ラジオを聴く」を押すと、いつでも最新の回が開きます。毎週火曜と金曜に新しい回が出ます。</p>
+      <a class="go line" href="https://lin.ee/tkYJ7Cw">LINE を開く</a></div>
+    <div class="way"><b>Spotify で</b>
+      <p>Spotify を使っている人は、フォローしておくと、新しい回がすぐ見つかります。</p>
+      <a class="go spotify" href="https://open.spotify.com/show/3jx1jEp9mOCeTlMFiGSuad">Spotify でフォローする</a></div>
+    <button class="close" id="fclose" type="button">閉じる</button>
+  </div>
+<script>
+(function(){
+  var s = document.getElementById('fsheet'), v = document.getElementById('fveil');
+  function open(){ s.classList.add('on'); v.classList.add('on'); }
+  function close(){ s.classList.remove('on'); v.classList.remove('on'); }
+  document.getElementById('follow').addEventListener('click', open);
+  document.getElementById('fclose').addEventListener('click', close);
+  v.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+})();
+</script>
+
   <div class="src"><b>今日の情報のもと</b><ul><li><a href="https://www.docomo.ne.jp/info/news_release/2026/09/25_00.html">ドコモ（2026年9月25日の発表）料金プランの変更と60歳以上割</a></li><li><a href="https://www.docomo.ne.jp/info/notice/page/260604_00.html">ドコモ（2026年6月4日のお知らせ）ドコモを名乗る偽メールへの注意</a></li></ul></div>
   <div class="more"><a href="../../terms/">この番組の用語集</a><a href="../../">最新の回へ</a></div>
   <div class="foot">わからないことは、教室で一緒に確かめましょう。<br>
-    <a href="https://lin.ee/9c4pI82">スマホ教室TERACO の公式LINE</a></div>
+    <a href="https://lin.ee/tkYJ7Cw">スマホ教室TERACO の公式LINE</a></div>
 </main>
 <script type="application/json" id="glossary-data">{"app": {"n": "アプリ", "r": "", "s": "スマホに入れて使う道具。画面に並んでいる、小さな絵のボタンです。", "u": "../../terms/app.html"}, "button": {"n": "ボタン", "r": "", "s": "押すと何かが動く場所です。スマホでは、画面を指で軽くさわって押します。", "u": "../../terms/button.html"}, "card": {"n": "カード", "r": "", "s": "ここではクレジットカードのことです。番号を知られると、勝手に買い物をされるおそれがあります。", "u": "../../terms/card.html"}, "docomo": {"n": "ドコモ", "r": "", "s": "日本の大きな携帯会社のひとつです。正式な名前は「NTTドコモ」です。", "u": "../../terms/docomo.html"}, "docomo-max": {"n": "ドコモ MAX", "r": "ドコモマックス", "s": "ドコモの料金プランのひとつです。使ったデータの量で、月の料金が3段階に変わります。", "u": "../../terms/docomo-max.html"}, "docomo-shop": {"n": "ドコモショップ", "r": "", "s": "ドコモのお店です。契約や料金の相談ができます。", "u": "../../terms/docomo-shop.html"}, "eximo": {"n": "eximo", "r": "エクシモ", "s": "ドコモの料金プランの名前です。「エクシモ」と読みます。", "u": "../../terms/eximo.html"}, "follow": {"n": "フォロー", "r": "", "s": "Spotify などで、番組を登録しておくことです。新しい回が出たときに、すぐ見つけられます。", "u": "../../terms/follow.html"}, "homepage": {"n": "ホームページ", "r": "", "s": "会社などがインターネットに出しているページです。お知らせや説明が載っています。", "u": "../../terms/homepage.html"}, "line": {"n": "LINE", "r": "ライン", "s": "家族や友だちと、メッセージや電話ができるアプリです。", "u": "../../terms/line.html"}, "link": {"n": "リンク", "r": "", "s": "押すと、別の画面が開く文字。青い色や下線がついていることが多いです。", "u": "../../terms/link.html"}, "mail": {"n": "メール", "r": "", "s": "インターネットで届く、手紙のようなものです。", "u": "../../terms/mail.html"}, "mark": {"n": "マーク", "r": "", "s": "会社の目じるしになる絵や文字です。「ロゴ」とも言います。", "u": "../../terms/mark.html"}, "message": {"n": "メッセージ", "r": "", "s": "文字で送る、短いお知らせや連絡のことです。", "u": "../../terms/message.html"}, "my-docomo": {"n": "My docomo", "r": "マイドコモ", "s": "ドコモの公式アプリ。料金や契約の内容を確かめられます。", "u": "../../terms/my-docomo.html"}, "nisemono-message": {"n": "偽物のメッセージ", "r": "にせもののメッセージ", "s": "本物の会社のふりをして、パスワードやカードの番号を盗もうとするメッセージです。「フィッシング詐欺」と呼ばれます。", "u": "../../terms/nisemono-message.html"}, "password": {"n": "パスワード", "r": "", "s": "本人だと確かめるための、秘密の合言葉です。", "u": "../../terms/password.html"}, "plan": {"n": "プラン", "r": "", "s": "料金の決まり方の種類です。どれだけ使えて、月にいくらかかるかが決まっています。", "u": "../../terms/plan.html"}, "sms": {"n": "SMS", "r": "エスエムエス", "s": "電話番号あてに届く、短いメッセージです。", "u": "../../terms/sms.html"}, "sumaho": {"n": "スマホ", "r": "", "s": "「スマートフォン」を短くした言葉です。電話やメール、インターネットが使える、画面をさわって操作する携帯電話です。", "u": "../../terms/sumaho.html"}}</script>
 

@@ -23,6 +23,7 @@ HERE = Path(__file__).resolve().parent
 NEWS_REPO = Path(os.environ.get("NEWS_REPO") or Path.home() / "Documents/Claude/ai-news-repo")
 sys.path.insert(0, str(NEWS_REPO))
 import glossary as G   # noqa: E402  AIニュースの用語の部品
+import follow_box      # noqa: E402  「この番組を毎回聴く」
 
 GLOSSARY = HERE / "glossary.json"
 WEEK = "月火水木金土日"
@@ -136,7 +137,7 @@ def _page(title: str, desc: str, header_sub: str, body: str, home: str, tail: st
 <meta name="description" content="{html.escape(desc)}">
 <link rel="icon" href="{home}cover.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
-<style>{G.TOOLTIP_CSS}{CSS}</style>
+<style>{G.TOOLTIP_CSS}{CSS}{follow_box.CSS}</style>
 </head>
 <body>
 <header>
@@ -146,7 +147,7 @@ def _page(title: str, desc: str, header_sub: str, body: str, home: str, tail: st
 <main>
 {body}
   <div class="foot">わからないことは、教室で一緒に確かめましょう。<br>
-    <a href="https://lin.ee/9c4pI82">スマホ教室TERACO の公式LINE</a></div>
+    <a href="https://lin.ee/tkYJ7Cw">スマホ教室TERACO の公式LINE</a></div>
 </main>
 {tail}</body>
 </html>
@@ -176,6 +177,7 @@ def build_yomu(date: str, terms: dict) -> Path:
   </article>
   <div class="review"><h2>今日のおさらい</h2><ol>{review}</ol>
     <p class="hw"><b>今日やってみること</b>　{html.escape(n['homework'])}</p></div>
+{follow_box.html()}
   <div class="src"><b>今日の情報のもと</b><ul>{sources}</ul></div>
   <div class="more"><a href="../../terms/">この番組の用語集</a><a href="../../">最新の回へ</a></div>"""
     out = ep / "yomu.html"
