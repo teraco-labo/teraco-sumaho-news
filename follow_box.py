@@ -2,7 +2,9 @@
 """「この番組を毎回聴く」ボタンと、押すと下から出る案内（聴くページ・文字で読むページで共用）。
 
 藤崎さん（2026-10-05）「生徒さんが聴いていいなと思ったら、毎回聴くボタンがあった方がいい」。
-入口は LINE（いちばん簡単。生徒さんはすでに LINE からこのページに来ている）と Spotify の2つ。
+入口は LINE とメール（Substack の「スマホニュース」区分け）の2択。Spotify は小さな文字のリンクで残す。
+2026-10-05 藤崎さん「最終的にはメールアドレスのリストを取りたい。LINE の友だちもリスト。選べた方がいい」。
+Spotify はフォローされても連絡先が分からない（リストにならない）ので主役にしない。
 「ホーム画面に追加」は、LINE の中のブラウザでは使えないので入れていない。
 JS に { } を含むので、str.format のテンプレートには format の後で差し込むこと。
 """
@@ -28,7 +30,9 @@ CSS = """
   #fsheet .go { display:block; margin-top:10px; padding:13px; border-radius:12px; text-align:center;
                 font-size:19px; font-weight:700; text-decoration:none; color:#fff; }
   #fsheet .go.line { background:#06C755; }
-  #fsheet .go.spotify { background:#1DB954; }
+  #fsheet .go.mail { background:var(--orange); }
+  #fsheet .sp-link { margin-top:14px; font-size:16px; color:var(--ink2); text-align:center; }
+  #fsheet .sp-link a { color:var(--ink2); }
   #fsheet .close { display:block; width:100%; margin-top:16px; padding:12px; border:1px solid var(--line);
                    border-radius:12px; background:transparent; color:var(--ink); font-size:18px; font-family:inherit; cursor:pointer; }
 """
@@ -42,12 +46,13 @@ def html() -> str:
   <div id="fveil"></div>
   <div id="fsheet" role="dialog" aria-modal="true" aria-labelledby="fsheet-h">
     <h3 id="fsheet-h">毎回聴くには</h3>
-    <div class="way"><b>LINE から</b>
+    <div class="way"><b>LINE で</b>
       <p>スマホ教室TERACO のトーク画面で、下のメニューの「ラジオを聴く」を押すと、いつでも最新の回が開きます。毎週火曜と金曜に新しい回が出ます。</p>
       <a class="go line" href="{CFG['line_url']}">LINE を開く</a></div>
-    <div class="way"><b>Spotify で</b>
-      <p>Spotify を使っている人は、フォローしておくと、新しい回がすぐ見つかります。</p>
-      <a class="go spotify" href="{CFG['spotify_url']}">Spotify でフォローする</a></div>
+    <div class="way"><b>メールで</b>
+      <p>メールアドレスを登録すると、番組からのお知らせがメールで届きます。登録は無料です。</p>
+      <a class="go mail" href="{CFG['substack_url']}">メールで受け取る</a></div>
+    <p class="sp-link">Spotify を使っている人は <a href="{CFG['spotify_url']}">こちらからフォロー</a></p>
     <button class="close" id="fclose" type="button">閉じる</button>
   </div>
 <script>
