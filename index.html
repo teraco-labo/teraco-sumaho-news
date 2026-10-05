@@ -2,228 +2,416 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>世界一わかりやすいスマホニュース</title>
-<meta name="description" content="携帯会社を名乗る偽メッセージ、だまされない3つのコツ">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>携帯会社を名乗る偽メッセージ、だまされない3つのコツ｜世界一わかりやすいスマホニュース</title>
+<meta name="description" content="今日のテーマ：携帯会社を名乗る偽メッセージ、だまされない3つのコツ">
+<link rel="canonical" href="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="携帯会社を名乗る偽メッセージ、だまされない3つのコツ｜世界一わかりやすいスマホニュース">
+<meta property="og:description" content="今日のテーマ：携帯会社を名乗る偽メッセージ、だまされない3つのコツ">
+<meta property="og:url" content="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/">
+<meta property="og:site_name" content="世界一わかりやすいスマホニュース">
+<meta property="og:image" content="https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="世界一わかりやすいスマホニュース" href="https://teraco-labo.github.io/teraco-sumaho-news/feed.xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "携帯会社を名乗る偽メッセージ、だまされない3つのコツ｜世界一わかりやすいスマホニュース", "description": "今日のテーマ：携帯会社を名乗る偽メッセージ、だまされない3つのコツ", "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/", "inLanguage": "ja", "author": {"@type": "Person", "name": "てらこ先生"}, "partOfSeries": {"@type": "PodcastSeries", "name": "世界一わかりやすいスマホニュース", "url": "https://teraco-labo.github.io/teraco-sumaho-news/"}, "datePublished": "2026-10-04"}</script>
 <link rel="icon" href="cover.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#F6F4EE; --card:#fff; --ink:#22251F; --ink2:#55594F; --line:#E2DED2;
-          --green:#1E4D3B; --green2:#163A2C; --orange:#E8792B; --orange-soft:#FCEBDC;
-          --teach:#E6F0EA; --mika:#FFF3E8; --now:#FFE7A8; --note:#fff; --head:#1E4D3B; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141915; --card:#1E2420; --ink:#ECEDE8;
-          --ink2:#B5B9AE; --line:#333A34; --green:#8CC7A6; --orange-soft:#3A2A1C; --teach:#1F3229; --mika:#3A2A1C;
-          --now:#5C4A12; --note:#141915; color-scheme:dark; } }
-  :root[data-theme="dark"] { --bg:#141915; --card:#1E2420; --ink:#ECEDE8; --ink2:#B5B9AE; --line:#333A34;
-          --green:#8CC7A6; --orange-soft:#3A2A1C; --teach:#1F3229; --mika:#3A2A1C; --now:#5C4A12; --note:#141915;
-          color-scheme:dark; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--ink); font-family:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;
-         font-size:19px; line-height:1.75; -webkit-text-size-adjust:100%; }
-  header { background:var(--head); color:#fff; padding:22px 16px 20px; text-align:center; }
-  header .sub { font-size:15px; opacity:.85; }
-  header h1 { font-size:27px; font-weight:700; line-height:1.3; }
-  header .date { margin-top:8px; font-size:17px; }
-  main { max-width:640px; margin:0 auto; padding:0 16px 60px; }
-  .player { background:var(--card); border:2px solid var(--line); border-radius:20px; padding:18px 16px;
-            margin-top:-2px; position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; box-shadow:0 4px 14px rgba(0,0,0,.06); }
-  .ttl { font-size:18px; font-weight:700; line-height:1.45; }
-  .btn { display:flex; align-items:center; justify-content:center; gap:12px; width:100%; margin-top:12px;
-         padding:18px; border:none; border-radius:16px; background:var(--orange); color:#fff;
-         font-size:24px; font-weight:700; font-family:inherit; cursor:pointer; }
-  .btn svg { width:30px; height:30px; }
-  .row { display:flex; align-items:center; gap:10px; margin-top:12px; }
-  .back { flex:none; border:2px solid var(--line); background:var(--card); border-radius:12px; padding:8px 12px;
-          font-size:16px; font-weight:700; font-family:inherit; color:var(--ink); cursor:pointer; }
-  input[type=range] { flex:1; min-width:0; accent-color:var(--orange); height:28px; }
-  .time { font-size:15px; color:var(--ink2); text-align:right; margin-top:2px; }
-  .speed { margin-top:12px; }
-  .player.mini .ttl, .player.mini .speed, .player.mini .time { display:none; }
-  .player.mini .btn { margin-top:0; padding:12px; font-size:20px; }
-  .btn.read { background:var(--card); color:var(--head); border:3px solid var(--head); text-decoration:none; padding:14px; font-size:22px; }
-  .player.mini .btn.read { display:none; }
-  .yomu-h { margin-top:30px; font-size:22px; color:var(--green); scroll-margin-top:170px; }
-  .yomu-h small { display:block; font-size:15px; color:var(--ink2); font-weight:500; }
-  .speed-k { display:flex; justify-content:space-between; font-size:13px; color:var(--ink2); padding:0 2px; }
-  .speed-row { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:2px; }
-  .sp { border:2px solid var(--line); background:var(--card); color:var(--ink); border-radius:10px;
-        padding:8px 0; font-size:16px; font-weight:700; font-family:inherit; cursor:pointer; }
-  .sp.on { background:var(--head); border-color:var(--head); color:#fff; }
-  .sp:focus-visible, .btn:focus-visible, .back:focus-visible { outline:3px solid var(--orange); outline-offset:2px; }
-  .menu { background:var(--card); border:2px solid var(--line); border-radius:18px; padding:16px; margin-top:16px; }
-  .menu h2 { font-size:17px; color:var(--green); }
-  .menu ul { padding-left:1.2em; }
-  .menu .k { display:inline-block; font-size:14px; font-weight:700; color:#fff; background:var(--head);
-             border-radius:6px; padding:0 8px; margin-top:8px; }
-  .part h3 { margin:30px 0 10px; font-size:21px; color:var(--green); border-left:6px solid var(--orange); padding-left:10px; }
-  .line { border-radius:14px; padding:10px 14px; margin:8px 0; cursor:pointer; transition:background .2s; }
-  .line.t { background:var(--teach); margin-right:28px; }
-  .line.m { background:var(--mika); margin-left:28px; }
-  .line.now { background:var(--now); }
-  .solo .who { display:none; }
-  .solo .line.t { margin-right:0; background:transparent; padding:8px 10px; }
-  .solo .line.t.now { background:var(--now); }
-  .who { font-size:13px; font-weight:700; color:var(--ink2); }
-  .term { text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:3px; text-underline-offset:4px; }
-  .note { margin-top:6px; background:var(--note); border-radius:10px; padding:6px 10px; font-size:16px; line-height:1.6; color:var(--ink2); }
-  .note b { color:var(--ink); }
-  .note-k { font-size:12px; font-weight:700; color:#fff; background:var(--orange); border-radius:5px; padding:1px 6px; margin-right:6px; }
-  .review { background:var(--orange-soft); border-radius:18px; padding:18px 16px; margin-top:28px; }
-  .review h2 { font-size:20px; }
-  .review ol { padding-left:1.4em; font-size:20px; font-weight:700; }
-  .review .hw { margin-top:12px; font-size:17px; }
-  .src { margin-top:28px; font-size:15px; color:var(--ink2); }
-  .src ul { padding-left:1.2em; }
-  .src a { color:var(--green); }
-  .foot { margin-top:28px; text-align:center; font-size:16px; color:var(--ink2); }
-  .foot a { color:var(--green); font-weight:700; }
+  .t { color:var(--accent); border-bottom:1px dashed currentColor; cursor:help;
+    font-weight:500; }
+  .t:hover, .t:focus-visible { background:rgba(14,116,144,0.10); outline:none; border-radius:2px; }
+  #tip { position:absolute; z-index:60; max-width:min(22rem,88vw); padding:0.85rem 1rem;
+    background:var(--card-bg); border:1px solid var(--border); border-radius:8px;
+    box-shadow:0 8px 28px rgba(15,23,42,0.16); font-size:0.84rem; line-height:1.8;
+    opacity:0; visibility:hidden; transition:opacity .12s; pointer-events:none; }
+  #tip.on { opacity:1; visibility:visible; pointer-events:auto; }
+  #tip .tip-n { font-weight:700; display:block; margin-bottom:0.3rem; }
+  #tip .tip-m { display:inline-block; margin-top:0.5rem; font-size:0.78rem;
+    font-weight:600; color:var(--accent); text-decoration:none; }
+  #sheet { position:fixed; left:0; right:0; bottom:0; z-index:70; padding:1.4rem 1.4rem 2rem;
+    background:var(--card-bg); border-top:1px solid var(--border);
+    border-radius:16px 16px 0 0; box-shadow:0 -8px 32px rgba(15,23,42,0.22);
+    transform:translateY(102%); transition:transform .22s ease; }
+  #sheet.on { transform:translateY(0); }
+  #sheet .sheet-grip { width:36px; height:4px; border-radius:2px; background:var(--border);
+    margin:0 auto 1rem; }
+  #sheet .tip-n { font-size:1.05rem; font-weight:700; display:block; margin-bottom:0.5rem; }
+  #sheet .tip-s { font-size:0.92rem; line-height:1.95; color:var(--text-muted); }
+  #sheet .tip-m { display:block; margin-top:1.1rem; padding:0.75rem; text-align:center;
+    background:var(--accent); color:#fff; border-radius:8px; font-size:0.88rem;
+    font-weight:700; text-decoration:none; }
+  #veil { position:fixed; inset:0; z-index:69; background:rgba(15,23,42,0.35);
+    opacity:0; visibility:hidden; transition:opacity .22s; }
+  #veil.on { opacity:1; visibility:visible; }
+  @media (prefers-reduced-motion:reduce){ #sheet,#veil,#tip{transition:none} }
 
-  .follow { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:30px;
-            padding:16px; border:none; border-radius:16px; background:var(--head); color:#fff;
-            font-size:21px; font-weight:700; font-family:inherit; cursor:pointer; }
-  .follow svg { width:26px; height:26px; }
+  :root { --bg:#FFFBEF;--card:#FFFFFF;--ink:#3D261D;--ink2:#7A5A48;--line:#F1E3C6;--head:#F9B050;--head-ink:#3D261D;--accent:#B8560F;--heading:#A04A10;--btn:#E8720C;--btn-ink:#FFFFFF;--soft:#FFF0D6;--now:#FFE08A;--mark:#F59A2E;--leaf:#CFE3A3;--leaf-ink:#33461A;--chip:#3D261D;--chip-ink:#FFFBEF;--hero1:#FFFDF6;--hero2:#FFE8C2;--hero-ink:#3D261D;--hero-sub:#7A5A48;--ribbon1:rgba(249,176,80,.55);--ribbon2:rgba(156,196,107,.50);--btn2:#F9B050;--pill-border:#F3C27E;--pill-bg:#FFFFFF;--pill-ink:#8A3F0B;--follow:#CFE3A3;--follow-ink:#33461A;--follow-edge:#9CC46B; --play-size:72px; --card-bg:var(--card); --border:var(--line); --text:var(--ink); --text-muted:var(--ink2); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1E1712;--card:#2A211A;--ink:#F6EBDD;--ink2:#CDB9A5;--line:#43362B;--head:#5A3A1E;--head-ink:#FFE3C0;--accent:#F7B267;--heading:#F7B267;--btn:#E8720C;--btn-ink:#FFFFFF;--soft:#3A2A1C;--now:#5C4512;--mark:#F59A2E;--leaf:#3F5726;--leaf-ink:#E5F2CC;--chip:#F6EBDD;--chip-ink:#1E1712;--hero1:#2A1E14;--hero2:#3A2716;--hero-ink:#FFE9CF;--hero-sub:#E2C8AE;--ribbon1:rgba(249,176,80,.35);--ribbon2:rgba(156,196,107,.30);--btn2:#F9B050;--pill-border:#6B4A2A;--pill-bg:#2A211A;--pill-ink:#F7B267;--follow:#3F5726;--follow-ink:#E5F2CC;--follow-edge:#2C3D1A; color-scheme:dark; } }
+  :root[data-theme="dark"] { --bg:#1E1712;--card:#2A211A;--ink:#F6EBDD;--ink2:#CDB9A5;--line:#43362B;--head:#5A3A1E;--head-ink:#FFE3C0;--accent:#F7B267;--heading:#F7B267;--btn:#E8720C;--btn-ink:#FFFFFF;--soft:#3A2A1C;--now:#5C4512;--mark:#F59A2E;--leaf:#3F5726;--leaf-ink:#E5F2CC;--chip:#F6EBDD;--chip-ink:#1E1712;--hero1:#2A1E14;--hero2:#3A2716;--hero-ink:#FFE9CF;--hero-sub:#E2C8AE;--ribbon1:rgba(249,176,80,.35);--ribbon2:rgba(156,196,107,.30);--btn2:#F9B050;--pill-border:#6B4A2A;--pill-bg:#2A211A;--pill-ink:#F7B267;--follow:#3F5726;--follow-ink:#E5F2CC;--follow-edge:#2C3D1A; color-scheme:dark; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:'Noto Sans JP','Hiragino Sans',sans-serif; font-size:19px;
+         font-weight:500; line-height:1.85; -webkit-text-size-adjust:100%; }
+  a { color:var(--heading); }
+  .hero { position:relative; overflow:hidden; background:linear-gradient(180deg,var(--hero1),var(--hero2));
+          color:var(--hero-ink); padding:28px 16px 30px; border-bottom:1px solid var(--line); }
+  .hero::before, .hero::after { content:""; position:absolute; border-radius:999px; pointer-events:none; }
+  .hero::before { right:-160px; bottom:-40px; width:620px; height:120px; transform:rotate(-14deg);
+                  background:linear-gradient(90deg,transparent,var(--ribbon1)); }
+  .hero::after { right:-120px; bottom:-90px; width:560px; height:90px; transform:rotate(-14deg);
+                 background:linear-gradient(90deg,transparent,var(--ribbon2)); }
+  .hero-inner { position:relative; z-index:1; max-width:680px; margin:0 auto; }
+  .crumbs { font-size:.78em; color:var(--hero-sub); margin-bottom:6px; }
+  .crumbs a { color:var(--hero-sub); text-decoration:none; }
+  .hero h1 { font-size:1.45em; font-weight:900; line-height:1.4; text-wrap:balance; }
+  .hero p { margin-top:6px; font-size:.9em; color:var(--hero-sub); }
+  .top-nav { margin-top:14px; display:flex; flex-wrap:wrap; gap:8px; }
+  .top-nav a { padding:6px 14px; border-radius:999px; border:1.5px solid var(--pill-border); background:var(--pill-bg);
+               color:var(--pill-ink); font-size:.8em; font-weight:700; text-decoration:none; }
+  main { max-width:680px; margin:0 auto; padding:18px 16px 110px; }
+  h2 { margin:32px 0 8px; font-size:1.16em; font-weight:900; color:var(--heading); border-left:6px solid var(--mark); padding-left:10px; text-wrap:balance; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:16px; margin-top:16px; }
+  .lbl { display:inline-block; font-size:.72em; font-weight:700; color:#fff; background:var(--head); border-radius:6px; padding:0 8px; margin-top:6px; }
+  .card ul { padding-left:1.2em; }
+  .soft { background:var(--soft); border-radius:18px; padding:18px 16px; margin-top:30px; }
+  .soft h2 { margin:0 0 6px; border:0; padding:0; color:var(--ink); }
+  .soft ol { padding-left:1.4em; font-size:1.05em; font-weight:700; }
+  .soft .hw { margin-top:10px; font-size:.9em; }
+  .src { margin-top:26px; font-size:.8em; color:var(--ink2); }
+  .src ul { padding-left:1.2em; }
+  .links { margin-top:22px; font-size:.85em; display:flex; flex-wrap:wrap; gap:8px 18px; }
+  footer.foot { margin-top:28px; text-align:center; font-size:.85em; color:var(--ink2); }
+  footer.foot a { font-weight:700; }
+  .t { font-weight:700; }
+  #tip { font-size:17px !important; line-height:1.8 !important; }
+  #sheet .tip-n { font-size:1.1em !important; }
+  #sheet .tip-s { font-size:.95em !important; color:var(--ink) !important; }
+  #sheet .tip-m { font-size:.95em !important; padding:14px !important; background:var(--chip) !important; color:var(--chip-ink) !important; }
+  :focus-visible { outline:3px solid var(--mark); outline-offset:2px; }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; scroll-behavior:auto !important; } }
+
+  .player { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 16px 16px; margin-top:-14px;
+             position:relative; z-index:2; box-shadow:0 6px 24px rgba(0,0,0,.06); }
+  .p-head { display:flex; gap:14px; align-items:center; }
+  .p-head img { width:84px; height:84px; border-radius:12px; flex:none; box-shadow:0 4px 14px rgba(0,0,0,.12); }
+  .p-date { font-size:.8em; color:var(--ink2); }
+  .p-title { font-weight:700; line-height:1.4; }
+  .progress { position:relative; height:10px; background:var(--line); border-radius:5px; margin-top:18px; cursor:pointer; touch-action:none; }
+  .progress .fill { position:absolute; left:0; top:0; bottom:0; width:0; background:linear-gradient(90deg,var(--btn2),var(--btn)); border-radius:5px; }
+  .progress .knob { position:absolute; top:50%; left:0; width:20px; height:20px; margin:-10px 0 0 -10px; border-radius:50%;
+                    background:var(--btn); border:3px solid var(--card); box-shadow:0 1px 4px rgba(0,0,0,.25); }
+  .time-row { display:flex; justify-content:space-between; font-size:.75em; color:var(--ink2); margin-top:6px; font-variant-numeric:tabular-nums; }
+  .controls { display:flex; align-items:center; justify-content:center; gap:4px; margin-top:6px; }
+  .ctl { display:flex; flex-direction:column; align-items:center; background:none; border:none; color:var(--ink); cursor:pointer;
+         padding:8px; border-radius:12px; font-family:inherit; }
+  .ctl svg { width:30px; height:30px; display:block; }
+  .ctl small { font-size:.6em; color:var(--ink2); font-weight:700; margin-top:-1px; }
+  .ctl.play { width:var(--play-size); height:var(--play-size); margin:0 10px; padding:0; justify-content:center; border-radius:50%;
+              background:var(--btn); color:var(--btn-ink); box-shadow:0 6px 16px color-mix(in srgb, var(--btn) 40%, transparent); }
+  .ctl.play svg { width:34px; height:34px; }
+  .play-lbl { text-align:center; font-size:.78em; font-weight:700; color:var(--ink2); margin-top:2px; }
+  .speed-row { margin-top:12px; }
+  .speed-label { display:block; font-size:.75em; color:var(--ink2); font-weight:700; margin-bottom:4px; }
+  .speed-btns { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,1fr)); gap:6px; }
+  .speed-btns .sp { padding:8px 0; border-radius:999px; border:1.5px solid var(--line); background:var(--bg); color:var(--ink);
+                    font-size:.85em; font-weight:700; font-family:inherit; cursor:pointer; }
+  .speed-btns .sp.on { background:var(--btn); border-color:var(--btn); color:var(--btn-ink); }
+  .readbtn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:12px; padding:13px;
+             border:2px solid var(--pill-border); border-radius:999px; background:var(--pill-bg); color:var(--pill-ink); font-size:1em;
+             font-weight:700; text-decoration:none; }
+  .readbtn svg { width:22px; height:22px; }
+  .kbd { margin-top:10px; font-size:.7em; color:var(--ink2); display:none; }
+  @media (hover:hover) and (pointer:fine) { .kbd { display:block; } }
+  .mini { position:fixed; left:0; right:0; bottom:0; z-index:50; background:var(--card); border-top:1px solid var(--line);
+          box-shadow:0 -6px 20px rgba(0,0,0,.12); padding:10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+          display:flex; gap:10px; align-items:center; transform:translateY(110%); transition:transform .2s; }
+  .mini.show { transform:translateY(0); }
+  .mini button { flex:none; border:none; border-radius:12px; font-family:inherit; font-weight:700; cursor:pointer; }
+  .mini .m-play { width:52px; height:44px; background:var(--btn); color:var(--btn-ink); }
+  .mini .m-play svg { width:24px; height:24px; }
+  .mini .m-back { position:relative; width:44px; height:44px; background:transparent; color:var(--ink); }
+  .mini .m-back svg { width:36px; height:36px; }
+  .mini .m-back span { position:absolute; left:0; right:0; top:50%; transform:translateY(-46%); font-size:.55em; font-weight:700; }
+  .mini .m-bar { flex:1; height:8px; background:var(--line); border-radius:4px; overflow:hidden; }
+  .mini .m-fill { height:100%; width:0; background:var(--btn); }
+  .mini .m-time { flex:none; font-size:.72em; color:var(--ink2); font-variant-numeric:tabular-nums; }
+  .read-h { scroll-margin-top:16px; }
+  .read-hint { font-size:.82em; color:var(--ink2); background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 14px; margin-top:8px; }
+  .ln { border-radius:12px; padding:6px 10px; margin:6px -10px; cursor:pointer; transition:background .2s; }
+  .ln.now { background:var(--now); }
+  .ln .who { display:block; font-size:.68em; font-weight:700; color:var(--ink2); }
+  .ln.partner { background:color-mix(in srgb, var(--soft) 55%, transparent); }
+  .ln.partner.now { background:var(--now); }
+  .follow { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:28px; padding:14px;
+            border:none; border-radius:999px; background:var(--follow); color:var(--follow-ink); font-size:1.05em; font-weight:700;
+            font-family:inherit; cursor:pointer; box-shadow:0 3px 0 var(--follow-edge); }
+  .follow:active { transform:translateY(2px); box-shadow:0 1px 0 var(--follow-edge); }
+  .follow svg { width:24px; height:24px; }
+  .follow.follow-top { margin-top:14px; }
   #fveil { position:fixed; inset:0; z-index:80; background:rgba(0,0,0,.4); display:none; }
-  #fsheet { position:fixed; left:0; right:0; bottom:0; z-index:81; max-width:680px; margin:0 auto;
-            background:var(--card); color:var(--ink); border-radius:18px 18px 0 0; padding:22px 18px 28px;
+  #fsheet { position:fixed; left:0; right:0; bottom:0; z-index:81; max-width:680px; margin:0 auto; background:var(--card);
+            color:var(--ink); border-radius:18px 18px 0 0; padding:22px 18px calc(26px + env(safe-area-inset-bottom, 0px));
             box-shadow:0 -8px 30px rgba(0,0,0,.25); display:none; max-height:88vh; overflow:auto; }
   #fveil.on, #fsheet.on { display:block; }
-  #fsheet h3 { font-size:22px; margin-bottom:6px; }
-  #fsheet .way { margin-top:16px; padding:14px; border:1px solid var(--line); border-radius:14px; }
-  #fsheet .way b { display:block; font-size:19px; }
-  #fsheet .way p { font-size:17px; color:var(--ink2); margin-top:4px; line-height:1.7; }
-  #fsheet .go { display:block; margin-top:10px; padding:13px; border-radius:12px; text-align:center;
-                font-size:19px; font-weight:700; text-decoration:none; color:#fff; }
-  #fsheet .go.line { background:#06C755; }
-  #fsheet .go.mail { background:var(--orange); }
-  #fsheet .sp-link { margin-top:14px; font-size:16px; color:var(--ink2); text-align:center; }
-  #fsheet .sp-link a { color:var(--ink2); }
-  #fsheet .close { display:block; width:100%; margin-top:16px; padding:12px; border:1px solid var(--line);
-                   border-radius:12px; background:transparent; color:var(--ink); font-size:18px; font-family:inherit; cursor:pointer; }
+  #fsheet h3 { font-size:1.15em; }
+  #fsheet .way { margin-top:14px; padding:14px; border:1px solid var(--line); border-radius:14px; }
+  #fsheet .way b { display:block; }
+  #fsheet .way p { font-size:.9em; color:var(--ink2); margin-top:4px; line-height:1.7; }
+  #fsheet .go { display:block; margin-top:10px; padding:13px; border-radius:12px; text-align:center; font-weight:700;
+                text-decoration:none; color:#fff; background:var(--btn); }
+  #fsheet .go.spotify { background:#1DB954; }
+  #fsheet .small { margin-top:14px; font-size:.85em; color:var(--ink2); text-align:center; }
+  #fsheet .small a { color:var(--ink2); }
+  #fsheet .close { display:block; width:100%; margin-top:14px; padding:12px; border:1px solid var(--line); border-radius:12px;
+                   background:transparent; color:var(--ink); font-size:.95em; font-family:inherit; cursor:pointer; }
 </style>
 </head>
 <body>
-<header>
-  <div class="sub">てらこ先生の</div>
-  <h1>世界一わかりやすい<br>スマホニュース</h1>
-  <div class="date">10月4日（日）・第1回</div>
-</header>
-<main class="solo">
-  <div class="player">
-    <div class="ttl">携帯会社を名乗る偽メッセージ、だまされない3つのコツ</div>
-    <button class="btn" id="play"></button>
-    <a class="btn read" id="read" href="episodes/2026-10-04/yomu.html"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4z"/></svg><span>文字で読む</span></a>
-    <div class="row">
-      <button class="back" id="back">10秒もどる</button>
-      <input type="range" id="seek" min="0" max="1000" value="0" aria-label="再生位置">
-    </div>
-    <div class="time" id="time">0:00</div>
-    <div class="speed">
-      <div class="speed-k"><span>ゆっくり</span><span>聴く速さ</span><span>はやく</span></div>
-      <div class="speed-row" id="speed">
-        <button class="sp" data-r="0.8">0.8倍</button>
-        <button class="sp" data-r="1">ふつう</button>
-        <button class="sp" data-r="1.2">1.2倍</button>
-      </div>
-    </div>
+<header class="hero"><div class="hero-inner"><div class="crumbs"><a href="">世界一わかりやすいスマホニュース</a></div><h1>携帯会社を名乗る偽メッセージ、だまされない3つのコツ</h1><p>10月4日（日）・第1回</p><nav class="top-nav"><a href="">トップ</a><a href="archive.html">これまでの回</a><a href="terms/">用語集</a></nav></div></header>
+<main>
+
+  <div class="player" id="player">
+    <div class="p-head"><img src="cover.jpg" alt="" width="84" height="84"><div><div class="p-date">10月4日（日）・第1回</div><div class="p-title">世界一わかりやすいスマホニュース</div></div></div>
+    <div class="progress" id="progress" role="slider" aria-label="再生位置" tabindex="0"><div class="fill" id="fill"></div><div class="knob" id="knob"></div></div>
+    <div class="time-row"><span id="cur">0:00</span><span id="dur">--:--</span></div>
+    <div class="controls"><button type="button" class="ctl" data-skip="-30" aria-label="30秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>30</small></button><button type="button" class="ctl" data-skip="-10" aria-label="10秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>10</small></button><button class="ctl play" id="play" type="button" aria-label="音声で聴く"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><button type="button" class="ctl" data-skip="10" aria-label="10秒すすむ"><svg style="transform:scaleX(-1)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>10</small></button><button type="button" class="ctl" data-skip="30" aria-label="30秒すすむ"><svg style="transform:scaleX(-1)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>30</small></button></div>
+    <div class="play-lbl" id="playLbl">音声で聴く</div>
+    <div class="speed-row" id="speeds"><span class="speed-label">聴く速さ</span><div class="speed-btns"><button type="button" class="sp" data-r="0.7">0.7×</button><button type="button" class="sp" data-r="0.8">0.8×</button><button type="button" class="sp" data-r="1">ふつう</button><button type="button" class="sp" data-r="1.2">1.2×</button><button type="button" class="sp" data-r="1.5">1.5×</button></div></div>
+    <button class="follow follow-top" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>この番組を毎回聴く</span></button>
+    <a class="readbtn" href="#yomu" id="toread"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4z"/></svg><span>文字で読む</span></a>
+    <p class="kbd">キーボード：スペースで再生／停止、← → で10秒、J / L で30秒</p>
   </div>
-
-  <div class="menu">
-    <h2>今日の内容</h2>
-    <span class="k">きっかけのニュース</span>
-    <ul><li>ドコモの「60歳以上割」が始まり、12月には一部のプランが値上げ</li></ul>
-    <span class="k">今日のテーマ</span>
-    <ul><li>携帯会社を名乗る偽メッセージ、だまされない3つのコツ</li></ul>
+  <audio id="audio" src="episodes/2026-10-04/audio.mp3" preload="metadata"></audio>
+  <div class="mini" id="mini" aria-hidden="true">
+    <button type="button" class="m-play" id="mplay" aria-label="再生／一時停止"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+    <button type="button" class="m-back" data-skip="-10" aria-label="10秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><span>10</span></button>
+    <div class="m-bar"><div class="m-fill" id="mfill"></div></div>
+    <span class="m-time" id="mtime">0:00</span>
   </div>
+  <div class="card"><b>今日の内容</b><br><span class="lbl">きっかけのニュース</span><ul><li>ドコモの「60歳以上割」が始まり、12月には一部のプランが値上げ</li></ul><span class="lbl">今日のテーマ</span><ul><li>携帯会社を名乗る偽メッセージ、だまされない3つのコツ</li></ul></div>
+  <h2 class="read-h" id="yomu">文字で読む</h2>
+  <p class="read-hint">線が引いてある言葉を押すと、説明が出ます。文を押すと、そこから聴けます。</p>
+  <article>
+<h2>今日のお話</h2>
+<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすい<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span>ニュース、てらこ先生です。</p>
+<p class="ln teacher" data-t="5.88">今日お伝えするのは、携帯会社を名乗る、<span class="t" data-t="nisemono-message" tabindex="0" role="button" aria-label="偽物のメッセージの説明を見る">偽物のメッセージ</span>のお話です。だまされないためのコツを、お伝えします。</p>
+<p class="ln teacher" data-t="14.14">その前に、まずは本物のニュースから。<span class="t" data-t="docomo" tabindex="0" role="button" aria-label="ドコモの説明を見る">ドコモ</span>が公式に発表した、料金のお知らせです。</p>
+<p class="ln teacher" data-t="20.88">実はこのニュースが、今日のお話とつながっています。</p>
+<h2>まずは本物のニュース</h2>
+<p class="ln teacher" data-t="25.2">ドコモが9月25日に、公式に発表しました。</p>
+<p class="ln teacher" data-t="29.52">10月1日から、新しい割引が始まっています。「<span class="t" data-t="docomo-max" tabindex="0" role="button" aria-label="ドコモ MAXの説明を見る">ドコモ MAX</span> 60歳以上割」です。</p>
+<p class="ln teacher" data-t="36.36">対象は60歳以上の人。ドコモ MAXという<span class="t" data-t="plan" tabindex="0" role="button" aria-label="プランの説明を見る">プラン</span>が、毎月最大2,970円安くなります。</p>
+<p class="ln teacher" data-t="44.46">ただし、安くなるのは最大3か月だけ。そのあとは、ふつうの値段に戻ります。</p>
+<p class="ln teacher" data-t="51.04">割引には、ほかにも細かい条件があります。気になる人は、<span class="t" data-t="docomo-shop" tabindex="0" role="button" aria-label="ドコモショップの説明を見る">ドコモショップ</span>で確かめてくださいね。</p>
+<p class="ln teacher" data-t="57.72">それから、12月1日からは、いくつかの料金プランが値上げになります。たとえば「<span class="t" data-t="eximo" tabindex="0" role="button" aria-label="eximoの説明を見る">eximo</span>」は、月に550円上がります。</p>
+<p class="ln teacher" data-t="67.16">ここまでが、ドコモが公式に発表した、本物のニュースです。</p>
+<p class="ln teacher" data-t="72.04">本物のお知らせは、ドコモの<span class="t" data-t="homepage" tabindex="0" role="button" aria-label="ホームページの説明を見る">ホームページ</span>や<span class="t" data-t="app" tabindex="0" role="button" aria-label="アプリの説明を見る">アプリ</span>で、いつでも確かめられます。</p>
+<h2>ここから今日のお話</h2>
+<p class="ln teacher" data-t="77.54">安くなる話、高くなる話。料金のこと、気になりますよね。</p>
+<p class="ln teacher" data-t="83.2">実は、こういう時期こそ、気をつけてほしいことがあるんです。</p>
+<p class="ln teacher" data-t="87.92">教室でもよくお話しするんですが、偽物のメッセージは、ちょうどいい時期に来ます。</p>
+<p class="ln teacher" data-t="94.36">たとえば、こんな文章です。「ご利用料金が高額になっています。こちらからご確認ください」。</p>
+<p class="ln teacher" data-t="101.14">料金の話を聞いたばかりだと、つい本物だと思ってしまいますよね。どきっとして、あわててしまう。</p>
+<p class="ln teacher" data-t="108.6">「高額」と書かれていたら、なおさらです。早く確かめなきゃ、と指が動いてしまいます。</p>
+<p class="ln teacher" data-t="115.3">それが、偽物のねらいなんです。</p>
+<p class="ln teacher" data-t="118.6">実際にドコモも、注意を呼びかけています。ドコモを名乗る、偽の<span class="t" data-t="mail" tabindex="0" role="button" aria-label="メールの説明を見る">メール</span>や<span class="t" data-t="sms" tabindex="0" role="button" aria-label="SMSの説明を見る">SMS</span>が届いている、というお知らせです。</p>
+<p class="ln teacher" data-t="127.38">SMSというのは、電話番号あてに届く、短い<span class="t" data-t="message" tabindex="0" role="button" aria-label="メッセージの説明を見る">メッセージ</span>のことです。</p>
+<h2>手順は3つ</h2>
+<p class="ln teacher" data-t="133.2">では、どうすればいいか。覚えてほしいことは、3つだけです。</p>
+<p class="ln teacher" data-t="138.0">ひとつめ。メッセージの中の<span class="t" data-t="link" tabindex="0" role="button" aria-label="リンクの説明を見る">リンク</span>は、押さない。</p>
+<p class="ln teacher" data-t="142.02">リンクというのは、青い文字で、押すと別の画面が開くところです。</p>
+<p class="ln teacher" data-t="147.52">「確認する」「こちら」と書かれた、四角い<span class="t" data-t="button" tabindex="0" role="button" aria-label="ボタンの説明を見る">ボタン</span>の形をしていることもあります。</p>
+<p class="ln teacher" data-t="153.6">押すと、本物そっくりの偽の画面が開きます。会社の<span class="t" data-t="mark" tabindex="0" role="button" aria-label="マークの説明を見る">マーク</span>や色まで、そっくりに作られています。</p>
+<p class="ln teacher" data-t="160.98">そこで<span class="t" data-t="password" tabindex="0" role="button" aria-label="パスワードの説明を見る">パスワード</span>や<span class="t" data-t="card" tabindex="0" role="button" aria-label="カードの説明を見る">カード</span>の番号を入れると、盗まれてしまいます。</p>
+<p class="ln teacher" data-t="165.94">だから、本物かどうか分からなくても、押さない。これがいちばん大事です。</p>
+<p class="ln teacher" data-t="171.78">ふたつめ。確かめたいときは、自分で開く。</p>
+<p class="ln teacher" data-t="175.98">いつも使っている、携帯会社のアプリを、自分で開いてください。ドコモなら「<span class="t" data-t="my-docomo" tabindex="0" role="button" aria-label="My docomoの説明を見る">My docomo</span>」です。</p>
+<p class="ln teacher" data-t="182.74">アプリというのは、スマホの画面に並んでいる、小さな絵のボタンのことです。<span class="t" data-t="line" tabindex="0" role="button" aria-label="LINEの説明を見る">LINE</span>やカメラと同じ仲間です。</p>
+<p class="ln teacher" data-t="190.48">本当に料金が高くなっていれば、アプリの中でちゃんと確かめられます。</p>
+<p class="ln teacher" data-t="195.9">電話で聞くときも、メッセージに書いてある番号には、かけません。ショップの番号に、自分でかけます。</p>
+<p class="ln teacher" data-t="203.08">みっつめ。もし入れてしまったら、すぐ相談する。</p>
+<p class="ln teacher" data-t="207.38">あわてて、つい入れてしまうこともあります。はずかしいことではありません。</p>
+<p class="ln teacher" data-t="212.68">すぐにショップか教室に連絡してください。パスワードを変えたり、カードの明細を確かめたりします。早いほど安心です。</p>
+<p class="ln teacher" data-t="220.92">相談するときは、届いたメッセージを消さずに、残しておいてください。</p>
+<p class="ln teacher" data-t="226.08">そして、いつ、どのメッセージで、何を入れてしまったか。分かる範囲で、そのまま伝えてください。</p>
+<h2>ここが大切</h2>
+<p class="ln teacher" data-t="233.56">ここが大切なところです。本物の携帯会社なら、メッセージのリンクを押さなくても、困ることはありません。</p>
+<p class="ln teacher" data-t="240.98">迷ったら、押さない。そして、自分で開く。これだけで、ほとんどの偽物は防げます。</p>
+<p class="ln teacher" data-t="248.06">むずかしい見分け方を、覚える必要はありません。本物か偽物かを、自分で判断しなくていいんです。</p>
+<p class="ln teacher" data-t="255.34">メッセージの中のものは使わない。それだけ決めておけば、あわてずにすみます。</p>
+<p class="ln teacher" data-t="261.02">もう一度言いますね。リンクは押さない。自分で開く。入れてしまったら、すぐ相談。</p>
+<h2>今日やってみること</h2>
+<p class="ln teacher" data-t="267.78">今日、やってみてほしいことがあります。</p>
+<p class="ln teacher" data-t="271.06">自分のスマホで、携帯会社のアプリがどこにあるか、探しておいてください。</p>
+<p class="ln teacher" data-t="276.44">いざというとき、すぐ開けるように。見つからなければ、次の教室で一緒に探しましょう。</p>
+<p class="ln teacher" data-t="282.44">それから、今日の3つのコツを、ご家族やお友だちにも伝えてあげてください。</p>
+<p class="ln teacher" data-t="288.16">「リンクは押さない、自分で開く、入れたらすぐ相談」。声に出すと、自分の中にもしっかり残ります。</p>
+<p class="ln teacher" data-t="296.3">この番組は、毎週火曜日と金曜日の朝にお届けしています。</p>
+<p class="ln teacher" data-t="301.48"><span class="t" data-t="follow" tabindex="0" role="button" aria-label="フォローの説明を見る">フォロー</span>していただくと、スマホの理解がぐっと深まりますよ。</p>
+<p class="ln teacher" data-t="306.12">世界一わかりやすいスマホニュース、てらこ先生でした。また火曜日の朝に、お会いしましょう。</p>
+  </article>
+  <div class="soft"><h2>今日のおさらい</h2><ol><li>メッセージの中のリンクは、押さない</li><li>確かめたいときは、いつものアプリを自分で開く</li><li>入れてしまったら、すぐ相談する</li></ol><p class="hw"><b>今日やってみること</b>　自分のスマホで、携帯会社のアプリがどこにあるか探しておく</p></div>
 
-
-  <div class="review">
-    <h2>今日のおさらい</h2>
-    <ol><li>メッセージの中のリンクは、押さない</li><li>確かめたいときは、いつものアプリを自分で開く</li><li>入れてしまったら、すぐ相談する</li></ol>
-    <p class="hw"><b>宿題</b>　自分のスマホで、携帯会社のアプリがどこにあるか探しておく</p>
-  </div>
-
-  <button class="follow" id="follow" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>この番組を毎回聴く</span></button>
+  <button class="follow" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>この番組を毎回聴く</span></button>
   <div id="fveil"></div>
   <div id="fsheet" role="dialog" aria-modal="true" aria-labelledby="fsheet-h">
-    <h3 id="fsheet-h">毎回聴くには</h3>
-    <div class="way"><b>LINE で</b>
-      <p>スマホ教室TERACO のトーク画面で、下のメニューの「ラジオを聴く」を押すと、いつでも最新の回が開きます。毎週火曜と金曜に新しい回が出ます。</p>
-      <a class="go line" href="https://lin.ee/tkYJ7Cw">LINE を開く</a></div>
-    <div class="way"><b>メールで</b>
-      <p>メールアドレスを登録すると、番組からのお知らせがメールで届きます。登録は無料です。</p>
-      <a class="go mail" href="https://teracosensei.substack.com/s/sumaho-news">メールで受け取る</a></div>
-    <p class="sp-link">Spotify を使っている人は <a href="https://open.spotify.com/show/3jx1jEp9mOCeTlMFiGSuad">こちらからフォロー</a></p>
+    <h3 id="fsheet-h">毎回聴くには</h3><div class="way"><b>メールで受け取る</b><p>メールアドレスを登録すると、番組の入口をメールでお知らせします。新しい回のたびにメールが届くことはありません。登録は無料です。</p><a class="go mail" href="https://teracosensei.substack.com/s/sumaho-news">メールで受け取る</a></div><p class="small">Spotify を使っている人は <a href="https://open.spotify.com/show/3jx1jEp9mOCeTlMFiGSuad">こちらからフォロー</a></p>
     <button class="close" id="fclose" type="button">閉じる</button>
   </div>
+  <div class="src"><b>今日の情報のもと</b><ul><li><a href="https://www.docomo.ne.jp/info/news_release/2026/09/25_00.html">ドコモ（2026年9月25日の発表）料金プランの変更と60歳以上割</a></li><li><a href="https://www.docomo.ne.jp/info/notice/page/260604_00.html">ドコモ（2026年6月4日のお知らせ）ドコモを名乗る偽メールへの注意</a></li></ul></div>
+  <div class="links"><a href="archive.html">これまでの回</a><a href="terms/">用語集</a><a href="">最新の回へ</a></div>
+  <footer class="foot">わからないことは、教室で一緒に確かめましょう。<br><a href="https://lin.ee/tkYJ7Cw">スマホ教室TERACO の公式LINE</a></footer>
+</main>
+
 <script>
 (function(){
-  var s = document.getElementById('fsheet'), v = document.getElementById('fveil');
-  function open(){ s.classList.add('on'); v.classList.add('on'); }
-  function close(){ s.classList.remove('on'); v.classList.remove('on'); }
-  document.getElementById('follow').addEventListener('click', open);
-  document.getElementById('fclose').addEventListener('click', close);
-  v.addEventListener('click', close);
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+  var C = {"play": "音声で聴く", "pause": "止める", "def": "1", "normal": ["1", "ふつう"], "remember": false, "key": "", "keyboard": true};
+  var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>', PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+  var a = document.getElementById('audio'), play = document.getElementById('play'), mplay = document.getElementById('mplay');
+  function fmt(s){ if (!isFinite(s)) return '--:--'; s = Math.floor(s); return Math.floor(s/60) + ':' + ('0' + s%60).slice(-2); }
+  function ui(){ var on = !a.paused;
+    play.innerHTML = on ? PAUSE : PLAY; play.setAttribute('aria-label', on ? C.pause : C.play);
+    document.getElementById('playLbl').textContent = on ? C.pause : C.play;
+    mplay.innerHTML = on ? PAUSE : PLAY; }
+  ui();
+  function toggle(){ a.paused ? a.play() : a.pause(); }
+  play.addEventListener('click', toggle); mplay.addEventListener('click', toggle);
+  a.addEventListener('play', ui); a.addEventListener('pause', ui); a.addEventListener('ended', ui);
+  function skip(s){ a.currentTime = Math.max(0, Math.min(a.duration || 0, a.currentTime + s)); }
+  document.querySelectorAll('[data-skip]').forEach(function(b){ b.addEventListener('click', function(){ skip(+b.dataset.skip); }); });
+  var fill = document.getElementById('fill'), mfill = document.getElementById('mfill');
+  a.addEventListener('loadedmetadata', function(){ document.getElementById('dur').textContent = fmt(a.duration); });
+  a.addEventListener('timeupdate', function(){
+    var r = a.duration ? a.currentTime / a.duration * 100 : 0;
+    fill.style.width = r + '%'; mfill.style.width = r + '%'; document.getElementById('knob').style.left = r + '%';
+    document.getElementById('cur').textContent = fmt(a.currentTime);
+    document.getElementById('mtime').textContent = fmt(a.currentTime) + ' / ' + fmt(a.duration);
+  });
+  var prog = document.getElementById('progress');
+  function seekAt(x){ var r = prog.getBoundingClientRect(); if (a.duration) a.currentTime = a.duration * Math.max(0, Math.min(1, (x - r.left) / r.width)); }
+  prog.addEventListener('click', function(e){ seekAt(e.clientX); });
+  prog.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') skip(-10); if (e.key === 'ArrowRight') skip(10); });
+  // 速さ：番組ごとの設定。覚える番組（AIニュース）は保存、毎回1倍の番組（スマホニュース）は保存しない
+  var rate = C.def, sps = [].slice.call(document.querySelectorAll('#speeds .sp'));
+  if (C.remember && C.key) { try { var s = localStorage.getItem(C.key); if (s && sps.some(function(b){ return b.dataset.r === s; })) rate = s; } catch(e) {} }
+  function setRate(v){ rate = v; a.playbackRate = parseFloat(v); a.preservesPitch = true;
+    sps.forEach(function(b){ b.classList.toggle('on', b.dataset.r === v); b.setAttribute('aria-pressed', b.dataset.r === v ? 'true' : 'false'); });
+    if (C.remember && C.key) { try { localStorage.setItem(C.key, v); } catch(e) {} } }
+  sps.forEach(function(b){ b.addEventListener('click', function(){ setRate(rate === b.dataset.r ? C.normal[0] : b.dataset.r); }); });  // もう一度押すとふつうに戻る
+  setRate(rate);
+  a.addEventListener('play', function(){ a.playbackRate = parseFloat(rate); });
+  if (C.keyboard) document.addEventListener('keydown', function(e){
+    if (/INPUT|TEXTAREA/.test(e.target.tagName) || e.metaKey || e.ctrlKey) return;
+    if (e.key === ' ' || e.key === 'k') { e.preventDefault(); toggle(); }
+    else if (e.key === 'ArrowLeft') skip(-10); else if (e.key === 'ArrowRight') skip(10);
+    else if (e.key === 'j') skip(-30); else if (e.key === 'l') skip(30);
+  });
+  // 大きなプレイヤーが画面の外に出たら、下に小さな再生バー
+  var big = document.getElementById('player'), mini = document.getElementById('mini');
+  function miniCheck(){ var out = big.getBoundingClientRect().bottom < 0; mini.classList.toggle('show', out); mini.setAttribute('aria-hidden', out ? 'false' : 'true'); }
+  addEventListener('scroll', miniCheck, {passive:true}); miniCheck();
+  // 本文：今の文に色をつけて画面がついていく。自分でスクロールした直後の8秒は追いかけない
+  var lines = [].slice.call(document.querySelectorAll('.ln[data-t]')), now = null, userAt = 0;
+  ['wheel','touchmove','keydown'].forEach(function(ev){ addEventListener(ev, function(){ userAt = Date.now(); }, {passive:true}); });
+  function follow(force){
+    var c = null;
+    for (var i = 0; i < lines.length; i++) { if (+lines[i].dataset.t <= a.currentTime + 0.15) c = lines[i]; else break; }
+    if (c === now && !force) return;
+    if (now) now.classList.remove('now'); now = c; if (!now) return;
+    now.classList.add('now');
+    if (!a.paused && Date.now() - userAt > 8000) { var r = now.getBoundingClientRect();
+      if (r.top < 60 || r.bottom > innerHeight - 90) scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: 'smooth' }); }
+  }
+  a.addEventListener('timeupdate', function(){ follow(false); });
+  a.addEventListener('seeked', function(){ follow(true); });
+  a.addEventListener('play', function(){ follow(true); });
+  lines.forEach(function(l){ l.addEventListener('click', function(e){
+    if (e.target.closest('.t') || e.target.closest('a')) return;      // 言葉の説明やリンクを押したときは再生しない
+    userAt = 0; a.currentTime = +l.dataset.t; a.play(); }); });
+  // 「この番組を毎回聴く」
+  var fs = document.getElementById('fsheet'), fv = document.getElementById('fveil'), fbs = document.querySelectorAll('.follow');
+  if (fs && fbs.length) { var op = function(){ fs.classList.add('on'); fv.classList.add('on'); }, cl = function(){ fs.classList.remove('on'); fv.classList.remove('on'); };
+    fbs.forEach(function(b){ b.addEventListener('click', op); }); document.getElementById('fclose').addEventListener('click', cl); fv.addEventListener('click', cl);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') cl(); }); }
 })();
 </script>
+<script type="application/json" id="glossary-data">{"app": {"n": "アプリ", "r": "", "s": "スマホに入れて使う道具。画面に並んでいる、小さな絵のボタンです。", "u": "terms/app.html"}, "button": {"n": "ボタン", "r": "", "s": "押すと何かが動く場所です。スマホでは、画面を指で軽くさわって押します。", "u": "terms/button.html"}, "card": {"n": "カード", "r": "", "s": "ここではクレジットカードのことです。番号を知られると、勝手に買い物をされるおそれがあります。", "u": "terms/card.html"}, "docomo": {"n": "ドコモ", "r": "", "s": "日本の大きな携帯会社のひとつです。正式な名前は「NTTドコモ」です。", "u": "terms/docomo.html"}, "docomo-max": {"n": "ドコモ MAX", "r": "ドコモマックス", "s": "ドコモの料金プランのひとつです。使ったデータの量で、月の料金が3段階に変わります。", "u": "terms/docomo-max.html"}, "docomo-shop": {"n": "ドコモショップ", "r": "", "s": "ドコモのお店です。契約や料金の相談ができます。", "u": "terms/docomo-shop.html"}, "eximo": {"n": "eximo", "r": "エクシモ", "s": "ドコモの料金プランの名前です。「エクシモ」と読みます。", "u": "terms/eximo.html"}, "follow": {"n": "フォロー", "r": "", "s": "Spotify などで、番組を登録しておくことです。新しい回が出たときに、すぐ見つけられます。", "u": "terms/follow.html"}, "homepage": {"n": "ホームページ", "r": "", "s": "会社などがインターネットに出しているページです。お知らせや説明が載っています。", "u": "terms/homepage.html"}, "line": {"n": "LINE", "r": "ライン", "s": "家族や友だちと、メッセージや電話ができるアプリです。", "u": "terms/line.html"}, "link": {"n": "リンク", "r": "", "s": "押すと、別の画面が開く文字。青い色や下線がついていることが多いです。", "u": "terms/link.html"}, "mail": {"n": "メール", "r": "", "s": "インターネットで届く、手紙のようなものです。", "u": "terms/mail.html"}, "mark": {"n": "マーク", "r": "", "s": "会社の目じるしになる絵や文字です。「ロゴ」とも言います。", "u": "terms/mark.html"}, "message": {"n": "メッセージ", "r": "", "s": "文字で送る、短いお知らせや連絡のことです。", "u": "terms/message.html"}, "my-docomo": {"n": "My docomo", "r": "マイドコモ", "s": "ドコモの公式アプリ。料金や契約の内容を確かめられます。", "u": "terms/my-docomo.html"}, "nisemono-message": {"n": "偽物のメッセージ", "r": "にせもののメッセージ", "s": "本物の会社のふりをして、パスワードやカードの番号を盗もうとするメッセージです。「フィッシング詐欺」と呼ばれます。", "u": "terms/nisemono-message.html"}, "password": {"n": "パスワード", "r": "", "s": "本人だと確かめるための、秘密の合言葉です。", "u": "terms/password.html"}, "plan": {"n": "プラン", "r": "", "s": "料金の決まり方の種類です。どれだけ使えて、月にいくらかかるかが決まっています。", "u": "terms/plan.html"}, "sms": {"n": "SMS", "r": "エスエムエス", "s": "電話番号あてに届く、短いメッセージです。", "u": "terms/sms.html"}, "sumaho": {"n": "スマホ", "r": "", "s": "「スマートフォン」を短くした言葉です。電話やメール、インターネットが使える、画面をさわって操作する携帯電話です。", "u": "terms/sumaho.html"}}</script>
 
-
-  <div class="src">
-    <b>今日の情報のもと</b>
-    <ul><li><a href="https://www.docomo.ne.jp/info/news_release/2026/09/25_00.html">ドコモ（2026年9月25日の発表）料金プランの変更と60歳以上割</a></li><li><a href="https://www.docomo.ne.jp/info/notice/page/260604_00.html">ドコモ（2026年6月4日のお知らせ）ドコモを名乗る偽メールへの注意</a></li></ul>
-  </div>
-
-  <div class="foot">
-    わからないことは、教室で一緒に確かめましょう。<br>
-    <a href="https://lin.ee/tkYJ7Cw">スマホ教室TERACO の公式LINE</a>
-  </div>
-</main>
-<audio id="audio" src="episodes/2026-10-04/audio.mp3" preload="metadata"></audio>
 <script>
-const a = document.getElementById('audio'), play = document.getElementById('play'),
-      seek = document.getElementById('seek'), time = document.getElementById('time');
-const PLAY  = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span>音声で聴く</span>';
-const PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg><span>止める</span>';
-const lines = [...document.querySelectorAll('.line[data-t]')];
-function fmt(s) { s = Math.floor(s || 0); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
-function ui() { play.innerHTML = a.paused ? PLAY : PAUSE; }
-ui();
-play.onclick = () => { a.paused ? a.play() : a.pause(); };
-a.onplay = a.onpause = ui;
-document.getElementById('back').onclick = () => { a.currentTime = Math.max(0, a.currentTime - 10); };
-seek.oninput = () => { if (a.duration) a.currentTime = a.duration * seek.value / 1000; };
-const player = document.querySelector('.player');
-const menu = document.querySelector('.menu');
-function fold() { player.classList.toggle('mini', menu.getBoundingClientRect().bottom < 0); }
-addEventListener('scroll', fold, { passive: true }); fold();
-let rate = 1;   // 開くたびに「ふつう」から（2026-10-04 藤崎さん：1倍を既定に、前後に1段ずつ）
-const sps = [...document.querySelectorAll('.sp')];
-function setRate(r) {
-  rate = r; a.playbackRate = r; a.preservesPitch = true;
-  sps.forEach(b => b.classList.toggle('on', +b.dataset.r === r));
-}
-sps.forEach(b => b.onclick = () => setRate(+b.dataset.r));
-setRate(1);
-a.addEventListener('loadedmetadata', () => { a.playbackRate = rate; });
-a.addEventListener('play', () => { a.playbackRate = rate; });
-let now = null;
-a.ontimeupdate = () => {
-  if (a.duration) seek.value = a.currentTime / a.duration * 1000;
-  time.textContent = fmt(a.currentTime) + ' / ' + fmt(a.duration);
-  let cur = null;
-  for (const l of lines) { if (+l.dataset.t <= a.currentTime + 0.1) cur = l; else break; }
-  if (cur !== now) {
-    if (now) now.classList.remove('now');
-    now = cur;
-    if (now) {
-      now.classList.add('now');
-      const r = now.getBoundingClientRect(), top = document.querySelector('.player').offsetHeight;
-      if (r.top < top || r.bottom > innerHeight) scrollTo({ top: scrollY + r.top - top - 16, behavior: 'smooth' });
-    }
+(function(){
+  var el = document.getElementById('glossary-data');
+  if (!el) return;
+  var G; try { G = JSON.parse(el.textContent); } catch(e) { return; }
+
+  // 指でも操作する端末ではシート、マウスがある端末ではポップアップにする
+  var hoverable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  var tip = document.createElement('div'); tip.id = 'tip';
+  var veil = document.createElement('div'); veil.id = 'veil';
+  var sheet = document.createElement('div'); sheet.id = 'sheet';
+  sheet.innerHTML = '<div class="sheet-grip"></div><span class="tip-n"></span>'
+    + '<div class="tip-s"></div><a class="tip-m" href="#">くわしい解説を読む →</a>';
+  document.body.appendChild(tip);
+  document.body.appendChild(veil);
+  document.body.appendChild(sheet);
+
+  function showTip(node, d){
+    tip.innerHTML = '<span class="tip-n"></span><span class="tip-s"></span>'
+      + '<a class="tip-m" href="#">くわしい解説 →</a>';
+    tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
+    tip.querySelector('.tip-s').textContent = d.s;
+    tip.querySelector('.tip-m').href = d.u;
+    tip.classList.add('on');
+    var r = node.getBoundingClientRect();
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = Math.min(Math.max(8, r.left + r.width/2 - w/2), window.innerWidth - w - 8);
+    var top = r.top - h - 10;
+    if (top < 8) top = r.bottom + 10;           // 上に入らなければ下に出す
+    tip.style.left = (left + window.scrollX) + 'px';
+    tip.style.top  = (top + window.scrollY) + 'px';
   }
-};
-a.onloadedmetadata = () => { time.textContent = '0:00 / ' + fmt(a.duration); };
-lines.forEach(l => l.onclick = () => { a.currentTime = +l.dataset.t; a.play(); });
+  function hideTip(){ tip.classList.remove('on'); }
+
+  function openSheet(d){
+    sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
+    sheet.querySelector('.tip-s').textContent = d.s;
+    sheet.querySelector('.tip-m').href = d.u;
+    sheet.classList.add('on'); veil.classList.add('on');
+  }
+  function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
+  veil.addEventListener('click', closeSheet);
+
+  var hideTimer;
+  document.addEventListener('mouseover', function(e){
+    if (!hoverable) return;
+    var n = e.target.closest('.t'); if (!n) return;
+    clearTimeout(hideTimer);
+    var d = G[n.getAttribute('data-t')]; if (d) showTip(n, d);
+  });
+  document.addEventListener('mouseout', function(e){
+    if (!hoverable) return;
+    if (e.target.closest('.t') && !tip.contains(e.relatedTarget)) {
+      hideTimer = setTimeout(hideTip, 180);
+    }
+  });
+  tip.addEventListener('mouseenter', function(){ clearTimeout(hideTimer); });
+  tip.addEventListener('mouseleave', hideTip);
+
+  document.addEventListener('click', function(e){
+    var n = e.target.closest('.t'); if (!n) return;
+    var d = G[n.getAttribute('data-t')]; if (!d) return;
+    e.preventDefault();
+    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { hideTip(); closeSheet(); return; }
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var n = document.activeElement; if (!n || !n.classList.contains('t')) return;
+    var d = G[n.getAttribute('data-t')]; if (!d) return;
+    e.preventDefault();
+    hoverable ? (location.href = d.u) : openSheet(d);
+  });
+})();
 </script>
 </body>
 </html>

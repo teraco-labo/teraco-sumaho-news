@@ -17,6 +17,6 @@ page = re.sub(r'<link rel="icon"[^>]*>\s*', "", page)
 page = page.replace("</head>\n<body>", "").replace("</body>\n</html>", "")
 band = ('<div style="background:var(--orange);color:#fff;text-align:center;font-size:15px;font-weight:700;'
         'padding:8px 16px">試聴用の見本です（まだ公開していません）</div>\n')
-page = page.replace("<header>", band + "<header>", 1)
+page = re.sub(r"<header( class=\"top\")?>", lambda m: band + m.group(0), page, count=1)
 out.write_text(page, encoding="utf-8")
 print(out, f"{len(page)/1e6:.1f}MB")

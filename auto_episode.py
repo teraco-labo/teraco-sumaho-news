@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """世界一わかりやすいスマホニュース：1回分を自動で作る（火曜・金曜の朝、Mac の定時実行から呼ぶ）。
 
-  python auto_episode.py build   [日付]   # 05:00 ニュース集め→台本→事実確認→検査→声→ページ（公開はしない）
-  python auto_episode.py publish [日付]   # 07:00 GitHub に送って公開し、藤崎さんの LINE に知らせる
+  python auto_episode.py build   [日付]   # 04:00 ニュース集め→台本→事実確認→検査→声→ページ（公開はしない）
+  python auto_episode.py publish [日付]   # 06:00 GitHub に送って公開し、藤崎さんの LINE に知らせる（自動配信は朝6時に統一）
 
 台本と事実確認は Claude Code をサブスク枠で呼ぶ（claude -p）。APIキーは子プロセスに渡さない
 ＝従量課金にならない。有料APIへの切り替えも付けない（失敗したらその回は休み）。
@@ -304,11 +304,10 @@ def build(date: str) -> int:
         log(r.stdout[-1500:])
         if r.returncode != 0 or not (d / "audio.mp3").exists():
             raise RuntimeError("声を作れませんでした\n" + (r.stdout + r.stderr)[-800:])
-        subprocess.run([sys.executable, str(HERE / "build_page.py"), date], check=True)
-        subprocess.run([sys.executable, str(HERE / "make_feed.py")], check=True)
+        subprocess.run([sys.executable, str(HERE / "build_site.py")], check=True)   # 共用エンジンで全ページと feed を作り直す
         title = json.loads((d / "notes.json").read_text(encoding="utf-8"))["title"]
-        log(f"{date} を作りました：{title}（公開は7時）")
-        if datetime.now(JST).hour >= 7:   # Mac が寝ていて作るのが遅れた日は、作り終えたらすぐ公開する
+        log(f"{date} を作りました：{title}（公開は6時）")
+        if datetime.now(JST).hour >= 6:   # Mac が寝ていて作るのが遅れた日は、作り終えたらすぐ公開する
             return publish(date)
         return 0
     except Exception as e:
@@ -323,7 +322,8 @@ def publish(date: str) -> int:
         log(f"{date} の音声が無いので公開しません")
         return 1
     git = ["git", "-C", str(HERE)]
-    subprocess.run(git + ["add", "episodes", "terms", "glossary.json", "index.html", "feed.xml", "episodes.json", "readings.json"], check=True)
+    subprocess.run(git + ["add", "episodes", "terms", "glossary.json", "index.html", "archive.html", "sitemap.xml", "robots.txt",
+                         "feed.xml", "episodes.json", "readings.json"], check=True)
     if subprocess.run(git + ["diff", "--cached", "--quiet"]).returncode == 0:
         log(f"{date} は公開済み")
         return 0

@@ -51,7 +51,7 @@ def main():
     items = ""
     for e in eps:
         text = f"{e['description']} 文字で読む（むずかしい言葉の説明つき）→ {e['page']} ／ 公式LINE → {CFG['line_url']}"
-        pub = datetime.strptime(e["date"], "%Y-%m-%d").replace(hour=7, tzinfo=JST)
+        pub = datetime.strptime(e["date"], "%Y-%m-%d").replace(hour=6, tzinfo=JST)   # 自動配信は朝6時
         items += f"""
   <item>
     <title>{_x(e['title'])}</title>
