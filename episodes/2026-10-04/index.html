@@ -110,12 +110,12 @@
               background:var(--btn); color:var(--btn-ink); box-shadow:0 6px 16px color-mix(in srgb, var(--btn) 40%, transparent); }
   .ctl.play svg { width:34px; height:34px; }
   .play-lbl { text-align:center; font-size:.78em; font-weight:700; color:var(--ink2); margin-top:2px; }
-  .speed-row { margin-top:12px; }
-  .speed-label { display:block; font-size:.75em; color:var(--ink2); font-weight:700; margin-bottom:4px; }
-  .speed-btns { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,1fr)); gap:6px; }
-  .speed-btns .sp { padding:8px 0; border-radius:999px; border:1.5px solid var(--line); background:var(--bg); color:var(--ink);
+  .sx-speed { margin-top:12px; }
+  .sx-speed-label { display:block; font-size:.75em; color:var(--ink2); font-weight:700; margin-bottom:4px; }
+  .sx-speed-btns { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,1fr)); gap:6px; }
+  .sx-speed-btns .sp { padding:8px 0; border-radius:999px; border:1.5px solid var(--line); background:var(--bg); color:var(--ink);
                     font-size:.85em; font-weight:700; font-family:inherit; cursor:pointer; }
-  .speed-btns .sp.on { background:var(--btn); border-color:var(--btn); color:var(--btn-ink); }
+  .sx-speed-btns .sp.on { background:var(--btn); border-color:var(--btn); color:var(--btn-ink); }
   .readbtn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:12px; padding:13px;
              border:2px solid var(--pill-border); border-radius:999px; background:var(--pill-bg); color:var(--pill-ink); font-size:1em;
              font-weight:700; text-decoration:none; }
@@ -176,7 +176,7 @@
     <div class="time-row"><span id="cur">0:00</span><span id="dur">--:--</span></div>
     <div class="controls"><button type="button" class="ctl" data-skip="-30" aria-label="30秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>30</small></button><button type="button" class="ctl" data-skip="-10" aria-label="10秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>10</small></button><button class="ctl play" id="play" type="button" aria-label="音声で聴く"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><button type="button" class="ctl" data-skip="10" aria-label="10秒すすむ"><svg style="transform:scaleX(-1)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>10</small></button><button type="button" class="ctl" data-skip="30" aria-label="30秒すすむ"><svg style="transform:scaleX(-1)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>30</small></button></div>
     <div class="play-lbl" id="playLbl">音声で聴く</div>
-    <div class="speed-row" id="speeds"><span class="speed-label">聴く速さ</span><div class="speed-btns"><button type="button" class="sp" data-r="0.7">0.7×</button><button type="button" class="sp" data-r="0.8">0.8×</button><button type="button" class="sp" data-r="1">ふつう</button><button type="button" class="sp" data-r="1.2">1.2×</button><button type="button" class="sp" data-r="1.5">1.5×</button></div></div>
+    <div class="sx-speed" id="speeds"><span class="sx-speed-label">聴く速さ</span><div class="sx-speed-btns"><button type="button" class="sp" data-r="0.7">0.7×</button><button type="button" class="sp" data-r="0.8">0.8×</button><button type="button" class="sp" data-r="1">ふつう</button><button type="button" class="sp" data-r="1.2">1.2×</button><button type="button" class="sp" data-r="1.5">1.5×</button></div></div>
     <button class="follow follow-top" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>この番組を毎回聴く</span></button>
     <a class="readbtn" href="#yomu" id="toread"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4z"/></svg><span>文字で読む</span></a>
     <p class="kbd">キーボード：スペースで再生／停止、← → で10秒、J / L で30秒</p>
@@ -265,7 +265,7 @@
 
 <script>
 (function(){
-  var C = {"play": "音声で聴く", "pause": "止める", "def": "1", "normal": ["1", "ふつう"], "remember": false, "key": "", "keyboard": true};
+  var C = {"play": "音声で聴く", "pause": "止める", "def": "1", "normal": ["1", "ふつう"], "remember": false, "key": "", "keyboard": true, "names": {}, "roles": {"てらこ先生": "teacher", "ミカ": "partner", "イロハ": "partner"}};
   var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>', PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
   var a = document.getElementById('audio'), play = document.getElementById('play'), mplay = document.getElementById('mplay');
   function fmt(s){ if (!isFinite(s)) return '--:--'; s = Math.floor(s); return Math.floor(s/60) + ':' + ('0' + s%60).slice(-2); }
@@ -311,8 +311,14 @@
   function miniCheck(){ var out = big.getBoundingClientRect().bottom < 0; mini.classList.toggle('show', out); mini.setAttribute('aria-hidden', out ? 'false' : 'true'); }
   addEventListener('scroll', miniCheck, {passive:true}); miniCheck();
   // 本文：今の文に色をつけて画面がついていく。自分でスクロールした直後の8秒は追いかけない
-  var lines = [].slice.call(document.querySelectorAll('.ln[data-t]')), now = null, userAt = 0;
+  var lines = [], now = null, userAt = 0;
   ['wheel','touchmove','keydown'].forEach(function(ev){ addEventListener(ev, function(){ userAt = Date.now(); }, {passive:true}); });
+  function wire(){
+    lines = [].slice.call(document.querySelectorAll('.ln[data-t]'));
+    lines.forEach(function(l){ if (l.dataset.w) return; l.dataset.w = 1; l.addEventListener('click', function(e){
+      if (e.target.closest('.t') || e.target.closest('a')) return;      // 言葉の説明やリンクを押したときは再生しない
+      userAt = 0; a.currentTime = +l.dataset.t; a.play(); }); });
+  }
   function follow(force){
     var c = null;
     for (var i = 0; i < lines.length; i++) { if (+lines[i].dataset.t <= a.currentTime + 0.15) c = lines[i]; else break; }
@@ -325,9 +331,27 @@
   a.addEventListener('timeupdate', function(){ follow(false); });
   a.addEventListener('seeked', function(){ follow(true); });
   a.addEventListener('play', function(){ follow(true); });
-  lines.forEach(function(l){ l.addEventListener('click', function(e){
-    if (e.target.closest('.t') || e.target.closest('a')) return;      // 言葉の説明やリンクを押したときは再生しない
-    userAt = 0; a.currentTime = +l.dataset.t; a.play(); }); });
+  wire();
+  // 台本を後から読み込む番組（AIニュース：声の差し替えで開始秒が変わるため、その場で読む）
+  var box = document.getElementById('sxLines');
+  if (box && box.dataset.script) {
+    var NAMES = C.names || {}, ROLES = C.roles || {};
+    Promise.all([
+      fetch(box.dataset.script, {cache:'no-cache'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); }),
+      fetch(box.dataset.times, {cache:'no-cache'}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+    ]).then(function(res){
+      var times = res[1] || [], k = 0, out = [];
+      res[0].split('\n').forEach(function(line){
+        var m = line.match(/^\[([^\]]+)\]\s*(.+)$/); if (!m) return;
+        var st = times[k++], who = NAMES[m[1]] || m[1], role = ROLES[m[1]] || 'teacher';
+        var t = (typeof st === 'number') ? ' data-t="' + st + '"' : '';
+        out.push('<div class="ln ' + role + '"' + t + '><span class="who">' + who.replace(/</g,'&lt;') + '</span>'
+                 + m[2].replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</div>');
+      });
+      box.innerHTML = out.length ? out.join('') : '<p class="read-hint">この号の台本はまだありません。</p>';
+      wire(); follow(true);
+    }).catch(function(){ box.innerHTML = '<p class="read-hint">台本を読み込めませんでした。</p>'; });
+  }
   // 「この番組を毎回聴く」
   var fs = document.getElementById('fsheet'), fv = document.getElementById('fveil'), fbs = document.querySelectorAll('.follow');
   if (fs && fbs.length) { var op = function(){ fs.classList.add('on'); fv.classList.add('on'); }, cl = function(){ fs.classList.remove('on'); fv.classList.remove('on'); };
