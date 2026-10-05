@@ -8,6 +8,7 @@ episodes/<日付>/ に notes.json と audio.mp3 がそろっている回を、�
 Spotify などはこの feed.xml を読みに来て、新しい回を番組に並べる。
 各回の説明文には「文字で読めるページ」のURLを入れる（注釈つきの記事版）。
 """
+import hashlib
 import json
 import subprocess
 from datetime import datetime, timedelta, timezone
@@ -45,7 +46,9 @@ def main():
         desc = ("今日のテーマ：" + n["lesson"] + "。きっかけのニュース：" + "／".join(n["news"]) + "。")
         eps.append({"date": d.name, "number": n["number"], "title": f"第{n['number']}回 {n['title']}",
                     "description": desc, "page": page, "url": f"{base}/episodes/{d.name}/audio.mp3",
-                    "size": mp3.stat().st_size, "duration": round(_duration(mp3))})
+                    "size": mp3.stat().st_size, "duration": round(_duration(mp3)),
+                    # 音声を差し替えたら住所の末尾の目印が変わる → Spotify などが取り込み直す（2026-10-06）
+                    "ver": hashlib.md5(mp3.read_bytes()).hexdigest()[:8]})
     (HERE / "episodes.json").write_text(json.dumps(eps, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     items = ""
@@ -59,7 +62,7 @@ def main():
     <link>{e['page']}</link>
     <description>{_x(text)}</description>
     <itunes:summary>{_x(text)}</itunes:summary>
-    <enclosure url="{e['url']}" length="{e['size']}" type="audio/mpeg"/>
+    <enclosure url="{e['url']}?v={e['ver']}" length="{e['size']}" type="audio/mpeg"/>
     <guid isPermaLink="false">{e['url']}</guid>
     <pubDate>{pub.strftime('%a, %d %b %Y %H:%M:%S %z')}</pubDate>
     <itunes:author>{_x(CFG['author'])}</itunes:author>
@@ -70,7 +73,6 @@ def main():
   </item>"""
     cat1, cat2 = CFG["category"]
     # カバーの中身から作った印。中身が変わったときだけURLが変わり、Spotify が取り直す（2026-10-04）
-    import hashlib
     v = hashlib.md5((HERE / "cover.jpg").read_bytes()).hexdigest()[:8]
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
