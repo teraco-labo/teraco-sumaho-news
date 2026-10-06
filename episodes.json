@@ -7,7 +7,8 @@
   "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-06/",
   "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-06/audio.mp3",
   "size": 2517987,
-  "duration": 252
+  "duration": 252,
+  "ver": "f18a1281"
  },
  {
   "date": "2026-10-04",
@@ -17,6 +18,7 @@
   "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/",
   "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-04/audio.mp3",
   "size": 3122460,
-  "duration": 312
+  "duration": 312,
+  "ver": "8906fbf5"
  }
 ]

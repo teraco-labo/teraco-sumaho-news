@@ -74,6 +74,8 @@ def cmd_check(date: str) -> int:
                 problems.append(f"{i}行目 40字超（{len(s)}字）: {s}")
         if re.search(r"(この|その|あの|どの|若い|年配の|ご高齢の|お)方[がはにをもの]", text):
             problems.append(f"{i}行目 人を指す「方」: {text}")
+        if "そうなんですよね" in text:
+            problems.append(f"{i}行目 「そうなんですよね」は声が暗く沈むので使わない（共感は1文で切り上げて前向きに）: {text}")
         if "本物のニュース" in text or "本当のニュース" in text:
             problems.append(f"{i}行目 「本物のニュース」とは言わない（番組のニュースが本物でないように聞こえる）: {text}")
         if text in seen:
@@ -84,6 +86,12 @@ def cmd_check(date: str) -> int:
             problems.append(f"{i}行目 英字が読み替えられていない: {v}")
         if re.search(r"[㐀-鿿]{1}[们这个说吗呢]|[们这个说吗呢]", text):
             problems.append(f"{i}行目 中国語の混入の疑い: {text}")
+    prev_yone = False
+    for i, (spk, text) in enumerate(lines, 1):     # 共感で沈む「〜よね。」を続けない（声が暗くなる）
+        yone = text.rstrip().endswith(("よね。", "よね"))
+        if yone and prev_yone:
+            problems.append(f"{i}行目 「〜よね。」で終わる文が続いている（声が沈むので、間に前向きな文を入れる）: {text}")
+        prev_yone = yone
     chars = sum(len(t) for _, t in lines)
     est = chars * 0.157 / 60 + len(lines) * 0.45 / 60
     print(f"台詞 {len(lines)} 件・{chars} 字・推定 {est:.1f} 分")
