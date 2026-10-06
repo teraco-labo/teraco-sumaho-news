@@ -42,12 +42,12 @@ def log(msg: str):
         f.write(line + "\n")
 
 
-def notify(text: str):
+def notify(text: str, urgent: bool = False):
     """藤崎さん1人の LINE に送る（Teraco Studio の部品を共用・無料枠）。失敗しても止めない。"""
     try:
         sys.path.insert(0, str(STUDIO))
         import app
-        app.notify_line(text)
+        app.notify_line(text, urgent=urgent)   # 2026-10-06 お知らせ箱経由。失敗だけ急ぎ
     except Exception as e:
         log(f"LINE に送れませんでした: {e}")
 
@@ -325,7 +325,7 @@ def build(date: str) -> int:
         return 0
     except Exception as e:
         log(f"失敗: {e}")
-        notify(f"【スマホニュース】{date} の回は作れませんでした。今回はお休みにします。\n理由: {str(e)[:300]}")
+        notify(f"【スマホニュース】{date} の回は作れませんでした。今回はお休みにします。\n理由: {str(e)[:300]}", urgent=True)
         return 1
 
 
@@ -344,7 +344,7 @@ def publish(date: str) -> int:
     subprocess.run(git + ["commit", "-q", "-m", f"第{n['number']}回 {n['title']}（自動作成）"], check=True)
     r = subprocess.run(git + ["push", "-q", "origin", "main"], capture_output=True, text=True)
     if r.returncode != 0:
-        notify(f"【スマホニュース】{date} の回を公開できませんでした（GitHub への送信に失敗）。")
+        notify(f"【スマホニュース】{date} の回を公開できませんでした（GitHub への送信に失敗）。", urgent=True)
         log("push 失敗: " + r.stderr[-500:])
         return 1
     base = json.loads((HERE / "config.json").read_text(encoding="utf-8"))["base_url"]
