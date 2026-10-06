@@ -63,6 +63,37 @@ def _lines(script: str):
             (re.match(r"^\[(てらこ先生|ミカ)\]\s*(.+)$", l.strip()) for l in script.splitlines()) if m]
 
 
+# 相づち・共感の言い回し。同じものが続くと「定型だな」と聞こえる（2026-10-06 藤崎さん）
+# 長いものから順に照合し、1文につき1つだけ拾う
+AIZUCHI = sorted([
+    "そうなんですよね", "そうですよね", "そうなんです", "わかります", "ありますよね", "なりますよね",
+    "気になりますよね", "思いますよね", "思ってしまいますよね", "しまいますよね", "とまどいますよね",
+    "困りますよね", "迷いますよね", "あせりますよね", "びっくりしますよね", "どきっとしますよね",
+    "ありがちです", "よくあります", "無理もありません", "当然です", "安心してください", "大丈夫です",
+], key=len, reverse=True)
+
+
+def aizuchi(lines) -> list:
+    """台詞から相づち・共感の言い回しを順に拾う"""
+    out = []
+    for _, text in lines:
+        for s in re.findall(r"[^。！？]+[。！？]?", text):
+            hit = next((a for a in AIZUCHI if a in s), None)
+            if hit:
+                out.append(hit)
+    return out
+
+
+def recent_aizuchi(date: str, n: int = 2) -> list:
+    """この回より前の n 回で使った相づち（次の回では避ける）"""
+    used = []
+    for d in sorted(x for x in (HERE / "episodes").iterdir() if x.is_dir() and x.name < date)[-n:]:
+        f = d / "script.txt"
+        if f.exists():
+            used += aizuchi(_lines(f.read_text(encoding="utf-8")))
+    return sorted(set(used))
+
+
 def cmd_check(date: str) -> int:
     script = (HERE / "episodes" / date / "script.txt").read_text(encoding="utf-8")
     lines = _lines(script)
@@ -74,8 +105,6 @@ def cmd_check(date: str) -> int:
                 problems.append(f"{i}行目 40字超（{len(s)}字）: {s}")
         if re.search(r"(この|その|あの|どの|若い|年配の|ご高齢の|お)方[がはにをもの]", text):
             problems.append(f"{i}行目 人を指す「方」: {text}")
-        if "そうなんですよね" in text:
-            problems.append(f"{i}行目 「そうなんですよね」は声が暗く沈むので使わない（共感は1文で切り上げて前向きに）: {text}")
         if "本物のニュース" in text or "本当のニュース" in text:
             problems.append(f"{i}行目 「本物のニュース」とは言わない（番組のニュースが本物でないように聞こえる）: {text}")
         if text in seen:
@@ -92,6 +121,14 @@ def cmd_check(date: str) -> int:
         if yone and prev_yone:
             problems.append(f"{i}行目 「〜よね。」で終わる文が続いている（声が沈むので、間に前向きな文を入れる）: {text}")
         prev_yone = yone
+    # 相づちは毎回変える：1回の中で同じ言い回しを2度使わない／前の2回と同じものを避ける
+    # （「大丈夫です」「安心してください」は締めの言葉として何度出てもよい）
+    mine = aizuchi(lines)
+    repeat_ok = {"大丈夫です", "安心してください"}
+    for a in sorted({a for a in mine if mine.count(a) > 1} - repeat_ok):
+        problems.append(f"相づち「{a}」を{mine.count(a)}回使っている（定型に聞こえるので言い方を変える）")
+    for a in sorted(set(mine) & set(recent_aizuchi(date)) - repeat_ok):
+        problems.append(f"相づち「{a}」は前の回でも使った（毎回同じに聞こえるので言い方を変える）")
     chars = sum(len(t) for _, t in lines)
     est = chars * 0.157 / 60 + len(lines) * 0.45 / 60
     print(f"台詞 {len(lines)} 件・{chars} 字・推定 {est:.1f} 分")
