@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""世界一わかりやすいスマホニュース：1回分を自動で作る（火曜・金曜の朝、Mac の定時実行から呼ぶ）。
+"""世界一わかりやすいスマホニュース：1回分を自動で作る（火曜・木曜の朝、Mac の定時実行から呼ぶ）。
 
   python auto_episode.py build   [日付]   # 04:00 ニュース集め→台本→事実確認→検査→声→ページ（公開はしない）
   python auto_episode.py publish [日付]   # 06:00 GitHub に送って公開し、藤崎さんの LINE に知らせる（自動配信は朝6時に統一）
@@ -125,7 +125,7 @@ RULES = """\
 3. 手順3つ（「ひとつめ」「ふたつめ」「みっつめ」）
 4. 「ここが大切」
 5. 今日やってみること
-6. 締め：「この番組は、毎週火曜日と金曜日の朝にお届けしています。」
+6. 締め：「この番組は、毎週火曜日と木曜日の朝にお届けしています。」
    「フォローしていただくと、スマホの理解がぐっと深まりますよ。」
    「世界一わかりやすいスマホニュース、てらこ先生でした。また〇曜日の朝に、お会いしましょう。」
 
@@ -190,7 +190,7 @@ def past_topics() -> list:
 
 def write(date: str, news: list) -> dict:
     wd = WEEK[datetime.strptime(date, "%Y-%m-%d").weekday()]
-    nxt = "金" if wd == "火" else "火"
+    nxt = "木" if wd == "火" else "火"   # 2026-10-08 火・金 → 火・木
     kfiles = "、".join(p.name for p in sorted(KNOWLEDGE.glob("*.md")))
     prompt = f"""{RULES}
 # 今回
