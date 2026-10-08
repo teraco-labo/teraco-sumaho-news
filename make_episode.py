@@ -105,6 +105,11 @@ def cmd_check(date: str) -> int:
                 problems.append(f"{i}行目 40字超（{len(s)}字）: {s}")
         if re.search(r"(この|その|あの|どの|若い|年配の|ご高齢の|お)方[がはにをもの]", text):
             problems.append(f"{i}行目 人を指す「方」: {text}")
+        # 打ち消しの形のほめ言葉・沈む言葉は、本人の声が暗く落ちる（2026-10-08 藤崎さん）
+        for w in ("なくてすみ", "ずにすみ", "なくても大丈夫", "心配いりません", "心配はいりません",
+                  "ため息", "つらい", "こわい", "不安", "困っ", "困り"):
+            if w in text:
+                problems.append(f"{i}行目 「{w}」は声が沈む（できること・うれしいことを明るく言い切る）: {text}")
         if "本物のニュース" in text or "本当のニュース" in text:
             problems.append(f"{i}行目 「本物のニュース」とは言わない（番組のニュースが本物でないように聞こえる）: {text}")
         if text in seen:
