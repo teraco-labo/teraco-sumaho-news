@@ -18,7 +18,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Tue, 06 Oct 2026 15:35:17 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 08 Oct 2026 21:01:08 +0900</lastBuildDate>
+  <item>
+    <title>第3回 カメラをかざすと読み上げ　Geminiの新しい「シンプルガイド」</title>
+    <itunes:title>第3回 カメラをかざすと読み上げ　Geminiの新しい「シンプルガイド」</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-08/</link>
+    <description>今日のテーマ：スマホのカメラで書類やリモコンを映し、声で教えてもらう（Geminiのシンプルガイドの始め方）。きっかけのニュース：Googleが2026年10月6日に、AIのGeminiアプリの新しい機能「シンプルガイド」を公式に発表（Android 9以降が対象）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-08/ ／ 公式LINE → https://lin.ee/tkYJ7Cw</description>
+    <itunes:summary>今日のテーマ：スマホのカメラで書類やリモコンを映し、声で教えてもらう（Geminiのシンプルガイドの始め方）。きっかけのニュース：Googleが2026年10月6日に、AIのGeminiアプリの新しい機能「シンプルガイド」を公式に発表（Android 9以降が対象）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-08/ ／ 公式LINE → https://lin.ee/tkYJ7Cw</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-08/audio.mp3?v=c9346464" length="3143097" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-08/audio.mp3</guid>
+    <pubDate>Thu, 08 Oct 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>3</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:05:14</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第2回 LINEの画面が新しく　友だちの一覧はどこ？迷わないコツ</title>
     <itunes:title>第2回 LINEの画面が新しく　友だちの一覧はどこ？迷わないコツ</itunes:title>

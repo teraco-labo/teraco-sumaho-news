@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-10-08",
+  "number": 3,
+  "title": "第3回 カメラをかざすと読み上げ　Geminiの新しい「シンプルガイド」",
+  "description": "今日のテーマ：スマホのカメラで書類やリモコンを映し、声で教えてもらう（Geminiのシンプルガイドの始め方）。きっかけのニュース：Googleが2026年10月6日に、AIのGeminiアプリの新しい機能「シンプルガイド」を公式に発表（Android 9以降が対象）。",
+  "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-08/",
+  "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-08/audio.mp3",
+  "size": 3143097,
+  "duration": 314,
+  "ver": "c9346464"
+ },
+ {
   "date": "2026-10-06",
   "number": 2,
   "title": "第2回 LINEの画面が新しく　友だちの一覧はどこ？迷わないコツ",

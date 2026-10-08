@@ -576,6 +576,193 @@
       "detail": "アプリは新しくなるたびに、バージョンの番号が上がります。LINEヤフーの発表では、新しいトークの画面はバージョン15.16.0以上が対象です。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "news",
+      "term": "ニュース",
+      "reading": "ニュース",
+      "aliases": [],
+      "category": "ことば",
+      "short": "新しい出来事を知らせる情報のことです。",
+      "detail": "新聞やテレビ、インターネットなどで伝えられます。この番組では、スマホに関係する新しい話題をお伝えしています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "camera",
+      "term": "カメラ",
+      "reading": "カメラ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "写真や動画をとるための部分です。スマホにも付いています。",
+      "detail": "スマホのカメラは、写真をとるだけでなく、映したものをアプリに見せるのにも使われます。今回のシンプルガイドでは、カメラで映したものをGeminiが読み取ります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "google",
+      "term": "Google",
+      "reading": "グーグル",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "インターネットの検索などで知られるアメリカの会社です。",
+      "detail": "検索のほか、地図やメール、AndroidやGeminiなど、たくさんのサービスを作っています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "gemini",
+      "term": "Gemini",
+      "reading": "ジェミニ",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Googleが作っているAIです。文字や声で話しかけて使います。",
+      "detail": "スマホではGeminiのアプリから使えます。質問に答えたり、文章をまとめたりできます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "ai",
+      "term": "AI",
+      "reading": "エーアイ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "人のように考えて答えを出す、コンピューターの仕組みです。",
+      "detail": "日本語では「人工知能」と言います。便利ですが、答えが間違っていることもあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "simple-guide",
+      "term": "シンプルガイド",
+      "reading": "シンプルガイド",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Geminiの機能のひとつです。カメラで映したものを、声で説明してくれます。",
+      "detail": "Googleが2026年10月6日に発表しました。書類やリモコンの字を読み上げたり、スマホ操作のヒントを伝えたりします。Android 9以降のAndroidのスマホで使えます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "remote-control",
+      "term": "リモコン",
+      "reading": "リモコン",
+      "aliases": [],
+      "category": "ことば",
+      "short": "テレビやエアコンなどを、離れたところから動かす道具です。",
+      "detail": "「リモートコントローラー」を短くした言い方です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "hint",
+      "term": "ヒント",
+      "reading": "ヒント",
+      "aliases": [],
+      "category": "ことば",
+      "short": "答えや次にすることを見つける手がかりのことです。",
+      "detail": "英語の「hint」から来た言葉です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "image",
+      "term": "イメージ",
+      "reading": "イメージ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "頭の中に思い浮かべる様子のことです。",
+      "detail": "英語の「image」から来た言葉です。「〜のような感じ」という意味で使います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "android",
+      "term": "Android",
+      "reading": "アンドロイド",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホを動かす基本の仕組みのひとつです。Googleが作っています。",
+      "detail": "いろいろな会社のスマホに使われています。「Android 9」のような数字は、その仕組みの版を表します。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "iphone",
+      "term": "iPhone",
+      "reading": "アイフォーン",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "アメリカのApple（アップル）という会社が作っているスマホです。",
+      "detail": "Androidとは別の仕組みで動いています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "play-store",
+      "term": "Playストア",
+      "reading": "プレイストア",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Androidのスマホで、アプリを入れたり新しくしたりする場所です。",
+      "detail": "Googleが運営しています。正式な名前は「Google Play ストア」です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "on",
+      "term": "オン",
+      "reading": "オン",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "機能を使える状態にすることです。反対は「オフ」です。",
+      "detail": "スマホの設定では、スイッチのような部分を押して、オンとオフを切り替えることが多いです。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "profile",
+      "term": "プロフィール",
+      "reading": "プロフィール",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "アプリの中で、自分の名前や写真などをまとめたところです。",
+      "detail": "アプリによっては、ここから設定を開くことができます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "accessibility",
+      "term": "ユーザー補助",
+      "reading": "ユーザーほじょ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "Androidのスマホの設定にある、使いやすくするための項目です。",
+      "detail": "字を大きくしたり、読み上げを使ったりする設定がまとまっています。シンプルガイドを呼び出すショートカットも、ここから作れると案内されています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "shortcut",
+      "term": "ショートカット",
+      "reading": "ショートカット",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "機能をすぐに呼び出すための近道のことです。",
+      "detail": "英語で「近道」という意味です。何度も画面を開かなくても、すぐに使いたい機能にたどり着けます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "gemini-live",
+      "term": "Gemini Live",
+      "reading": "ジェミニライブ",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Geminiと、声でやりとりするための機能です。",
+      "detail": "Geminiのアプリの中で使います。シンプルガイドは、このGemini Liveが使える地域と言葉で利用できると案内されています。",
+      "related": [],
+      "status": "published"
     }
   ]
 }
