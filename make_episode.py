@@ -25,6 +25,10 @@ HERE = Path(__file__).resolve().parent
 NEWS_REPO = Path(os.environ.get("NEWS_REPO") or Path.home() / "Documents/Claude/ai-news-repo")   # 定時実行では ~/ai-office/work の複製を渡す
 READINGS = HERE / "readings.json"
 SOLO_PAUSE = 0.7   # 一人語りの段落の間（秒）
+# 本人の声（ElevenLabs）への指示タグ。Teraco Studio・AIニュースは [calm]（落ち着いて）のまま、
+# スマホニュースだけ [warmly]（あたたかく）にする。2026-10-08 藤崎さんが [calm]／[warmly]／[cheerfully] を
+# 聴き比べて選んだ（「テンションを下げすぎてネガティブな発声になる。通して明るく」）
+ELEVEN_TAG = "[warmly]"
 
 # ─── 読み替え ─────────────────────────────────────────────
 _DIG = "〇一二三四五六七八九"
@@ -229,6 +233,18 @@ def cmd_voice(date: str) -> int:
         # ElevenLabs はこの「！」を元気よく読むので、本人の口調より明るすぎた（2026-10-02 藤崎さん
         # 「冒頭が元気すぎる。もう少し落ち着いた口調で」）。ElevenLabs のときは書き換えない。
         pv._tidy_for_teraco = pv.preprocess_for_tts
+        orig_eleven = pv._eleven
+        def _eleven_tagged():
+            ev = orig_eleven()
+            if ev:
+                ev[1]["elevenlabs_tag"] = ELEVEN_TAG
+            return ev
+        pv._eleven = _eleven_tagged
+        tag_file = ep / "work" / "tag.txt"          # 指示タグが変わったら、声を全部作り直す（混ぜない）
+        if (tag_file.read_text().strip() if tag_file.exists() else "[calm]") != ELEVEN_TAG:
+            for f in work.glob("t_*.wav"):
+                f.unlink()
+        tag_file.write_text(ELEVEN_TAG + "\n")
     with open(ep / "work" / "voice.log", "a", encoding="utf-8") as log:
         pv.build(voice_script, ep / "audio.mp3", log)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
