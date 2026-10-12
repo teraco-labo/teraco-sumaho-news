@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-10-13",
+  "number": 4,
+  "title": "第4回 指紋や顔でログイン　Googleの「パスキー」を作ってみよう",
+  "description": "今日のテーマ：Googleアカウントにパスキーを作り、指紋や顔でログインする。きっかけのニュース：Googleが10月8日に公式ブログで、指紋・顔・画面ロックでログインできる「パスキー」の作り方を紹介した。",
+  "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-13/",
+  "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-13/audio.mp3",
+  "size": 2566313,
+  "duration": 257,
+  "ver": "26b0b1bf"
+ },
+ {
   "date": "2026-10-08",
   "number": 3,
   "title": "第3回 カメラをかざすと読み上げ　Geminiの新しい「シンプルガイド」",

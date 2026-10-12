@@ -763,6 +763,171 @@
       "detail": "Geminiのアプリの中で使います。シンプルガイドは、このGemini Liveが使える地域と言葉で利用できると案内されています。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "passkey",
+      "term": "パスキー",
+      "reading": "パスキー",
+      "aliases": [],
+      "category": "安全",
+      "short": "パスワードの代わりに、指紋や顔、スマホの画面ロックでログインできる仕組みです。",
+      "detail": "Googleでは、パスワードに代わる簡単で安全なログインの方法として案内されています。ログインするときは、スマホのロックを外すのと同じように本人確認をします。Googleアカウントで作ったあとも、パスワードでのログインは引き続き使えます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "login",
+      "term": "ログイン",
+      "reading": "ログイン",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "サービスを使う前に、「わたしです」と名乗って入ることです。",
+      "detail": "ふつうは、メールアドレスなどとパスワードを入れて、本人かどうかを確かめます。パスキーを使うと、指紋や顔、画面ロックで確かめられるようになります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "blog",
+      "term": "ブログ",
+      "reading": "ブログ",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "インターネット上で、記事やお知らせを日記のように発表するページです。",
+      "detail": "会社が新しいサービスや使い方を紹介するために、公式のブログを持っていることがあります。今回のパスキーの作り方も、Googleの公式ブログで紹介されました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "phishing",
+      "term": "フィッシング",
+      "reading": "フィッシング",
+      "aliases": [],
+      "category": "安全",
+      "short": "本物そっくりのメールやページで、パスワードなどを入力させようとする手口です。",
+      "detail": "Googleは、パスキーはフィッシングのような、よくあるネットの攻撃に強い作りだと説明しています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "net",
+      "term": "ネット",
+      "reading": "ネット",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "「インターネット」を短くした言い方です。",
+      "detail": "世界中のコンピューターやスマホをつないでいる仕組みのことです。ホームページを見たり、メールを送ったりするときに使っています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "lock",
+      "term": "ロック",
+      "reading": "ロック",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "鍵をかけることです。スマホでは、ほかの人に勝手に使われないように鍵をかけることを言います。",
+      "detail": "スマホのロックを外すには、指紋や顔、暗証番号などを使います。パスキーも、このロックを外す動きで本人確認をします。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "screen-lock",
+      "term": "画面ロック",
+      "reading": "がめんロック",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホを開くときに、指紋や顔、暗証番号などを求める鍵の仕組みです。",
+      "detail": "Googleは、パスキーを使う準備として、スマホの画面ロックをオンにするよう案内しています。画面ロックは、スマホの設定の中で決められます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "google-account",
+      "term": "Googleアカウント",
+      "reading": "グーグルアカウント",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "Googleのサービスを使うための、あなた専用の登録です。",
+      "detail": "GmailやPlayストアなど、Googleのいろいろなサービスで同じアカウントを使います。パスキーは、このGoogleアカウントに作ります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "gmail",
+      "term": "Gmail",
+      "reading": "ジーメール",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Googleが提供しているメールのサービスです。",
+      "detail": "Googleアカウントを持っていると使えます。アドレスの最後が「@gmail.com」になるメールです。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "page",
+      "term": "ページ",
+      "reading": "ページ",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "インターネットで見る、1枚1枚の画面のことです。",
+      "detail": "ホームページの中の、ひとつひとつの画面をページと呼びます。アドレスを入れたり、リンクを押したりして開きます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "g-co-passkeys",
+      "term": "g.co/passkeys",
+      "reading": "ジー ドット シーオー スラッシュ パスキーズ",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "Googleが、パスキーを作るために案内しているページのアドレスです。",
+      "detail": "Googleの公式ブログでは、このページを開いて「パスキーを作成する」を押し、案内に沿って進むよう紹介されています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "keyboard",
+      "term": "キーボード",
+      "reading": "キーボード",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "文字を入力するための、ボタンが並んだ部分です。",
+      "detail": "スマホでは、文字を入れる場所を触ると、画面の下にキーボードが出てきます。ひらがなとアルファベットを切り替えて使えます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "alphabet",
+      "term": "アルファベット",
+      "reading": "アルファベット",
+      "aliases": [],
+      "category": "ことば",
+      "short": "A、B、Cなどの英語の文字のことです。",
+      "detail": "ホームページのアドレスやパスワードには、アルファベットがよく使われます。スマホのキーボードで、入力する文字の種類を切り替えて打ちます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "ios",
+      "term": "iOS",
+      "reading": "アイオーエス",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhoneを動かしている、基本の仕組みの名前です。",
+      "detail": "後ろに付く数字はバージョンを表します。Googleのヘルプでは、パスキーを使うにはiOS 16以上が必要と案内されています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "memo",
+      "term": "メモ",
+      "reading": "メモ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "忘れないように、短く書きとめておくことです。",
+      "detail": "紙のメモ帳のほか、スマホのメモのアプリに書いておくこともできます。パスワードはほかの人に見せないよう、大切にしまっておきましょう。",
+      "related": [],
+      "status": "published"
     }
   ]
 }
