@@ -74,13 +74,15 @@ def main():
     cat1, cat2 = CFG["category"]
     # カバーの中身から作った印。中身が変わったときだけURLが変わり、Spotify が取り直す（2026-10-04）
     v = hashlib.md5((HERE / "cover.jpg").read_bytes()).hexdigest()[:8]
+    # 2026-10-13 Spotify for Creators へ引っ越し。古い RSS に引っ越し先を書く（Apple などがこれを見て付け替える）
+    newfeed = f"\n  <itunes:new-feed-url>{CFG['new_feed_url']}</itunes:new-feed-url>" if CFG.get("new_feed_url") else ""
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>{_x(CFG['show_title'])}</title>
   <itunes:title>{_x(CFG['show_title'])}</itunes:title>
   <link>{base}/</link>
-  <atom:link href="{base}/feed.xml" rel="self" type="application/rss+xml"/>
+  <atom:link href="{base}/feed.xml" rel="self" type="application/rss+xml"/>{newfeed}
   <language>ja</language>
   <description>{_x(CFG['description'])}</description>
   <itunes:summary>{_x(CFG['description'])}</itunes:summary>

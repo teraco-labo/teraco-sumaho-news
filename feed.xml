@@ -5,6 +5,7 @@
   <itunes:title>世界一わかりやすいスマホニュース｜てらこ先生</itunes:title>
   <link>https://teraco-labo.github.io/teraco-sumaho-news/</link>
   <atom:link href="https://teraco-labo.github.io/teraco-sumaho-news/feed.xml" rel="self" type="application/rss+xml"/>
+  <itunes:new-feed-url>https://anchor.fm/s/11878a410/podcast/rss</itunes:new-feed-url>
   <language>ja</language>
   <description>スマホ教室のてらこ先生とミカが、毎朝7分でお届けします。携帯会社のニュースやお得な話題をきっかけに、LINE・写真・詐欺対策などのスマホの使い方を、ゆっくり、やさしくお話しします。文字で読めるページには、むずかしい言葉の説明つき。宮崎県西都市のスマホ教室TERACOから。</description>
   <itunes:summary>スマホ教室のてらこ先生とミカが、毎朝7分でお届けします。携帯会社のニュースやお得な話題をきっかけに、LINE・写真・詐欺対策などのスマホの使い方を、ゆっくり、やさしくお話しします。文字で読めるページには、むずかしい言葉の説明つき。宮崎県西都市のスマホ教室TERACOから。</itunes:summary>
@@ -18,7 +19,7 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Tue, 13 Oct 2026 04:07:18 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 13 Oct 2026 18:02:00 +0900</lastBuildDate>
   <item>
     <title>第4回 指紋や顔でログイン　Googleの「パスキー」を作ってみよう</title>
     <itunes:title>第4回 指紋や顔でログイン　Googleの「パスキー」を作ってみよう</itunes:title>
