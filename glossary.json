@@ -928,6 +928,193 @@
       "detail": "紙のメモ帳のほか、スマホのメモのアプリに書いておくこともできます。パスワードはほかの人に見せないよう、大切にしまっておきましょう。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "mobile-battery",
+      "term": "モバイルバッテリー",
+      "reading": "モバイルバッテリー",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "持ち歩いて、外出先でスマホなどを充電できる電池です。",
+      "detail": "前もって電気をためておき、スマホとケーブルでつないで充電します。中には、リチウムイオン電池の仲間が使われています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "elecom",
+      "term": "エレコム",
+      "reading": "エレコム",
+      "aliases": [],
+      "category": "ことば",
+      "short": "スマホやパソコンのまわりの品物を作っている会社です。",
+      "detail": "2026年10月14日に、リン酸鉄リチウムイオン電池を使ったモバイルバッテリー3モデルを発表しました。発売は10月中旬です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "pasokon",
+      "term": "パソコン",
+      "reading": "パソコン",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "「パーソナルコンピューター」を縮めた言葉で、ひとりで使うコンピューターのことです。",
+      "detail": "机に置く形や、持ち運べるノート型があります。インターネットや文書づくりなどに使います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "outlet",
+      "term": "コンセント",
+      "reading": "コンセント",
+      "aliases": [],
+      "category": "ことば",
+      "short": "壁などについている、電気の差し込み口です。",
+      "detail": "スマホは、コンセントに差した充電器とケーブルでつないで充電します。モバイルバッテリーがあれば、コンセントから離れた場所でも充電できます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "cable",
+      "term": "ケーブル",
+      "reading": "ケーブル",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "機械どうしをつないで、電気や情報を通すひもです。",
+      "detail": "スマホの充電にもケーブルを使います。差し込み口の形がいくつかあるので、機械に合ったものを選びます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "lfp-battery",
+      "term": "リン酸鉄リチウムイオン電池",
+      "reading": "リンサンテツリチウムイオンでんち",
+      "aliases": [],
+      "category": "ことば",
+      "short": "電池の種類のひとつです。安全性に優れ、長持ちするのが特長です。",
+      "detail": "電気自動車にも使われている電池です。エレコムの発表では、今回のモバイルバッテリーは約2,000サイクルの長寿命設計とされています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "cycle",
+      "term": "サイクル",
+      "reading": "サイクル",
+      "aliases": [],
+      "category": "ことば",
+      "short": "電池に充電して、使う。その1回分のくり返しを数える言い方です。",
+      "detail": "数が多いほど、くり返し長く使える設計だという目安になります。実際の長さは、使い方や置き場所によって変わります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "health-monitor",
+      "term": "Health Monitor",
+      "reading": "ヘルスモニター",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "今回のエレコムのモバイルバッテリーについている、買い替えどきの目安を知らせる機能です。",
+      "detail": "充電して使った回数に合わせて、ランプの光り方や色が変わります。買い替えどきの目安になります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "lamp",
+      "term": "ランプ",
+      "reading": "ランプ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "機械についている、小さな明かりです。",
+      "detail": "光り方や色で、機械の様子を知らせてくれます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "mah",
+      "term": "mAh",
+      "reading": "ミリアンペアアワー",
+      "aliases": [],
+      "category": "ことば",
+      "short": "電池にためられる電気の量を表す単位です。",
+      "detail": "数字が大きいほど、たくさんの電気をためられます。今回のエレコムの品物は、6,000mAh、8,000mAh、12,000mAhの3種類です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "open-price",
+      "term": "オープン価格",
+      "reading": "オープンかかく",
+      "aliases": [],
+      "category": "ことば",
+      "short": "作った会社が、おすすめの値段を決めていない売り方です。",
+      "detail": "値段は、それぞれのお店が決めます。そのため、お店によって値段がちがうことがあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "pse-mark",
+      "term": "PSEマーク",
+      "reading": "ピーエスイーマーク",
+      "aliases": [],
+      "category": "安全",
+      "short": "電気の製品が、国の法律（電気用品安全法）で決められた安全の基準に合っていることを示す印です。",
+      "detail": "モバイルバッテリーの本体で確かめられます。NITEも、買う前に表示のマークが適切か確かめるようすすめています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "nite",
+      "term": "NITE",
+      "reading": "ナイト",
+      "aliases": [],
+      "category": "安全",
+      "short": "製品の安全を調べている機関で、正式な名前は「製品評価技術基盤機構」です。",
+      "detail": "製品の事故について、注意を呼びかけています。リチウムイオン電池を使った製品は「賢く選ぶ」「丁寧に使う」「正しく捨てる、そして資源循環」の3つのCで事故を防ごう、と呼びかけています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "online-shopping",
+      "term": "ネット通販",
+      "reading": "ネットつうはん",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "インターネットで品物を選んで注文し、家に届けてもらう買い方です。",
+      "detail": "家にいながら買い物ができます。買う前に、売っている会社の連絡先が分かるかも確かめておきましょう。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "check",
+      "term": "チェック",
+      "reading": "チェック",
+      "aliases": [],
+      "category": "ことば",
+      "short": "確かめること、調べることです。",
+      "detail": "「チェックする」は「確かめる」と同じ意味で使われます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "point",
+      "term": "ポイント",
+      "reading": "ポイント",
+      "aliases": [],
+      "category": "ことば",
+      "short": "ここでは「大事なところ」という意味です。",
+      "detail": "お買い物でたまる「ポイント」とは、別の意味で使っています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "maker",
+      "term": "メーカー",
+      "reading": "メーカー",
+      "aliases": [],
+      "category": "ことば",
+      "short": "品物を作っている会社のことです。",
+      "detail": "使い終わった製品を、メーカーが回収していることもあります。説明書やホームページで確かめられます。",
+      "related": [],
+      "status": "published"
     }
   ]
 }

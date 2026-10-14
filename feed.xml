@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Tue, 13 Oct 2026 18:02:00 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 15 Oct 2026 04:09:24 +0900</lastBuildDate>
+  <item>
+    <title>第5回 外でも充電　モバイルバッテリーを安全に選ぶコツ</title>
+    <itunes:title>第5回 外でも充電　モバイルバッテリーを安全に選ぶコツ</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-15/</link>
+    <description>今日のテーマ：モバイルバッテリーの選び方・置き場所・替えどき。きっかけのニュース：エレコムが2026年10月14日、安全性に優れて長持ちする「リン酸鉄リチウムイオン電池」を使ったモバイルバッテリー3モデルを発表（10月中旬発売）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-15/ ／ 公式LINE → https://lin.ee/tkYJ7Cw</description>
+    <itunes:summary>今日のテーマ：モバイルバッテリーの選び方・置き場所・替えどき。きっかけのニュース：エレコムが2026年10月14日、安全性に優れて長持ちする「リン酸鉄リチウムイオン電池」を使ったモバイルバッテリー3モデルを発表（10月中旬発売）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-15/ ／ 公式LINE → https://lin.ee/tkYJ7Cw</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-15/audio.mp3?v=76871da2" length="2772158" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-15/audio.mp3</guid>
+    <pubDate>Thu, 15 Oct 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>5</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:04:37</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第4回 指紋や顔でログイン　Googleの「パスキー」を作ってみよう</title>
     <itunes:title>第4回 指紋や顔でログイン　Googleの「パスキー」を作ってみよう</itunes:title>
