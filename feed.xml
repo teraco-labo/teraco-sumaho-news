@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Thu, 15 Oct 2026 04:09:24 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 20 Oct 2026 04:04:47 +0900</lastBuildDate>
+  <item>
+    <title>第6回 マークの意味を知って見分けよう　ドコモメールの「公式アカウント」</title>
+    <itunes:title>第6回 マークの意味を知って見分けよう　ドコモメールの「公式アカウント」</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-20/</link>
+    <description>今日のテーマ：メールのマークは目印のひとつ。中身を読み、いつもの入り口から確かめるコツ。きっかけのニュース：ドコモが2026年10月15日に公式に発表：偽物のメールにドコモメール「公式アカウント」のマークが付いたという報告があったため、該当する会社や団体のマーク表示を一時的に止めている。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-20/ ／ 公式LINE → https://lin.ee/tkYJ7Cw</description>
+    <itunes:summary>今日のテーマ：メールのマークは目印のひとつ。中身を読み、いつもの入り口から確かめるコツ。きっかけのニュース：ドコモが2026年10月15日に公式に発表：偽物のメールにドコモメール「公式アカウント」のマークが付いたという報告があったため、該当する会社や団体のマーク表示を一時的に止めている。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-20/ ／ 公式LINE → https://lin.ee/tkYJ7Cw</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-20/audio.mp3?v=b31562e9" length="2368566" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-20/audio.mp3</guid>
+    <pubDate>Tue, 20 Oct 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>6</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:03:57</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第5回 外でも充電　モバイルバッテリーを安全に選ぶコツ</title>
     <itunes:title>第5回 外でも充電　モバイルバッテリーを安全に選ぶコツ</itunes:title>
