@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>スマホに入るマイナンバーカード　Androidで始まりました｜世界一わかりやすいスマホニュース</title>
+<meta name="description" content="今日のテーマ：Androidのマイナンバーカードを始める前の準備（使える機種の確認・画面ロック・見せる情報の選び方）">
+<link rel="canonical" href="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="スマホに入るマイナンバーカード　Androidで始まりました｜世界一わかりやすいスマホニュース">
+<meta property="og:description" content="今日のテーマ：Androidのマイナンバーカードを始める前の準備（使える機種の確認・画面ロック・見せる情報の選び方）">
+<meta property="og:url" content="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/">
+<meta property="og:site_name" content="世界一わかりやすいスマホニュース">
+<meta property="og:image" content="https://teraco-labo.github.io/teraco-sumaho-news/cover.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="世界一わかりやすいスマホニュース" href="https://teraco-labo.github.io/teraco-sumaho-news/feed.xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "スマホに入るマイナンバーカード　Androidで始まりました｜世界一わかりやすいスマホニュース", "description": "今日のテーマ：Androidのマイナンバーカードを始める前の準備（使える機種の確認・画面ロック・見せる情報の選び方）", "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/", "inLanguage": "ja", "author": {"@type": "Person", "name": "てらこ先生"}, "partOfSeries": {"@type": "PodcastSeries", "name": "世界一わかりやすいスマホニュース", "url": "https://teraco-labo.github.io/teraco-sumaho-news/"}, "datePublished": "2026-10-22"}</script>
+<link rel="icon" href="../../cover.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  .t { color:var(--accent); border-bottom:1px dashed currentColor; cursor:help;
+    font-weight:500; }
+  .t:hover, .t:focus-visible { background:rgba(14,116,144,0.10); outline:none; border-radius:2px; }
+  #tip { position:absolute; z-index:60; max-width:min(22rem,88vw); padding:0.85rem 1rem;
+    background:var(--card-bg); border:1px solid var(--border); border-radius:8px;
+    box-shadow:0 8px 28px rgba(15,23,42,0.16); font-size:0.84rem; line-height:1.8;
+    opacity:0; visibility:hidden; transition:opacity .12s; pointer-events:none; }
+  #tip.on { opacity:1; visibility:visible; pointer-events:auto; }
+  #tip .tip-n { font-weight:700; display:block; margin-bottom:0.3rem; }
+  #tip .tip-m { display:inline-block; margin-top:0.5rem; font-size:0.78rem;
+    font-weight:600; color:var(--accent); text-decoration:none; }
+  #sheet { position:fixed; left:0; right:0; bottom:0; z-index:70; padding:1.4rem 1.4rem 2rem;
+    background:var(--card-bg); border-top:1px solid var(--border);
+    border-radius:16px 16px 0 0; box-shadow:0 -8px 32px rgba(15,23,42,0.22);
+    transform:translateY(102%); transition:transform .22s ease; }
+  #sheet.on { transform:translateY(0); }
+  #sheet .sheet-grip { width:36px; height:4px; border-radius:2px; background:var(--border);
+    margin:0 auto 1rem; }
+  #sheet .tip-n { font-size:1.05rem; font-weight:700; display:block; margin-bottom:0.5rem; }
+  #sheet .tip-s { font-size:0.92rem; line-height:1.95; color:var(--text-muted); }
+  #sheet .tip-m { display:block; margin-top:1.1rem; padding:0.75rem; text-align:center;
+    background:var(--accent); color:#fff; border-radius:8px; font-size:0.88rem;
+    font-weight:700; text-decoration:none; }
+  #veil { position:fixed; inset:0; z-index:69; background:rgba(15,23,42,0.35);
+    opacity:0; visibility:hidden; transition:opacity .22s; }
+  #veil.on { opacity:1; visibility:visible; }
+  @media (prefers-reduced-motion:reduce){ #sheet,#veil,#tip{transition:none} }
+
+  :root { --bg:#FFFBEF;--card:#FFFFFF;--ink:#3D261D;--ink2:#7A5A48;--line:#F1E3C6;--head:#F9B050;--head-ink:#3D261D;--accent:#B8560F;--heading:#A04A10;--btn:#E8720C;--btn-ink:#FFFFFF;--soft:#FFF0D6;--now:#FFE08A;--mark:#F59A2E;--leaf:#CFE3A3;--leaf-ink:#33461A;--chip:#3D261D;--chip-ink:#FFFBEF;--hero1:#FFFDF6;--hero2:#FFE8C2;--hero-ink:#3D261D;--hero-sub:#7A5A48;--ribbon1:rgba(249,176,80,.55);--ribbon2:rgba(156,196,107,.50);--btn2:#F9B050;--pill-border:#F3C27E;--pill-bg:#FFFFFF;--pill-ink:#8A3F0B;--follow:#CFE3A3;--follow-ink:#33461A;--follow-edge:#9CC46B; --play-size:72px; --card-bg:var(--card); --border:var(--line); --text:var(--ink); --text-muted:var(--ink2); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#1E1712;--card:#2A211A;--ink:#F6EBDD;--ink2:#CDB9A5;--line:#43362B;--head:#5A3A1E;--head-ink:#FFE3C0;--accent:#F7B267;--heading:#F7B267;--btn:#E8720C;--btn-ink:#FFFFFF;--soft:#3A2A1C;--now:#5C4512;--mark:#F59A2E;--leaf:#3F5726;--leaf-ink:#E5F2CC;--chip:#F6EBDD;--chip-ink:#1E1712;--hero1:#2A1E14;--hero2:#3A2716;--hero-ink:#FFE9CF;--hero-sub:#E2C8AE;--ribbon1:rgba(249,176,80,.35);--ribbon2:rgba(156,196,107,.30);--btn2:#F9B050;--pill-border:#6B4A2A;--pill-bg:#2A211A;--pill-ink:#F7B267;--follow:#3F5726;--follow-ink:#E5F2CC;--follow-edge:#2C3D1A; color-scheme:dark; } }
+  :root[data-theme="dark"] { --bg:#1E1712;--card:#2A211A;--ink:#F6EBDD;--ink2:#CDB9A5;--line:#43362B;--head:#5A3A1E;--head-ink:#FFE3C0;--accent:#F7B267;--heading:#F7B267;--btn:#E8720C;--btn-ink:#FFFFFF;--soft:#3A2A1C;--now:#5C4512;--mark:#F59A2E;--leaf:#3F5726;--leaf-ink:#E5F2CC;--chip:#F6EBDD;--chip-ink:#1E1712;--hero1:#2A1E14;--hero2:#3A2716;--hero-ink:#FFE9CF;--hero-sub:#E2C8AE;--ribbon1:rgba(249,176,80,.35);--ribbon2:rgba(156,196,107,.30);--btn2:#F9B050;--pill-border:#6B4A2A;--pill-bg:#2A211A;--pill-ink:#F7B267;--follow:#3F5726;--follow-ink:#E5F2CC;--follow-edge:#2C3D1A; color-scheme:dark; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:'Noto Sans JP','Hiragino Sans',sans-serif; font-size:19px;
+         font-weight:500; line-height:1.85; -webkit-text-size-adjust:100%; }
+  a { color:var(--heading); }
+  .hero { position:relative; overflow:hidden; background:linear-gradient(180deg,var(--hero1),var(--hero2));
+          color:var(--hero-ink); padding:28px 16px 30px; border-bottom:1px solid var(--line); }
+  .hero::before, .hero::after { content:""; position:absolute; border-radius:999px; pointer-events:none; }
+  .hero::before { right:-160px; bottom:-40px; width:620px; height:120px; transform:rotate(-14deg);
+                  background:linear-gradient(90deg,transparent,var(--ribbon1)); }
+  .hero::after { right:-120px; bottom:-90px; width:560px; height:90px; transform:rotate(-14deg);
+                 background:linear-gradient(90deg,transparent,var(--ribbon2)); }
+  .hero-inner { position:relative; z-index:1; max-width:680px; margin:0 auto; }
+  .crumbs { font-size:.78em; color:var(--hero-sub); margin-bottom:6px; }
+  .crumbs a { color:var(--hero-sub); text-decoration:none; }
+  .hero h1 { font-size:1.45em; font-weight:900; line-height:1.4; text-wrap:balance; }
+  .hero p { margin-top:6px; font-size:.9em; color:var(--hero-sub); }
+  .top-nav { margin-top:14px; display:flex; flex-wrap:wrap; gap:8px; }
+  .top-nav a { padding:6px 14px; border-radius:999px; border:1.5px solid var(--pill-border); background:var(--pill-bg);
+               color:var(--pill-ink); font-size:.8em; font-weight:700; text-decoration:none; }
+  main { max-width:680px; margin:0 auto; padding:18px 16px 110px; }
+  h2 { margin:32px 0 8px; font-size:1.16em; font-weight:900; color:var(--heading); border-left:6px solid var(--mark); padding-left:10px; text-wrap:balance; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:16px; margin-top:16px; }
+  .lbl { display:inline-block; font-size:.72em; font-weight:700; color:#fff; background:var(--head); border-radius:6px; padding:0 8px; margin-top:6px; }
+  .card ul { padding-left:1.2em; }
+  .soft { background:var(--soft); border-radius:18px; padding:18px 16px; margin-top:30px; }
+  .soft h2 { margin:0 0 6px; border:0; padding:0; color:var(--ink); }
+  .soft ol { padding-left:1.4em; font-size:1.05em; font-weight:700; }
+  .soft .hw { margin-top:10px; font-size:.9em; }
+  .src { margin-top:26px; font-size:.8em; color:var(--ink2); }
+  .src ul { padding-left:1.2em; }
+  .links { margin-top:22px; font-size:.85em; display:flex; flex-wrap:wrap; gap:8px 18px; }
+  footer.foot { margin-top:28px; text-align:center; font-size:.85em; color:var(--ink2); }
+  footer.foot a { font-weight:700; }
+  .t { font-weight:700; }
+  #tip { font-size:17px !important; line-height:1.8 !important; }
+  #sheet .tip-n { font-size:1.1em !important; }
+  #sheet .tip-s { font-size:.95em !important; color:var(--ink) !important; }
+  #sheet .tip-m { font-size:.95em !important; padding:14px !important; background:var(--chip) !important; color:var(--chip-ink) !important; }
+  :focus-visible { outline:3px solid var(--mark); outline-offset:2px; }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; scroll-behavior:auto !important; } }
+
+  .player { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 16px 16px; margin-top:-14px;
+             position:relative; z-index:2; box-shadow:0 6px 24px rgba(0,0,0,.06); }
+  .p-head { display:flex; gap:14px; align-items:center; }
+  .p-head img { width:84px; height:84px; border-radius:12px; flex:none; box-shadow:0 4px 14px rgba(0,0,0,.12); }
+  .p-date { font-size:.8em; color:var(--ink2); }
+  .p-title { font-weight:700; line-height:1.4; }
+  .progress { position:relative; height:10px; background:var(--line); border-radius:5px; margin-top:18px; cursor:pointer; touch-action:none; }
+  .progress .fill { position:absolute; left:0; top:0; bottom:0; width:0; background:linear-gradient(90deg,var(--btn2),var(--btn)); border-radius:5px; }
+  .progress .knob { position:absolute; top:50%; left:0; width:20px; height:20px; margin:-10px 0 0 -10px; border-radius:50%;
+                    background:var(--btn); border:3px solid var(--card); box-shadow:0 1px 4px rgba(0,0,0,.25); }
+  .time-row { display:flex; justify-content:space-between; font-size:.75em; color:var(--ink2); margin-top:6px; font-variant-numeric:tabular-nums; }
+  .controls { display:flex; align-items:center; justify-content:center; gap:4px; margin-top:6px; }
+  .ctl { display:flex; flex-direction:column; align-items:center; background:none; border:none; color:var(--ink); cursor:pointer;
+         padding:8px; border-radius:12px; font-family:inherit; }
+  .ctl svg { width:30px; height:30px; display:block; }
+  .ctl small { font-size:.6em; color:var(--ink2); font-weight:700; margin-top:-1px; }
+  .ctl.play { width:var(--play-size); height:var(--play-size); margin:0 10px; padding:0; justify-content:center; border-radius:50%;
+              background:var(--btn); color:var(--btn-ink); box-shadow:0 6px 16px color-mix(in srgb, var(--btn) 40%, transparent); }
+  .ctl.play svg { width:34px; height:34px; }
+  .play-lbl { text-align:center; font-size:.78em; font-weight:700; color:var(--ink2); margin-top:2px; }
+  .sx-speed { margin-top:12px; }
+  .sx-speed-label { display:block; font-size:.75em; color:var(--ink2); font-weight:700; margin-bottom:4px; }
+  .sx-speed-btns { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,1fr)); gap:6px; }
+  .sx-speed-btns .sp { padding:8px 0; border-radius:999px; border:1.5px solid var(--line); background:var(--bg); color:var(--ink);
+                    font-size:.85em; font-weight:700; font-family:inherit; cursor:pointer; }
+  .sx-speed-btns .sp.on { background:var(--btn); border-color:var(--btn); color:var(--btn-ink); }
+  .readbtn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:12px; padding:13px;
+             border:2px solid var(--pill-border); border-radius:999px; background:var(--pill-bg); color:var(--pill-ink); font-size:1em;
+             font-weight:700; text-decoration:none; }
+  .readbtn svg { width:22px; height:22px; }
+  .kbd { margin-top:10px; font-size:.7em; color:var(--ink2); display:none; }
+  @media (hover:hover) and (pointer:fine) { .kbd { display:block; } }
+  .mini { position:fixed; left:0; right:0; bottom:0; z-index:50; background:var(--card); border-top:1px solid var(--line);
+          box-shadow:0 -6px 20px rgba(0,0,0,.12); padding:10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+          display:flex; gap:10px; align-items:center; transform:translateY(110%); transition:transform .2s; }
+  .mini.show { transform:translateY(0); }
+  .mini button { flex:none; border:none; border-radius:12px; font-family:inherit; font-weight:700; cursor:pointer; }
+  .mini .m-play { width:52px; height:44px; background:var(--btn); color:var(--btn-ink); }
+  .mini .m-play svg { width:24px; height:24px; }
+  .mini .m-back { position:relative; width:44px; height:44px; background:transparent; color:var(--ink); }
+  .mini .m-back svg { width:36px; height:36px; }
+  .mini .m-back span { position:absolute; left:0; right:0; top:50%; transform:translateY(-46%); font-size:.55em; font-weight:700; }
+  .mini .m-bar { flex:1; height:8px; background:var(--line); border-radius:4px; overflow:hidden; }
+  .mini .m-fill { height:100%; width:0; background:var(--btn); }
+  .mini .m-time { flex:none; font-size:.72em; color:var(--ink2); font-variant-numeric:tabular-nums; }
+  .read-h { scroll-margin-top:16px; }
+  .read-hint { font-size:.82em; color:var(--ink2); background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 14px; margin-top:8px; }
+  .ln { border-radius:12px; padding:6px 10px; margin:6px -10px; cursor:pointer; transition:background .2s; }
+  .ln.now { background:var(--now); }
+  .ln .who { display:block; font-size:.68em; font-weight:700; color:var(--ink2); }
+  .ln.partner { background:color-mix(in srgb, var(--soft) 55%, transparent); }
+  .ln.partner.now { background:var(--now); }
+  .follow { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:28px; padding:14px;
+            border:none; border-radius:999px; background:var(--follow); color:var(--follow-ink); font-size:1.05em; font-weight:700;
+            font-family:inherit; cursor:pointer; box-shadow:0 3px 0 var(--follow-edge); }
+  .follow:active { transform:translateY(2px); box-shadow:0 1px 0 var(--follow-edge); }
+  .follow svg { width:24px; height:24px; }
+  .follow.follow-top { margin-top:14px; }
+  #fveil { position:fixed; inset:0; z-index:80; background:rgba(0,0,0,.4); display:none; }
+  #fsheet { position:fixed; left:0; right:0; bottom:0; z-index:81; max-width:680px; margin:0 auto; background:var(--card);
+            color:var(--ink); border-radius:18px 18px 0 0; padding:22px 18px calc(26px + env(safe-area-inset-bottom, 0px));
+            box-shadow:0 -8px 30px rgba(0,0,0,.25); display:none; max-height:88vh; overflow:auto; }
+  #fveil.on, #fsheet.on { display:block; }
+  #fsheet h3 { font-size:1.15em; }
+  #fsheet .way { margin-top:14px; padding:14px; border:1px solid var(--line); border-radius:14px; }
+  #fsheet .way b { display:block; }
+  #fsheet .way p { font-size:.9em; color:var(--ink2); margin-top:4px; line-height:1.7; }
+  #fsheet .go { display:block; margin-top:10px; padding:13px; border-radius:12px; text-align:center; font-weight:700;
+                text-decoration:none; color:#fff; background:var(--btn); }
+  #fsheet .go.spotify { background:#1DB954; }
+  #fsheet .small { margin-top:14px; font-size:.85em; color:var(--ink2); text-align:center; }
+  #fsheet .small a { color:var(--ink2); }
+  #fsheet .close { display:block; width:100%; margin-top:14px; padding:12px; border:1px solid var(--line); border-radius:12px;
+                   background:transparent; color:var(--ink); font-size:.95em; font-family:inherit; cursor:pointer; }
+</style>
+</head>
+<body>
+<header class="hero"><div class="hero-inner"><div class="crumbs"><a href="../../">世界一わかりやすいスマホニュース</a></div><h1>スマホに入るマイナンバーカード　Androidで始まりました</h1><p>10月22日（木）・第7回</p><nav class="top-nav"><a href="../../">トップ</a><a href="../../archive.html">これまでの回</a><a href="../../terms/">用語集</a></nav></div></header>
+<main>
+
+  <div class="player" id="player">
+    <div class="p-head"><img src="../../cover.jpg" alt="" width="84" height="84"><div><div class="p-date">10月22日（木）・第7回</div><div class="p-title">世界一わかりやすいスマホニュース</div></div></div>
+    <div class="progress" id="progress" role="slider" aria-label="再生位置" tabindex="0"><div class="fill" id="fill"></div><div class="knob" id="knob"></div></div>
+    <div class="time-row"><span id="cur">0:00</span><span id="dur">--:--</span></div>
+    <div class="controls"><button type="button" class="ctl" data-skip="-30" aria-label="30秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>30</small></button><button type="button" class="ctl" data-skip="-10" aria-label="10秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>10</small></button><button class="ctl play" id="play" type="button" aria-label="音声で聴く"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><button type="button" class="ctl" data-skip="10" aria-label="10秒すすむ"><svg style="transform:scaleX(-1)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>10</small></button><button type="button" class="ctl" data-skip="30" aria-label="30秒すすむ"><svg style="transform:scaleX(-1)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><small>30</small></button></div>
+    <div class="play-lbl" id="playLbl">音声で聴く</div>
+    <div class="sx-speed" id="speeds"><span class="sx-speed-label">聴く速さ</span><div class="sx-speed-btns"><button type="button" class="sp" data-r="0.7">0.7×</button><button type="button" class="sp" data-r="0.8">0.8×</button><button type="button" class="sp" data-r="1">ふつう</button><button type="button" class="sp" data-r="1.2">1.2×</button><button type="button" class="sp" data-r="1.5">1.5×</button></div></div>
+    <button class="follow follow-top" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>この番組を毎回聴く</span></button>
+    <a class="readbtn" href="#yomu" id="toread"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h16v2H4z"/></svg><span>文字で読む</span></a>
+    <p class="kbd">キーボード：スペースで再生／停止、← → で10秒、J / L で30秒</p>
+  </div>
+  <audio id="audio" src="audio.mp3" preload="metadata"></audio>
+  <div class="mini" id="mini" aria-hidden="true">
+    <button type="button" class="m-play" id="mplay" aria-label="再生／一時停止"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+    <button type="button" class="m-back" data-skip="-10" aria-label="10秒もどる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><span>10</span></button>
+    <div class="m-bar"><div class="m-fill" id="mfill"></div></div>
+    <span class="m-time" id="mtime">0:00</span>
+  </div>
+  <div class="card"><b>今日の内容</b><br><span class="lbl">きっかけのニュース</span><ul><li>Googleが2026年10月20日、「Androidのマイナンバーカード」の提供開始を公式ブログで発表</li></ul><span class="lbl">今日のテーマ</span><ul><li>Androidのマイナンバーカードを始める前の準備（使える機種の確認・画面ロック・見せる情報の選び方）</li></ul></div>
+  <h2 class="read-h" id="yomu">文字で読む</h2>
+  <p class="read-hint">線が引いてある言葉を押すと、説明が出ます。文を押すと、そこから聴けます。</p>
+  <article>
+<h2>はじめに</h2>
+<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすい<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span><span class="t" data-t="news" tabindex="0" role="button" aria-label="ニュースの説明を見る">ニュース</span>、てらこ先生です。</p>
+<p class="ln teacher" data-t="5.84">今日お伝えするのは、スマホに入る<span class="t" data-t="my-number-card" tabindex="0" role="button" aria-label="マイナンバーカードの説明を見る">マイナンバーカード</span>のお話です。</p>
+<p class="ln teacher" data-t="10.82">その前に、まずは今日のニュースから。<span class="t" data-t="google" tabindex="0" role="button" aria-label="Googleの説明を見る">Google</span>が公式に発表したお知らせです。</p>
+<h2>今日のニュース</h2>
+<p class="ln teacher" data-t="16.52">「<span class="t" data-t="android" tabindex="0" role="button" aria-label="Androidの説明を見る">Android</span>のマイナンバーカード」が、使えるようになりました。</p>
+<p class="ln teacher" data-t="20.6">Googleが10月20日に、公式<span class="t" data-t="blog" tabindex="0" role="button" aria-label="ブログの説明を見る">ブログ</span>で発表しました。</p>
+<p class="ln teacher" data-t="25.02">国の<span class="t" data-t="digital-agency" tabindex="0" role="button" aria-label="デジタル庁の説明を見る">デジタル庁</span>も、<span class="t" data-t="homepage" tabindex="0" role="button" aria-label="ホームページの説明を見る">ホームページ</span>で提供の開始を知らせています。</p>
+<p class="ln teacher" data-t="29.9">使うのは、<span class="t" data-t="google-wallet" tabindex="0" role="button" aria-label="Googleウォレットの説明を見る">Googleウォレット</span>という<span class="t" data-t="app" tabindex="0" role="button" aria-label="アプリの説明を見る">アプリ</span>です。</p>
+<p class="ln teacher" data-t="33.72">ここに、ご自分のマイナンバーカードを登録します。</p>
+<p class="ln teacher" data-t="37.6">すると、お店や<span class="t" data-t="internet" tabindex="0" role="button" aria-label="インターネットの説明を見る">インターネット</span>の<span class="t" data-t="service" tabindex="0" role="button" aria-label="サービスの説明を見る">サービス</span>で、<span class="t" data-t="identity-check" tabindex="0" role="button" aria-label="本人確認の説明を見る">本人確認</span>に使えます。</p>
+<p class="ln teacher" data-t="42.76">年齢の確認や、住所の確認にも使えます。</p>
+<p class="ln teacher" data-t="46.8">スマホを<span class="t" data-t="tap" tabindex="0" role="button" aria-label="タップの説明を見る">タップ</span>して、相手に読み取ってもらう形です。</p>
+<p class="ln teacher" data-t="50.84"><span class="t" data-t="electronic-certificate" tabindex="0" role="button" aria-label="電子証明書の説明を見る">電子証明書</span>という<span class="t" data-t="feature" tabindex="0" role="button" aria-label="機能の説明を見る">機能</span>も登録すると、できることがさらに広がります。</p>
+<p class="ln teacher" data-t="56.16"><span class="t" data-t="mynaportal" tabindex="0" role="button" aria-label="マイナポータルの説明を見る">マイナポータル</span>で情報を見たり、<span class="t" data-t="online" tabindex="0" role="button" aria-label="オンラインの説明を見る">オンライン</span>で申請したりできます。</p>
+<p class="ln teacher" data-t="60.9"><span class="t" data-t="convenience-store" tabindex="0" role="button" aria-label="コンビニの説明を見る">コンビニ</span>で、証明書を受け取ることもできます。</p>
+<p class="ln teacher" data-t="64.68">ここまでが、Googleからのお知らせでした。</p>
+<h2>スマホにカードが入る</h2>
+<p class="ln teacher" data-t="68.08">スマホに<span class="t" data-t="card" tabindex="0" role="button" aria-label="カードの説明を見る">カード</span>が入るなんて、びっくりしませんか。</p>
+<p class="ln teacher" data-t="72.04">「わたしのスマホでも使えるのかしら」と、迷いますよね。</p>
+<p class="ln teacher" data-t="76.98">始める前の準備を知っておけば、すっと進められますよ。</p>
+<p class="ln teacher" data-t="81.22">今日のお話は、Androidのスマホのお話です。</p>
+<p class="ln teacher" data-t="85.22">一緒に、ゆっくり見ていきましょう。</p>
+<h2>ひとつめ　使えるスマホか確かめる</h2>
+<p class="ln teacher" data-t="88.14">ひとつめは、ご自分のスマホが使える機種か、確かめることです。</p>
+<p class="ln teacher" data-t="93.28">使えるスマホは、機種ごとに決まっています。</p>
+<p class="ln teacher" data-t="96.82">デジタル庁のホームページに、使える機種の一覧が出ています。</p>
+<p class="ln teacher" data-t="101.32">ここ、つまずきやすいところです。</p>
+<p class="ln teacher" data-t="104.32">機種の名前は、<span class="t" data-t="settings-app" tabindex="0" role="button" aria-label="設定アプリの説明を見る">設定アプリ</span>の中で見られます。</p>
+<p class="ln teacher" data-t="108.16">スマホの情報、といった項目を開くと、名前が書いてあります。</p>
+<p class="ln teacher" data-t="113.3">一覧の名前と、ご自分のスマホの名前を見比べてみましょう。</p>
+<h2>ふたつめ　画面ロックをかけておく</h2>
+<p class="ln teacher" data-t="118.08">ふたつめは、スマホに<span class="t" data-t="screen-lock" tabindex="0" role="button" aria-label="画面ロックの説明を見る">画面ロック</span>をかけておくことです。</p>
+<p class="ln teacher" data-t="122.34">指紋や顔、<span class="t" data-t="pin" tabindex="0" role="button" aria-label="暗証番号の説明を見る">暗証番号</span>で、スマホを開く仕組みですね。</p>
+<p class="ln teacher" data-t="127.12">Androidのマイナンバーカードにも、守りの仕組みがあります。</p>
+<p class="ln teacher" data-t="131.4">暗証番号や、指紋・顔で<span class="t" data-t="lock" tabindex="0" role="button" aria-label="ロックの説明を見る">ロック</span>をかけられます。</p>
+<p class="ln teacher" data-t="135.66">もしものときに、<span class="t" data-t="data" tabindex="0" role="button" aria-label="データの説明を見る">データ</span>を消す機能も用意されています。</p>
+<p class="ln teacher" data-t="139.74">大事なカードを、スマホがしっかり守ってくれるんです。</p>
+<p class="ln teacher" data-t="143.96">画面ロックをかけておくと、毎日の安心もぐっと増えますよ。</p>
+<h2>みっつめ　見せる情報は自分で選ぶ</h2>
+<p class="ln teacher" data-t="148.64">みっつめは、相手に見せる情報を、自分で選べることです。</p>
+<p class="ln teacher" data-t="153.52">年齢の確認なら年齢を、住所の確認なら住所を、という形です。</p>
+<p class="ln teacher" data-t="159.42">その場に必要なものだけを、選んで見せられます。</p>
+<p class="ln teacher" data-t="163.12">スマホに入るのも、必要な分だけの情報と決まっています。</p>
+<p class="ln teacher" data-t="167.72">見せる情報を、自分の手で決められる。これがうれしいところです。</p>
+<h2>ここが大切</h2>
+<p class="ln teacher" data-t="173.12">登録を始めるときは、公式の入り口から進めましょう。</p>
+<p class="ln teacher" data-t="177.32">Googleウォレットのアプリと、デジタル庁のホームページ。</p>
+<p class="ln teacher" data-t="181.38">この2つが、いちばん確かな案内です。</p>
+<p class="ln teacher" data-t="184.92"><span class="t" data-t="message" tabindex="0" role="button" aria-label="メッセージの説明を見る">メッセージ</span>で届いた<span class="t" data-t="link" tabindex="0" role="button" aria-label="リンクの説明を見る">リンク</span>より、公式の案内のほうがずっと確かです。</p>
+<p class="ln teacher" data-t="190.0">それから、アプリは<span class="t" data-t="update" tabindex="0" role="button" aria-label="アップデートの説明を見る">アップデート</span>で、<span class="t" data-t="button" tabindex="0" role="button" aria-label="ボタンの説明を見る">ボタン</span>の場所が変わることがあります。</p>
+<p class="ln teacher" data-t="195.16">だからわたしは、教室でいつもお伝えしています。</p>
+<p class="ln teacher" data-t="199.32">自分で操作して、そのときの画面を<span class="t" data-t="memo" tabindex="0" role="button" aria-label="メモの説明を見る">メモ</span>しておきましょう、と。</p>
+<p class="ln teacher" data-t="204.02">書いておくと、次に開いたときに、すっと思い出せますよ。</p>
+<h2>今日やってみること</h2>
+<p class="ln teacher" data-t="208.5">今日は、ご自分のスマホの機種の名前を、メモしてみましょう。</p>
+<p class="ln teacher" data-t="213.12">設定アプリの中から、スマホの名前を探してみてください。</p>
+<p class="ln teacher" data-t="217.58">見つけたら、デジタル庁のホームページの一覧と見比べます。</p>
+<p class="ln teacher" data-t="222.14">名前が見つかったら、準備の第一歩はばっちりです。</p>
+<p class="ln teacher" data-t="226.26">分からないときは、そのメモを持って、教室に来てくださいね。</p>
+<h2>おわりに</h2>
+<p class="ln teacher" data-t="230.82">この番組は、毎週火曜日と木曜日の朝にお届けしています。</p>
+<p class="ln teacher" data-t="235.96"><span class="t" data-t="follow" tabindex="0" role="button" aria-label="フォローの説明を見る">フォロー</span>していただくと、スマホの理解がぐっと深まりますよ。</p>
+<p class="ln teacher" data-t="240.48">世界一わかりやすいスマホニュース、てらこ先生でした。また火曜日の朝に、お会いしましょう。</p>
+  </article>
+  <div class="soft"><h2>今日のおさらい</h2><ol><li>使える機種は決まっています。デジタル庁のホームページの一覧で、ご自分のスマホの名前を確かめましょう</li><li>スマホに画面ロックをかけておきましょう。マイナンバーカードにも暗証番号や指紋・顔のロックがあります</li><li>相手に見せる情報は、その場に必要なものだけを自分で選べます。登録は公式の案内から進めましょう</li></ol><p class="hw"><b>今日やってみること</b>　設定アプリでスマホの機種の名前を探してメモし、デジタル庁のホームページの一覧と見比べてみましょう</p></div>
+
+  <button class="follow" type="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>この番組を毎回聴く</span></button>
+  <div id="fveil"></div>
+  <div id="fsheet" role="dialog" aria-modal="true" aria-labelledby="fsheet-h">
+    <h3 id="fsheet-h">毎回聴くには</h3><div class="way"><b>メールで受け取る</b><p>メールアドレスを登録すると、週に1回、スマホニュースとAIニュースのまとめをメールでお届けします。毎回の番組のメールは届きません。登録は無料です。</p><a class="go mail" href="https://teracosensei.substack.com/embed">メールで受け取る</a></div><p class="small">Spotify を使っている人は <a href="https://open.spotify.com/show/3jx1jEp9mOCeTlMFiGSuad">こちらからフォロー</a></p>
+    <button class="close" id="fclose" type="button">閉じる</button>
+  </div>
+  <div class="src"><b>今日の情報のもと</b><ul><li><a href="https://blog.google/intl/ja-jp/products/android-chrome-play/mynumbercard-on-android-launch/">Google 公式ブログ（2026年10月20日）「Android のマイナンバーカード、本日より提供開始」</a></li><li><a href="https://services.digital.go.jp/mynumbercard-android/news/13d5101e1dce63e2b6bdc/">デジタル庁「『Androidのマイナンバーカード』の提供を開始しました」</a></li><li><a href="https://services.digital.go.jp/mynumbercard-android/news/fec690c52f9ffeb35d30f/">デジタル庁「2026年10月20日から『Androidのマイナンバーカード』を開始予定です」</a></li><li><a href="https://services.digital.go.jp/mynumbercard-android/">デジタル庁 Androidのマイナンバーカード（サービスページ）</a></li></ul></div>
+  <div class="links"><a href="../../archive.html">これまでの回</a><a href="../../terms/">用語集</a><a href="../../">最新の回へ</a></div>
+  <footer class="foot">わからないことは、教室で一緒に確かめましょう。<br><a href="https://lin.ee/WACibGu">てらこ先生｜スマホ教室てらこ の公式LINE</a></footer>
+</main>
+
+<script>
+(function(){
+  var C = {"play": "音声で聴く", "pause": "止める", "def": "1", "normal": ["1", "ふつう"], "remember": false, "key": "", "keyboard": true, "names": {}, "roles": {"てらこ先生": "teacher", "ミカ": "partner", "イロハ": "partner"}};
+  var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>', PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+  var a = document.getElementById('audio'), play = document.getElementById('play'), mplay = document.getElementById('mplay');
+  function fmt(s){ if (!isFinite(s)) return '--:--'; s = Math.floor(s); return Math.floor(s/60) + ':' + ('0' + s%60).slice(-2); }
+  function ui(){ var on = !a.paused;
+    play.innerHTML = on ? PAUSE : PLAY; play.setAttribute('aria-label', on ? C.pause : C.play);
+    document.getElementById('playLbl').textContent = on ? C.pause : C.play;
+    mplay.innerHTML = on ? PAUSE : PLAY; }
+  ui();
+  function toggle(){ a.paused ? a.play() : a.pause(); }
+  play.addEventListener('click', toggle); mplay.addEventListener('click', toggle);
+  a.addEventListener('play', ui); a.addEventListener('pause', ui); a.addEventListener('ended', ui);
+  function skip(s){ a.currentTime = Math.max(0, Math.min(a.duration || 0, a.currentTime + s)); }
+  document.querySelectorAll('[data-skip]').forEach(function(b){ b.addEventListener('click', function(){ skip(+b.dataset.skip); }); });
+  var fill = document.getElementById('fill'), mfill = document.getElementById('mfill');
+  a.addEventListener('loadedmetadata', function(){ document.getElementById('dur').textContent = fmt(a.duration); });
+  a.addEventListener('timeupdate', function(){
+    var r = a.duration ? a.currentTime / a.duration * 100 : 0;
+    fill.style.width = r + '%'; mfill.style.width = r + '%'; document.getElementById('knob').style.left = r + '%';
+    document.getElementById('cur').textContent = fmt(a.currentTime);
+    document.getElementById('mtime').textContent = fmt(a.currentTime) + ' / ' + fmt(a.duration);
+  });
+  var prog = document.getElementById('progress');
+  function seekAt(x){ var r = prog.getBoundingClientRect(); if (a.duration) a.currentTime = a.duration * Math.max(0, Math.min(1, (x - r.left) / r.width)); }
+  prog.addEventListener('click', function(e){ seekAt(e.clientX); });
+  prog.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') skip(-10); if (e.key === 'ArrowRight') skip(10); });
+  // 速さ：番組ごとの設定。覚える番組（AIニュース）は保存、毎回1倍の番組（スマホニュース）は保存しない
+  var rate = C.def, sps = [].slice.call(document.querySelectorAll('#speeds .sp'));
+  if (C.remember && C.key) { try { var s = localStorage.getItem(C.key); if (s && sps.some(function(b){ return b.dataset.r === s; })) rate = s; } catch(e) {} }
+  function setRate(v){ rate = v; a.playbackRate = parseFloat(v); a.preservesPitch = true;
+    sps.forEach(function(b){ b.classList.toggle('on', b.dataset.r === v); b.setAttribute('aria-pressed', b.dataset.r === v ? 'true' : 'false'); });
+    if (C.remember && C.key) { try { localStorage.setItem(C.key, v); } catch(e) {} } }
+  sps.forEach(function(b){ b.addEventListener('click', function(){ setRate(rate === b.dataset.r ? C.normal[0] : b.dataset.r); }); });  // もう一度押すとふつうに戻る
+  setRate(rate);
+  a.addEventListener('play', function(){ a.playbackRate = parseFloat(rate); });
+  if (C.keyboard) document.addEventListener('keydown', function(e){
+    if (/INPUT|TEXTAREA/.test(e.target.tagName) || e.metaKey || e.ctrlKey) return;
+    if (e.key === ' ' || e.key === 'k') { e.preventDefault(); toggle(); }
+    else if (e.key === 'ArrowLeft') skip(-10); else if (e.key === 'ArrowRight') skip(10);
+    else if (e.key === 'j') skip(-30); else if (e.key === 'l') skip(30);
+  });
+  // 大きなプレイヤーが画面の外に出たら、下に小さな再生バー
+  var big = document.getElementById('player'), mini = document.getElementById('mini');
+  function miniCheck(){ var out = big.getBoundingClientRect().bottom < 0; mini.classList.toggle('show', out); mini.setAttribute('aria-hidden', out ? 'false' : 'true'); }
+  addEventListener('scroll', miniCheck, {passive:true}); miniCheck();
+  // 本文：今の文に色をつけて画面がついていく。自分でスクロールした直後の8秒は追いかけない
+  var lines = [], now = null, userAt = 0;
+  ['wheel','touchmove','keydown'].forEach(function(ev){ addEventListener(ev, function(){ userAt = Date.now(); }, {passive:true}); });
+  function wire(){
+    lines = [].slice.call(document.querySelectorAll('.ln[data-t]'));
+    lines.forEach(function(l){ if (l.dataset.w) return; l.dataset.w = 1; l.addEventListener('click', function(e){
+      if (e.target.closest('.t') || e.target.closest('a')) return;      // 言葉の説明やリンクを押したときは再生しない
+      userAt = 0; a.currentTime = +l.dataset.t; a.play(); }); });
+  }
+  function follow(force){
+    var c = null;
+    for (var i = 0; i < lines.length; i++) { if (+lines[i].dataset.t <= a.currentTime + 0.15) c = lines[i]; else break; }
+    if (c === now && !force) return;
+    if (now) now.classList.remove('now'); now = c; if (!now) return;
+    now.classList.add('now');
+    if (!a.paused && Date.now() - userAt > 8000) { var r = now.getBoundingClientRect();
+      if (r.top < 60 || r.bottom > innerHeight - 90) scrollTo({ top: scrollY + r.top - innerHeight * 0.3, behavior: 'smooth' }); }
+  }
+  a.addEventListener('timeupdate', function(){ follow(false); });
+  a.addEventListener('seeked', function(){ follow(true); });
+  a.addEventListener('play', function(){ follow(true); });
+  wire();
+  // 台本を後から読み込む番組（AIニュース：声の差し替えで開始秒が変わるため、その場で読む）
+  var box = document.getElementById('sxLines');
+  if (box && box.dataset.script) {
+    var NAMES = C.names || {}, ROLES = C.roles || {};
+    Promise.all([
+      fetch(box.dataset.script, {cache:'no-cache'}).then(function(r){ return r.ok ? r.text() : Promise.reject(); }),
+      fetch(box.dataset.times, {cache:'no-cache'}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+    ]).then(function(res){
+      var times = res[1] || [], k = 0, out = [];
+      res[0].split('\n').forEach(function(line){
+        var m = line.match(/^\[([^\]]+)\]\s*(.+)$/); if (!m) return;
+        var st = times[k++], who = NAMES[m[1]] || m[1], role = ROLES[m[1]] || 'teacher';
+        var t = (typeof st === 'number') ? ' data-t="' + st + '"' : '';
+        out.push('<div class="ln ' + role + '"' + t + '><span class="who">' + who.replace(/</g,'&lt;') + '</span>'
+                 + m[2].replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</div>');
+      });
+      box.innerHTML = out.length ? out.join('') : '<p class="read-hint">この号の台本はまだありません。</p>';
+      wire(); follow(true);
+    }).catch(function(){ box.innerHTML = '<p class="read-hint">台本を読み込めませんでした。</p>'; });
+  }
+  // 「この番組を毎回聴く」
+  var fs = document.getElementById('fsheet'), fv = document.getElementById('fveil'), fbs = document.querySelectorAll('.follow');
+  if (fs && fbs.length) { var op = function(){ fs.classList.add('on'); fv.classList.add('on'); }, cl = function(){ fs.classList.remove('on'); fv.classList.remove('on'); };
+    fbs.forEach(function(b){ b.addEventListener('click', op); }); document.getElementById('fclose').addEventListener('click', cl); fv.addEventListener('click', cl);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') cl(); }); }
+})();
+</script>
+<script type="application/json" id="glossary-data">{"android": {"n": "Android", "r": "アンドロイド", "s": "スマホを動かす基本の仕組みのひとつです。Googleが作っています。", "u": "../../terms/android.html"}, "app": {"n": "アプリ", "r": "", "s": "スマホに入れて使う道具。画面に並んでいる、小さな絵のボタンです。", "u": "../../terms/app.html"}, "blog": {"n": "ブログ", "r": "ブログ", "s": "インターネット上で、記事やお知らせを日記のように発表するページです。", "u": "../../terms/blog.html"}, "button": {"n": "ボタン", "r": "", "s": "押すと何かが動く場所です。スマホでは、画面を指で軽くさわって押します。", "u": "../../terms/button.html"}, "card": {"n": "カード", "r": "", "s": "ここではクレジットカードのことです。番号を知られると、勝手に買い物をされるおそれがあります。", "u": "../../terms/card.html"}, "convenience-store": {"n": "コンビニ", "r": "コンビニ", "s": "「コンビニエンスストア」を短くした言い方です。", "u": "../../terms/convenience-store.html"}, "data": {"n": "データ", "r": "データ", "s": "スマホの中に入っている情報のことです。", "u": "../../terms/data.html"}, "digital-agency": {"n": "デジタル庁", "r": "デジタルちょう", "s": "国の役所の一つです。マイナンバーカードの仕組みなどを担当しています。", "u": "../../terms/digital-agency.html"}, "electronic-certificate": {"n": "電子証明書", "r": "でんししょうめいしょ", "s": "インターネット上で「本人です」と証明するための仕組みです。", "u": "../../terms/electronic-certificate.html"}, "feature": {"n": "機能", "r": "きのう", "s": "アプリの中でできること、ひとつひとつのことです。", "u": "../../terms/feature.html"}, "follow": {"n": "フォロー", "r": "", "s": "Spotify などで、番組を登録しておくことです。新しい回が出たときに、すぐ見つけられます。", "u": "../../terms/follow.html"}, "google": {"n": "Google", "r": "グーグル", "s": "インターネットの検索などで知られるアメリカの会社です。", "u": "../../terms/google.html"}, "google-wallet": {"n": "Googleウォレット", "r": "グーグルウォレット", "s": "Googleの、お財布の役目をするアプリです。カードなどを登録して使います。", "u": "../../terms/google-wallet.html"}, "homepage": {"n": "ホームページ", "r": "", "s": "会社などがインターネットに出しているページです。お知らせや説明が載っています。", "u": "../../terms/homepage.html"}, "identity-check": {"n": "本人確認", "r": "ほんにんかくにん", "s": "その人が本当に本人かどうかを確かめることです。", "u": "../../terms/identity-check.html"}, "internet": {"n": "インターネット", "r": "インターネット", "s": "世界中のコンピューターやスマホをつなぐ仕組みです。", "u": "../../terms/internet.html"}, "link": {"n": "リンク", "r": "", "s": "押すと、別の画面が開く文字。青い色や下線がついていることが多いです。", "u": "../../terms/link.html"}, "lock": {"n": "ロック", "r": "ロック", "s": "鍵をかけることです。スマホでは、ほかの人に勝手に使われないように鍵をかけることを言います。", "u": "../../terms/lock.html"}, "memo": {"n": "メモ", "r": "メモ", "s": "忘れないように、短く書きとめておくことです。", "u": "../../terms/memo.html"}, "message": {"n": "メッセージ", "r": "", "s": "文字で送る、短いお知らせや連絡のことです。", "u": "../../terms/message.html"}, "my-number-card": {"n": "マイナンバーカード", "r": "マイナンバーカード", "s": "国が発行する、顔写真付きのカードです。本人確認などに使います。", "u": "../../terms/my-number-card.html"}, "mynaportal": {"n": "マイナポータル", "r": "マイナポータル", "s": "国が用意した、自分の情報を確認したり手続きをしたりできるサービスです。", "u": "../../terms/mynaportal.html"}, "news": {"n": "ニュース", "r": "ニュース", "s": "新しい出来事を知らせる情報のことです。", "u": "../../terms/news.html"}, "online": {"n": "オンライン", "r": "オンライン", "s": "インターネットにつながっている状態のことです。", "u": "../../terms/online.html"}, "pin": {"n": "暗証番号", "r": "あんしょうばんごう", "s": "本人だけが知っている、確認用の番号です。", "u": "../../terms/pin.html"}, "screen-lock": {"n": "画面ロック", "r": "がめんロック", "s": "スマホを開くときに、指紋や顔、暗証番号などを求める鍵の仕組みです。", "u": "../../terms/screen-lock.html"}, "service": {"n": "サービス", "r": "サービス", "s": "アプリやインターネットで使える、ひとまとまりの機能のことです。", "u": "../../terms/service.html"}, "settings-app": {"n": "設定アプリ", "r": "せっていアプリ", "s": "スマホのいろいろな設定を変えたり確かめたりするアプリです。", "u": "../../terms/settings-app.html"}, "sumaho": {"n": "スマホ", "r": "", "s": "「スマートフォン」を短くした言葉です。電話やメール、インターネットが使える、画面をさわって操作する携帯電話です。", "u": "../../terms/sumaho.html"}, "tap": {"n": "タップ", "r": "タップ", "s": "画面などを、指で軽くトンとたたくことです。", "u": "../../terms/tap.html"}, "update": {"n": "アップデート", "r": "アップデート", "s": "アプリやスマホを新しくすることです。", "u": "../../terms/update.html"}}</script>
+
+<script>
+(function(){
+  var el = document.getElementById('glossary-data');
+  if (!el) return;
+  var G; try { G = JSON.parse(el.textContent); } catch(e) { return; }
+
+  // 指でも操作する端末ではシート、マウスがある端末ではポップアップにする
+  var hoverable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  var tip = document.createElement('div'); tip.id = 'tip';
+  var veil = document.createElement('div'); veil.id = 'veil';
+  var sheet = document.createElement('div'); sheet.id = 'sheet';
+  sheet.innerHTML = '<div class="sheet-grip"></div><span class="tip-n"></span>'
+    + '<div class="tip-s"></div><a class="tip-m" href="#">くわしい解説を読む →</a>';
+  document.body.appendChild(tip);
+  document.body.appendChild(veil);
+  document.body.appendChild(sheet);
+
+  function showTip(node, d){
+    tip.innerHTML = '<span class="tip-n"></span><span class="tip-s"></span>'
+      + '<a class="tip-m" href="#">くわしい解説 →</a>';
+    tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
+    tip.querySelector('.tip-s').textContent = d.s;
+    tip.querySelector('.tip-m').href = d.u;
+    tip.classList.add('on');
+    var r = node.getBoundingClientRect();
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var left = Math.min(Math.max(8, r.left + r.width/2 - w/2), window.innerWidth - w - 8);
+    var top = r.top - h - 10;
+    if (top < 8) top = r.bottom + 10;           // 上に入らなければ下に出す
+    tip.style.left = (left + window.scrollX) + 'px';
+    tip.style.top  = (top + window.scrollY) + 'px';
+  }
+  function hideTip(){ tip.classList.remove('on'); }
+
+  function openSheet(d){
+    sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
+    sheet.querySelector('.tip-s').textContent = d.s;
+    sheet.querySelector('.tip-m').href = d.u;
+    sheet.classList.add('on'); veil.classList.add('on');
+  }
+  function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
+  veil.addEventListener('click', closeSheet);
+
+  var hideTimer;
+  document.addEventListener('mouseover', function(e){
+    if (!hoverable) return;
+    var n = e.target.closest('.t'); if (!n) return;
+    clearTimeout(hideTimer);
+    var d = G[n.getAttribute('data-t')]; if (d) showTip(n, d);
+  });
+  document.addEventListener('mouseout', function(e){
+    if (!hoverable) return;
+    if (e.target.closest('.t') && !tip.contains(e.relatedTarget)) {
+      hideTimer = setTimeout(hideTip, 180);
+    }
+  });
+  tip.addEventListener('mouseenter', function(){ clearTimeout(hideTimer); });
+  tip.addEventListener('mouseleave', hideTip);
+
+  document.addEventListener('click', function(e){
+    var n = e.target.closest('.t'); if (!n) return;
+    var d = G[n.getAttribute('data-t')]; if (!d) return;
+    e.preventDefault();
+    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { hideTip(); closeSheet(); return; }
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var n = document.activeElement; if (!n || !n.classList.contains('t')) return;
+    var d = G[n.getAttribute('data-t')]; if (!d) return;
+    e.preventDefault();
+    hoverable ? (location.href = d.u) : openSheet(d);
+  });
+})();
+</script>
+</body>
+</html>

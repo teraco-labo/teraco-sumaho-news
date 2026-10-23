@@ -1159,6 +1159,160 @@
       "detail": "よく使うアプリのアイコンは、ホーム画面の押しやすい場所に移せます。くわしい動かし方は、機種によって少しちがいます。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "my-number-card",
+      "term": "マイナンバーカード",
+      "reading": "マイナンバーカード",
+      "aliases": [],
+      "category": "ことば",
+      "short": "国が発行する、顔写真付きのカードです。本人確認などに使います。",
+      "detail": "マイナンバー（個人番号）が書かれた、プラスチックのカードです。対応しているスマホでは、このカードの機能をスマホに入れて使えるようになりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "google-wallet",
+      "term": "Googleウォレット",
+      "reading": "グーグルウォレット",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Googleの、お財布の役目をするアプリです。カードなどを登録して使います。",
+      "detail": "「ウォレット」は英語で「お財布」という意味です。Androidのマイナンバーカードは、このアプリに登録して使います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "mynaportal",
+      "term": "マイナポータル",
+      "reading": "マイナポータル",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "国が用意した、自分の情報を確認したり手続きをしたりできるサービスです。",
+      "detail": "マイナンバーカードを使ってログインします。Androidのマイナンバーカードで電子証明書の機能を登録すると、スマホから使えます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "electronic-certificate",
+      "term": "電子証明書",
+      "reading": "でんししょうめいしょ",
+      "aliases": [],
+      "category": "安全",
+      "short": "インターネット上で「本人です」と証明するための仕組みです。",
+      "detail": "マイナンバーカードに入っている機能の一つです。Androidのマイナンバーカードでこの機能を登録すると、マイナポータルやコンビニでの証明書の交付などに使えます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "convenience-store",
+      "term": "コンビニ",
+      "reading": "コンビニ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "「コンビニエンスストア」を短くした言い方です。",
+      "detail": "Androidのマイナンバーカードに電子証明書の機能を登録すると、コンビニで証明書を受け取ることができます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "online",
+      "term": "オンライン",
+      "reading": "オンライン",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "インターネットにつながっている状態のことです。",
+      "detail": "「オンラインで申請」は、窓口に行かずに、インターネットを通して手続きをすることです。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "internet",
+      "term": "インターネット",
+      "reading": "インターネット",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "世界中のコンピューターやスマホをつなぐ仕組みです。",
+      "detail": "ホームページを見たり、メッセージを送ったりするときに使っています。短く「ネット」とも言います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "tap",
+      "term": "タップ",
+      "reading": "タップ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "画面などを、指で軽くトンとたたくことです。",
+      "detail": "Androidのマイナンバーカードでは、スマホをタップして、相手に情報を読み取ってもらう使い方があります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "identity-check",
+      "term": "本人確認",
+      "reading": "ほんにんかくにん",
+      "aliases": [],
+      "category": "安全",
+      "short": "その人が本当に本人かどうかを確かめることです。",
+      "detail": "お店の窓口や、インターネットのサービスの申し込みなどで行われます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "digital-agency",
+      "term": "デジタル庁",
+      "reading": "デジタルちょう",
+      "aliases": [],
+      "category": "ことば",
+      "short": "国の役所の一つです。マイナンバーカードの仕組みなどを担当しています。",
+      "detail": "Androidのマイナンバーカードについて、使える機種などをホームページで案内しています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "settings-app",
+      "term": "設定アプリ",
+      "reading": "せっていアプリ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホのいろいろな設定を変えたり確かめたりするアプリです。",
+      "detail": "歯車の形のアイコンが目印です。スマホの機種の名前も、この中で確かめられます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "data",
+      "term": "データ",
+      "reading": "データ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "スマホの中に入っている情報のことです。",
+      "detail": "写真や連絡先、登録したカードの情報なども、すべてデータとしてスマホに入っています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "update",
+      "term": "アップデート",
+      "reading": "アップデート",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "アプリやスマホを新しくすることです。",
+      "detail": "「更新」とも言います。アップデートのあとは、ボタンの場所や見た目が変わることがあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "pin",
+      "term": "暗証番号",
+      "reading": "あんしょうばんごう",
+      "aliases": [],
+      "category": "安全",
+      "short": "本人だけが知っている、確認用の番号です。",
+      "detail": "スマホの画面ロックや、Androidのマイナンバーカードのロックにも使われます。",
+      "related": [],
+      "status": "published"
     }
   ]
 }

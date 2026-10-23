@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Tue, 20 Oct 2026 04:04:47 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 23 Oct 2026 11:50:30 +0900</lastBuildDate>
+  <item>
+    <title>第7回 スマホに入るマイナンバーカード　Androidで始まりました</title>
+    <itunes:title>第7回 スマホに入るマイナンバーカード　Androidで始まりました</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/</link>
+    <description>今日のテーマ：Androidのマイナンバーカードを始める前の準備（使える機種の確認・画面ロック・見せる情報の選び方）。きっかけのニュース：Googleが2026年10月20日、「Androidのマイナンバーカード」の提供開始を公式ブログで発表。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/ ／ 公式LINE → https://lin.ee/WACibGu</description>
+    <itunes:summary>今日のテーマ：Androidのマイナンバーカードを始める前の準備（使える機種の確認・画面ロック・見せる情報の選び方）。きっかけのニュース：Googleが2026年10月20日、「Androidのマイナンバーカード」の提供開始を公式ブログで発表。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/ ／ 公式LINE → https://lin.ee/WACibGu</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/audio.mp3?v=2b99acfc" length="2464175" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-22/audio.mp3</guid>
+    <pubDate>Thu, 22 Oct 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>7</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:04:06</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第6回 マークの意味を知って見分けよう　ドコモメールの「公式アカウント」</title>
     <itunes:title>第6回 マークの意味を知って見分けよう　ドコモメールの「公式アカウント」</itunes:title>
