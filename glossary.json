@@ -1313,6 +1313,204 @@
       "detail": "スマホの画面ロックや、Androidのマイナンバーカードのロックにも使われます。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "kinkyu-sokuho-mail",
+      "term": "緊急速報メール",
+      "reading": "きんきゅうそくほうメール",
+      "aliases": [],
+      "category": "安全",
+      "short": "地震や津波、災害・避難情報などを、その地域にいるスマホへ一斉に届けるお知らせです。",
+      "detail": "ソフトバンクでは、緊急地震速報・津波警報・災害・避難情報が届きます。月額料金も通信料も無料です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "security",
+      "term": "セキュリティ",
+      "reading": "",
+      "aliases": [],
+      "category": "安全",
+      "short": "情報やしくみを、悪い使われ方から守ることです。",
+      "detail": "今回は、システムの弱いところに対応するために、一部の配信をお休みしていました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "maintenance",
+      "term": "メンテナンス",
+      "reading": "",
+      "aliases": [],
+      "category": "ことば",
+      "short": "機械やしくみの点検や手入れのことです。",
+      "detail": "メンテナンスのあいだは、サービスの一部をお休みすることがあります。今回は、ソフトバンクでは10月26日午後11時17分に、すべて終わりました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "softbank",
+      "term": "ソフトバンク",
+      "reading": "",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "日本の大きな携帯会社のひとつです。",
+      "detail": "ソフトバンクのほかに、ワイモバイルやLINEMOというブランドも出しています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "ymobile",
+      "term": "ワイモバイル",
+      "reading": "",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "ソフトバンクが出している、携帯電話のブランドのひとつです。",
+      "detail": "緊急速報メールのお知らせでは、ソフトバンクやLINEMOと同じく対象になっていました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "linemo",
+      "term": "LINEMO",
+      "reading": "ラインモ",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "ソフトバンクが出している、オンラインで申し込む料金プランのブランドです。",
+      "detail": "緊急速報メールのお知らせでは、ソフトバンクやワイモバイルと同じく対象になっていました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "area-mail",
+      "term": "エリアメール",
+      "reading": "",
+      "aliases": [],
+      "category": "携帯会社",
+      "short": "ドコモが届けている緊急速報の名前です。",
+      "detail": "緊急地震速報や津波警報、国や自治体からの災害・避難情報が届きます。対象のエリアにいれば料金は無料で、申し込みもいりません。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "jma",
+      "term": "気象庁",
+      "reading": "きしょうちょう",
+      "aliases": [],
+      "category": "ことば",
+      "short": "天気や地震、津波の情報を出している国の役所です。",
+      "detail": "緊急地震速報や津波警報は、気象庁が出す情報です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "earthquake-early-warning",
+      "term": "緊急地震速報",
+      "reading": "きんきゅうじしんそくほう",
+      "aliases": [],
+      "category": "安全",
+      "short": "大きな揺れが来ることを、すばやく知らせるお知らせです。",
+      "detail": "気象庁が出す情報で、緊急速報メールやエリアメールでスマホに届きます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "tsunami-warning",
+      "term": "津波警報",
+      "reading": "つなみけいほう",
+      "aliases": [],
+      "category": "安全",
+      "short": "津波が来るおそれを知らせる、気象庁のお知らせです。",
+      "detail": "緊急速報メールやエリアメールでスマホに届きます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "disaster-evacuation-info",
+      "term": "災害・避難情報",
+      "reading": "さいがい・ひなんじょうほう",
+      "aliases": [],
+      "category": "安全",
+      "short": "国や市町村が出す、災害や避難についてのお知らせです。",
+      "detail": "ドコモの案内では「高齢者等避難」「避難指示」「緊急安全確保」などがふくまれます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "gear-icon",
+      "term": "歯車のマーク",
+      "reading": "はぐるまのマーク",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "ギザギザの輪の形をしたマークで、「設定」のしるしです。",
+      "detail": "スマホの設定アプリのアイコンによく使われています。アプリの中でも、設定を開くボタンとして出てくることがあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "notification",
+      "term": "通知",
+      "reading": "つうち",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "アプリからのお知らせを、画面や音で知らせるしくみです。",
+      "detail": "iPhoneでは設定アプリの「通知」の中に「緊急速報」の項目があります。Androidは機種によって場所がちがいます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "scroll",
+      "term": "スクロール",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "画面を指でなぞって、表示を上下に動かすことです。",
+      "detail": "画面に入りきらない続きを見るときに使います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "model",
+      "term": "機種",
+      "reading": "きしゅ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホの種類のことです。",
+      "detail": "同じAndroidでも、機種によって設定の場所や名前が少しちがうことがあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "switch",
+      "term": "スイッチ",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "画面の上で、オンとオフを切りかえるつまみのことです。",
+      "detail": "ソフトバンクの案内では、iPhoneは「設定」→「通知」→「緊急速報」と進み、「緊急速報」をオンにします。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "off",
+      "term": "オフ",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "機能を止めている状態のことです。",
+      "detail": "オンの反対です。スイッチに指で触れると、オンとオフを切りかえられます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "manner-mode",
+      "term": "マナーモード",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "着信音などを鳴らさないようにする設定です。",
+      "detail": "ソフトバンクの案内では、緊急速報メールの専用の音はマナーモードのときでも鳴ります。ただし、一部の機種では鳴りません。",
+      "related": [],
+      "status": "published"
     }
   ]
 }

@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Fri, 23 Oct 2026 11:50:30 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 04:06:57 +0900</lastBuildDate>
+  <item>
+    <title>第8回 いざというときのお知らせ　緊急速報メールのスイッチを確かめよう</title>
+    <itunes:title>第8回 いざというときのお知らせ　緊急速報メールのスイッチを確かめよう</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-27/</link>
+    <description>今日のテーマ：緊急速報メール（エリアメール）がオンになっているかを、設定アプリで確かめる。きっかけのニュース：ソフトバンクが10月23日に公式に発表（10月26日に更新）。メンテナンスで一部をお休みしていた緊急速報メールが、10月26日午後11時17分にすべて再開。ドコモのエリアメールも10月25日午後8時1分に再開。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-27/ ／ 公式LINE → https://lin.ee/WACibGu</description>
+    <itunes:summary>今日のテーマ：緊急速報メール（エリアメール）がオンになっているかを、設定アプリで確かめる。きっかけのニュース：ソフトバンクが10月23日に公式に発表（10月26日に更新）。メンテナンスで一部をお休みしていた緊急速報メールが、10月26日午後11時17分にすべて再開。ドコモのエリアメールも10月25日午後8時1分に再開。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-27/ ／ 公式LINE → https://lin.ee/WACibGu</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-27/audio.mp3?v=a8955e7e" length="2830411" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-27/audio.mp3</guid>
+    <pubDate>Tue, 27 Oct 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>8</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:04:43</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第7回 スマホに入るマイナンバーカード　Androidで始まりました</title>
     <itunes:title>第7回 スマホに入るマイナンバーカード　Androidで始まりました</itunes:title>

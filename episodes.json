@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-10-27",
+  "number": 8,
+  "title": "第8回 いざというときのお知らせ　緊急速報メールのスイッチを確かめよう",
+  "description": "今日のテーマ：緊急速報メール（エリアメール）がオンになっているかを、設定アプリで確かめる。きっかけのニュース：ソフトバンクが10月23日に公式に発表（10月26日に更新）。メンテナンスで一部をお休みしていた緊急速報メールが、10月26日午後11時17分にすべて再開。ドコモのエリアメールも10月25日午後8時1分に再開。",
+  "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-27/",
+  "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-27/audio.mp3",
+  "size": 2830411,
+  "duration": 283,
+  "ver": "a8955e7e"
+ },
+ {
   "date": "2026-10-22",
   "number": 7,
   "title": "第7回 スマホに入るマイナンバーカード　Androidで始まりました",
