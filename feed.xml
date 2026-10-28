@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Tue, 27 Oct 2026 04:06:57 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 29 Oct 2026 04:05:06 +0900</lastBuildDate>
+  <item>
+    <title>第9回 長押しでそっと読む　LINEの「プレビュー」がAndroidでも</title>
+    <itunes:title>第9回 長押しでそっと読む　LINEの「プレビュー」がAndroidでも</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-29/</link>
+    <description>今日のテーマ：LINEのトークリストで長押しして、未読のままメッセージを読む「プレビュー」の使い方。きっかけのニュース：LINEヤフーが10月28日に発表。トークの一部を未読のまま読める「プレビュー」が、11月4日からAndroidを含むすべてのLINEユーザーに広がります（これまではiOS版だけでした）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-29/ ／ 公式LINE → https://lin.ee/WACibGu</description>
+    <itunes:summary>今日のテーマ：LINEのトークリストで長押しして、未読のままメッセージを読む「プレビュー」の使い方。きっかけのニュース：LINEヤフーが10月28日に発表。トークの一部を未読のまま読める「プレビュー」が、11月4日からAndroidを含むすべてのLINEユーザーに広がります（これまではiOS版だけでした）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-29/ ／ 公式LINE → https://lin.ee/WACibGu</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-29/audio.mp3?v=e9a6cfcb" length="2497611" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-10-29/audio.mp3</guid>
+    <pubDate>Thu, 29 Oct 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>9</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:04:10</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第8回 いざというときのお知らせ　緊急速報メールのスイッチを確かめよう</title>
     <itunes:title>第8回 いざというときのお知らせ　緊急速報メールのスイッチを確かめよう</itunes:title>

@@ -1511,6 +1511,105 @@
       "detail": "ソフトバンクの案内では、緊急速報メールの専用の音はマナーモードのときでも鳴ります。ただし、一部の機種では鳴りません。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "line-preview",
+      "term": "プレビュー",
+      "reading": "プレビュー",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、トークを開く前に中身の一部を見られる機能です。メッセージは未読のままです。",
+      "detail": "トークリストでトークを長押しすると表示されます。これまではiOS版のLINEだけでしたが、2026年11月4日から、Androidを含むすべてのLINEユーザーに広がります。プレビューの画面はスクロールできません。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "lyp-premium",
+      "term": "LYPプレミアム",
+      "reading": "エルワイピープレミアム",
+      "aliases": [],
+      "category": "サービス",
+      "short": "LINEヤフーの有料の会員サービスです。会員向けの特典が受けられます。",
+      "detail": "2026年11月4日から、トーク全体をさかのぼって未読のまま読める「スクロールプレビュー」が、スタンダードプランとwith Netflixの会員向けの特典になります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "kidoku",
+      "term": "既読",
+      "reading": "きどく",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、相手がメッセージを読んだことを知らせるしるしです。送った人の画面に出ます。",
+      "detail": "トークを開いてメッセージを読むと、送った人の画面に「既読」と表示されます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "midoku",
+      "term": "未読",
+      "reading": "みどく",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "メッセージがまだ読まれていない状態のことです。",
+      "detail": "LINEのプレビューでは、メッセージを未読のまま、中身の一部を見ることができます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "user",
+      "term": "ユーザー",
+      "reading": "ユーザー",
+      "aliases": [],
+      "category": "ことば",
+      "short": "アプリやサービスを使っている人のことです。",
+      "detail": "「LINEユーザー」は、LINEを使っている人のことです。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "long-press",
+      "term": "長押し",
+      "reading": "ながおし",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "画面に指を置いたまま、少し待つ操作です。",
+      "detail": "ちょんと軽く押す「タップ」とは別の操作です。長押しすると、タップのときとは違う画面や項目が出てくることがあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "talk-list",
+      "term": "トークリスト",
+      "reading": "トークリスト",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "LINEで、トークがずらりと並んでいる一覧の画面です。",
+      "detail": "トークリストでトークをタップするとトークルームが開き、長押しするとプレビューが出ます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "app-store",
+      "term": "App Store",
+      "reading": "アップストア",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "iPhoneでアプリを入れたり、新しくしたりするお店のアプリです。",
+      "detail": "Apple（アップル）が運営しています。アプリのアップデートも、ここで確かめられます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "pace",
+      "term": "ペース",
+      "reading": "ペース",
+      "aliases": [],
+      "category": "ことば",
+      "short": "物事を進める速さや調子のことです。",
+      "detail": "「自分のペースで」は、自分にちょうどいい速さで、という意味です。",
+      "related": [],
+      "status": "published"
     }
   ]
 }
