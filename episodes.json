@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-03",
+  "number": 10,
+  "title": "第10回 2分で点検　Gmailを守る「セキュリティ診断」を開いてみよう",
+  "description": "今日のテーマ：Googleアカウントの「セキュリティ診断」で、ログイン中の機器・つながっているアプリ・再設定用の情報を確かめる。きっかけのニュース：Googleが10月30日、公式ブログで「Gmailにだれがアクセスできるか2分で確かめよう」と、セキュリティ診断での3つの確認（ログイン中の機器・使っていないアプリ・再設定用の情報）を案内。",
+  "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-03/",
+  "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-03/audio.mp3",
+  "size": 2358379,
+  "duration": 236,
+  "ver": "4983d0d6"
+ },
+ {
   "date": "2026-10-29",
   "number": 9,
   "title": "第9回 長押しでそっと読む　LINEの「プレビュー」がAndroidでも",

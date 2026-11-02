@@ -1610,6 +1610,83 @@
       "detail": "「自分のペースで」は、自分にちょうどいい速さで、という意味です。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "security-checkup",
+      "term": "セキュリティ診断",
+      "reading": "せきゅりてぃしんだん",
+      "aliases": [],
+      "category": "安全",
+      "short": "Googleアカウントの守りの様子を、まとめて点検できるGoogleのページです。",
+      "detail": "ログインしている機器、アカウントにアクセスできるアプリ、再設定用の電話番号やメールアドレスなどを確かめられます。Googleアカウントにログインして開きます。おすすめの対策も案内されます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "access",
+      "term": "アクセス",
+      "reading": "アクセス",
+      "aliases": [],
+      "category": "ことば",
+      "short": "ページやデータを開いたり、使ったりすることです。",
+      "detail": "「Gmailにアクセスできる」は、そのメールを開いて見たり使ったりできる、という意味です。インターネットでは、ページを開くことも「アクセスする」と言います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "inbox",
+      "term": "受信トレイ",
+      "reading": "じゅしんトレイ",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "届いたメールが並ぶ場所です。",
+      "detail": "Gmailでは、届いたメールがまず受信トレイに並びます。郵便受けのような場所だと考えるとわかりやすいです。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "tablet",
+      "term": "タブレット",
+      "reading": "タブレット",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホより画面が大きい、板のような形の機器です。",
+      "detail": "指で画面を触って使うところは、スマホと同じです。同じGoogleアカウントで、スマホとタブレットの両方にログインすることもできます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "list",
+      "term": "リスト",
+      "reading": "リスト",
+      "aliases": [],
+      "category": "ことば",
+      "short": "名前などを、上から順に並べたものです。",
+      "detail": "「一覧」と同じ意味です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "account",
+      "term": "アカウント",
+      "reading": "アカウント",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "サービスを使うための、自分専用の利用者登録です。",
+      "detail": "メールアドレスやパスワードなどで、自分だと確かめて使います。Googleのサービスで使うものを、Googleアカウントと言います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "email-address",
+      "term": "メールアドレス",
+      "reading": "メールアドレス",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "メールを届けるための、あて先の住所です。",
+      "detail": "「@（アットマーク）」をはさんだ英字や数字の並びでできています。Googleアカウントでは、再設定用のメールアドレスを登録しておくことができます。",
+      "related": [],
+      "status": "published"
     }
   ]
 }
