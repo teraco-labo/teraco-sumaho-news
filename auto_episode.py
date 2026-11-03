@@ -27,6 +27,27 @@ import make_episode as ME   # 検査と同じ相づちの拾い方を台本づ�
 HERE = Path(__file__).resolve().parent
 JST = timezone(timedelta(hours=9))
 KNOWLEDGE = Path.home() / ".openclaw/workspace/terako-sensei/knowledge"
+
+# 録音アイデア（2026-10-18 藤崎さん「小出しにしてバラバラに使ってよい」）。1回に最大2件。
+# 使ったアイデアの記録は公開リポジトリに入れない（生徒さんの話が混ざることがあるため）。
+IDEA_TOOL = Path.home() / ".openclaw/workspace/terako-sensei/content/strategy"
+IDEAS_USED_DIR = Path.home() / "ai-office/work/sumaho-news-ideas-used"   # git の外
+try:
+    sys.path.insert(0, str(IDEA_TOOL))
+    import idea_pick as IP
+except Exception:
+    IP = None
+
+
+def idea_pool() -> list:
+    if IP is None:
+        return []
+    try:
+        topic = "スマホ 使い方 安全 詐欺 LINE 写真 カメラ 地図 携帯会社 充電 アプリ 設定 お得"
+        return [{"id": i["id"], "題": i.get("theme"), "ひとこと": i.get("hook"), "中身": i.get("detail")}
+                for _, i in IP.pool(topic, n=30)]
+    except Exception:
+        return []
 STUDIO = Path.home() / ".openclaw/workspace/terako-sensei"
 FEEDS = ["https://k-tai.watch.impress.co.jp/data/rss/1.0/ktw/feed.rdf",
          "https://rss.itmedia.co.jp/rss/2.0/mobile.xml"]
@@ -129,6 +150,12 @@ RULES = """\
    「フォローしていただくと、スマホの理解がぐっと深まりますよ。」
    「世界一わかりやすいスマホニュース、てらこ先生でした。また〇曜日の朝に、お会いしましょう。」
 
+# iPhone と Android（2026-11-03 藤崎さん「序盤で自分のための話か判断がつかない。できれば1つのネタで両方の説明を」）
+- 冒頭の「今日お伝えするのは、〇〇のお話です」のすぐ後で、**iPhone の話か、Android の話か、両方かを必ず言う**（例「iPhone でも Android でも使えるお話です」）
+- 使い方を教えるときは、**できるだけ iPhone と Android の両方の手順を言う**（「iPhone の人は〜」「Android の人は〜」と分けて）
+- 片方にしか無い機能のときだけ片方にして、そのことを冒頭で言う（例「今日は iPhone だけの機能です。Android の人は、また別の回で」）
+- Android の手順は Google 公式の Android ヘルプの言い方で書き、「機種によって表示が少し違います」と1回添える。確かめられない手順は書かない
+
 # 書き方
 - 1文は40字まで。ゆっくり、やさしく、敬体。落ち着いた口調（「！」は使わない）
 - **全体を明るいトーンで**。共感の場面でも沈ませない（本人の声は、文の気持ちに合わせて声を落とすため。2026-10-06 藤崎さん「暗めの口調が暗すぎる」）
@@ -211,6 +238,11 @@ def write(date: str, news: list) -> dict:
    ちょうどいいニュースが無ければ、ニュース無しの「学びの回」にしてよい
 2. 選んだニュースの公式発表を WebFetch で開いて、数字・日付・条件を確かめる
 3. ニュースを入口に、使い方を1テーマ教える台本を書く（教室のナレッジから、生徒さんがよくつまずく点を拾ってよい）
+4. 下の「録音アイデア」（てらこ先生が実際の教室で話したこと）から、今回のテーマに合うものを**0〜2件だけ**、
+   先生の実体験・ひとこととして自然に混ぜる。合うものが無ければ混ぜない。
+   生徒さんの名前など、個人が分かることは書かない。録音の中の説明が古いこともあるので、事実は公式で確かめる。
+   使ったものの id を JSON の "ideas_used"（配列）に入れる。使わなければ空の配列
+- 録音アイデア：{json.dumps(idea_pool(), ensure_ascii=False)}
 {FORMAT}"""
     system = "あなたはスマホ教室の講師てらこ先生の台本作家です。事実は公式で確かめ、確かめられないことは書きません。返事は指定の JSON だけです。"
     log("台本を書いています（Claude・サブスク枠）")
@@ -305,7 +337,11 @@ def build(date: str) -> int:
         log(f"{date} はもう作ってあります")
         return 0
     try:
-        ep = factcheck(write(date, gather()))
+        drafted = write(date, gather())
+        used = [x for x in (drafted.get("ideas_used") or []) if isinstance(x, str)][:2]
+        IDEAS_USED_DIR.mkdir(parents=True, exist_ok=True)
+        (IDEAS_USED_DIR / f"{date}.json").write_text(json.dumps(used), encoding="utf-8")
+        ep = factcheck(drafted)
         save(date, ep)
         ok, out = run_check(date)
         if not ok:
@@ -353,7 +389,20 @@ def publish(date: str) -> int:
     base = json.loads((HERE / "config.json").read_text(encoding="utf-8"))["base_url"]
     notify(f"【スマホニュース】第{n['number']}回を公開しました。\n「{n['title']}」\n{base}/episodes/{date}/")
     log(f"{date} を公開しました")
+    mark_ideas(date, f"{date} スマホニュース第{n['number']}回")
     return 0
+
+
+def mark_ideas(date: str, where: str):
+    f = IDEAS_USED_DIR / f"{date}.json"
+    if IP is None or not f.exists():
+        return
+    try:
+        for i in json.loads(f.read_text(encoding="utf-8")):
+            IP.use(i, where)
+        log(f"録音アイデアに使用済みの印: {f.read_text(encoding='utf-8')}")
+    except Exception as e:
+        log(f"録音アイデアの印つけに失敗（公開は済み）: {e}")
 
 
 if __name__ == "__main__":
