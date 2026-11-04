@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Tue, 03 Nov 2026 04:06:47 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 05 Nov 2026 04:05:28 +0900</lastBuildDate>
+  <item>
+    <title>第11回 設定アプリで見てみよう　スマホの「ストレージ」</title>
+    <itunes:title>第11回 設定アプリで見てみよう　スマホの「ストレージ」</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-05/</link>
+    <description>今日のテーマ：スマホのストレージ（空き具合）を設定アプリで確かめる。ネットに突然出る警告は、画面を閉じてから確かめる。きっかけのニュース：。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-05/ ／ 公式LINE → https://lin.ee/WACibGu</description>
+    <itunes:summary>今日のテーマ：スマホのストレージ（空き具合）を設定アプリで確かめる。ネットに突然出る警告は、画面を閉じてから確かめる。きっかけのニュース：。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-05/ ／ 公式LINE → https://lin.ee/WACibGu</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-05/audio.mp3?v=34673f6f" length="2056664" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-05/audio.mp3</guid>
+    <pubDate>Thu, 05 Nov 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>11</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:03:26</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第10回 2分で点検　Gmailを守る「セキュリティ診断」を開いてみよう</title>
     <itunes:title>第10回 2分で点検　Gmailを守る「セキュリティ診断」を開いてみよう</itunes:title>

@@ -1687,6 +1687,149 @@
       "detail": "「@（アットマーク）」をはさんだ英字や数字の並びでできています。Googleアカウントでは、再設定用のメールアドレスを登録しておくことができます。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "storage",
+      "term": "ストレージ",
+      "reading": "ストレージ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "写真やアプリ、データをしまっておく、スマホの中の保存場所です。",
+      "detail": "iPhone では設定アプリの「一般」から「iPhoneストレージ」を選ぶと、使っている量を確かめられます。Android では設定アプリの「ストレージ」から確かめられます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "iphone-storage-recommendations",
+      "term": "おすすめ",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhone のストレージ画面に出る、空きを作るためのヒントです。",
+      "detail": "「iPhoneストレージ」を開くと、「おすすめ」とアプリの一覧が使用量と一緒に表示されます。「すべてを表示」を選ぶと、おすすめの節約法がすべて表示されます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "iphone-settings-general",
+      "term": "一般",
+      "reading": "いっぱん",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhone の設定アプリの中にある項目のひとつです。",
+      "detail": "「一般」を選んだ先に「iPhoneストレージ」があります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "iphone-storage",
+      "term": "iPhoneストレージ",
+      "reading": "アイフォーンストレージ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhone で、ストレージの使い方を確かめる画面です。",
+      "detail": "設定アプリの「一般」から選べます。アプリの一覧が使用量と一緒に表示され、アプリ名を選ぶと、そのアプリの使用状況の内訳を確認できます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "category",
+      "term": "カテゴリ",
+      "reading": "カテゴリ",
+      "aliases": [],
+      "category": "ことば",
+      "short": "種類ごとに分けたまとまりのことです。",
+      "detail": "Android のストレージ画面では、カテゴリを選ぶと、その中身を確かめられます。表示は機種によって少し違います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "ipa",
+      "term": "IPA",
+      "reading": "アイピーエー",
+      "aliases": [],
+      "category": "安全",
+      "short": "情報処理推進機構の略です。情報セキュリティの注意喚起などを出しています。",
+      "detail": "「情報セキュリティ安心相談窓口」で、スマートフォンに出る偽のセキュリティ警告からアプリのインストールへ誘導する手口への注意を呼びかけています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "virus",
+      "term": "ウイルス",
+      "reading": "ウイルス",
+      "aliases": [],
+      "category": "安全",
+      "short": "スマホやパソコンに悪さをするプログラムのことです。",
+      "detail": "偽の警告では「ウイルスに感染している」などと表示して、アプリを入れさせようとする例があると、IPA が紹介しています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "browser",
+      "term": "ブラウザ",
+      "reading": "ブラウザ",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "ホームページを見るためのアプリです。",
+      "detail": "iPhone の Safari や、Android の Chrome などがあります。偽の警告が出たときは、ブラウザのタブを閉じるか、ブラウザを終了して閲覧履歴を削除することで対処できると、IPA が案内しています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "browser-tab",
+      "term": "タブ",
+      "reading": "タブ",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "ブラウザで、ひとつのページを開いている枠のことです。",
+      "detail": "タブを閉じると、そこで開いていたページが閉じます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "cleaner-app",
+      "term": "お掃除",
+      "reading": "おそうじ",
+      "aliases": [],
+      "category": "安全",
+      "short": "スマホの中をきれいにすると名乗るアプリのことを、ここではこう呼んでいます。",
+      "detail": "アプリを入れる前に、作った会社（開発元）、機能、利用料金、利用規約を確かめる習慣をつけるよう、IPA がすすめています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "subscription",
+      "term": "サブスクリプション",
+      "reading": "サブスクリプション",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "月ごとや年ごとに、自動でお支払いが続く契約のことです。",
+      "detail": "自動で続く課金は、アプリを削除しても解約されません。iPhone では「サブスクリプション」から解約の手続きをします。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "google-play-subscription",
+      "term": "定期購入",
+      "reading": "ていきこうにゅう",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Android で、自動で続くお支払いを確かめたり解約したりする場所の名前です。",
+      "detail": "自動で続く課金は、アプリを削除しても解約されません。Android では「定期購入」から解約の手続きをします。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "ok",
+      "term": "OK",
+      "reading": "オーケー",
+      "aliases": [],
+      "category": "ことば",
+      "short": "「それでよい」という意味のことばです。",
+      "detail": "スマホの画面でも、確かめや同意のボタンによく使われます。",
+      "related": [],
+      "status": "published"
     }
   ]
 }

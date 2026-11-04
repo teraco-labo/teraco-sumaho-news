@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-05",
+  "number": 11,
+  "title": "第11回 設定アプリで見てみよう　スマホの「ストレージ」",
+  "description": "今日のテーマ：スマホのストレージ（空き具合）を設定アプリで確かめる。ネットに突然出る警告は、画面を閉じてから確かめる。きっかけのニュース：。",
+  "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-05/",
+  "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-05/audio.mp3",
+  "size": 2056664,
+  "duration": 206,
+  "ver": "34673f6f"
+ },
+ {
   "date": "2026-11-03",
   "number": 10,
   "title": "第10回 2分で点検　Gmailを守る「セキュリティ診断」を開いてみよう",
