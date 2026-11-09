@@ -193,13 +193,13 @@
   <p class="read-hint">線が引いてある言葉を押すと、説明が出ます。文を押すと、そこから聴けます。</p>
   <article>
 <h2>はじめに</h2>
-<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすい<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span><span class="t" data-t="news" tabindex="0" role="button" aria-label="ニュースの説明を見る">ニュース</span>、てらこ先生です。</p>
+<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすいスマホニュース、てらこ先生です。</p>
 <p class="ln teacher" data-t="5.78">今日お伝えするのは、指紋や顔で<span class="t" data-t="login" tabindex="0" role="button" aria-label="ログインの説明を見る">ログイン</span>できる「<span class="t" data-t="passkey" tabindex="0" role="button" aria-label="パスキーの説明を見る">パスキー</span>」のお話です。</p>
-<p class="ln teacher" data-t="11.32">その前に、まずは今日のニュースから。<span class="t" data-t="google" tabindex="0" role="button" aria-label="Googleの説明を見る">Google</span>が公式に紹介したお知らせです。</p>
+<p class="ln teacher" data-t="11.32">その前に、まずは今日の<span class="t" data-t="news" tabindex="0" role="button" aria-label="ニュースの説明を見る">ニュース</span>から。<span class="t" data-t="google" tabindex="0" role="button" aria-label="Googleの説明を見る">Google</span>が公式に紹介したお知らせです。</p>
 <h2>今日のニュース</h2>
 <p class="ln teacher" data-t="17.16">Googleが10月8日に、公式<span class="t" data-t="blog" tabindex="0" role="button" aria-label="ブログの説明を見る">ブログ</span>でパスキーの作り方を紹介しました。</p>
 <p class="ln teacher" data-t="22.94">パスキーは、<span class="t" data-t="password" tabindex="0" role="button" aria-label="パスワードの説明を見る">パスワード</span>の代わりに使える、新しいログインの仕組みです。</p>
-<p class="ln teacher" data-t="28.18">スマホの<span class="t" data-t="lock" tabindex="0" role="button" aria-label="ロックの説明を見る">ロック</span>を外すのと同じように、指紋や顔、<span class="t" data-t="pin" tabindex="0" role="button" aria-label="暗証番号の説明を見る">暗証番号</span>でログインできます。</p>
+<p class="ln teacher" data-t="28.18"><span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span>の<span class="t" data-t="lock" tabindex="0" role="button" aria-label="ロックの説明を見る">ロック</span>を外すのと同じように、指紋や顔、<span class="t" data-t="pin" tabindex="0" role="button" aria-label="暗証番号の説明を見る">暗証番号</span>でログインできます。</p>
 <p class="ln teacher" data-t="34.58"><span class="t" data-t="phishing" tabindex="0" role="button" aria-label="フィッシングの説明を見る">フィッシング</span>のような、よくある<span class="t" data-t="net" tabindex="0" role="button" aria-label="ネットの説明を見る">ネット</span>の手口にも強い作りだそうです。</p>
 <p class="ln teacher" data-t="39.66">ここまでが、Googleからのお知らせでした。</p>
 <h2>パスキーってなに</h2>
@@ -390,7 +390,8 @@
       + '<a class="tip-m" href="#">くわしい解説 →</a>';
     tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     tip.querySelector('.tip-s').textContent = d.s;
-    tip.querySelector('.tip-m').href = d.u;
+    tip.querySelector('.tip-m').href = d.u || '#';
+    tip.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     tip.classList.add('on');
     var r = node.getBoundingClientRect();
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -405,7 +406,8 @@
   function openSheet(d){
     sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     sheet.querySelector('.tip-s').textContent = d.s;
-    sheet.querySelector('.tip-m').href = d.u;
+    sheet.querySelector('.tip-m').href = d.u || '#';
+    sheet.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     sheet.classList.add('on'); veil.classList.add('on');
   }
   function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
@@ -431,7 +433,7 @@
     var n = e.target.closest('.t'); if (!n) return;
     var d = G[n.getAttribute('data-t')]; if (!d) return;
     e.preventDefault();
-    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+    if (hoverable && d.u) { location.href = d.u; } else if (!hoverable) { openSheet(d); }
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') { hideTip(); closeSheet(); return; }

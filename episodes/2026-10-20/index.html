@@ -193,9 +193,9 @@
   <p class="read-hint">線が引いてある言葉を押すと、説明が出ます。文を押すと、そこから聴けます。</p>
   <article>
 <h2>はじめに</h2>
-<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすい<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span><span class="t" data-t="news" tabindex="0" role="button" aria-label="ニュースの説明を見る">ニュース</span>、てらこ先生です。</p>
+<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすいスマホニュース、てらこ先生です。</p>
 <p class="ln teacher" data-t="5.8">今日お伝えするのは、<span class="t" data-t="mail" tabindex="0" role="button" aria-label="メールの説明を見る">メール</span>に付く「<span class="t" data-t="mark" tabindex="0" role="button" aria-label="マークの説明を見る">マーク</span>」との、上手な付き合い方のお話です。</p>
-<p class="ln teacher" data-t="11.88">その前に、まずは今日のニュースから。<span class="t" data-t="docomo" tabindex="0" role="button" aria-label="ドコモの説明を見る">ドコモ</span>が公式に発表したお知らせです。</p>
+<p class="ln teacher" data-t="11.88">その前に、まずは今日の<span class="t" data-t="news" tabindex="0" role="button" aria-label="ニュースの説明を見る">ニュース</span>から。<span class="t" data-t="docomo" tabindex="0" role="button" aria-label="ドコモの説明を見る">ドコモ</span>が公式に発表したお知らせです。</p>
 <h2>今日のニュース</h2>
 <p class="ln teacher" data-t="17.54">ドコモが10月15日に、公式に発表しました。</p>
 <p class="ln teacher" data-t="21.9"><span class="t" data-t="docomo-mail" tabindex="0" role="button" aria-label="ドコモメールの説明を見る">ドコモメール</span>には、「<span class="t" data-t="docomo-mail-official-account" tabindex="0" role="button" aria-label="公式アカウントの説明を見る">公式アカウント</span>」という仕組みがあります。</p>
@@ -249,7 +249,7 @@
 <p class="ln teacher" data-t="217.22">これで、いつもの入り口の準備はばっちりです。</p>
 <h2>おわりに</h2>
 <p class="ln teacher" data-t="221.26">この番組は、毎週火曜日と木曜日の朝にお届けしています。</p>
-<p class="ln teacher" data-t="226.38"><span class="t" data-t="follow" tabindex="0" role="button" aria-label="フォローの説明を見る">フォロー</span>していただくと、スマホの理解がぐっと深まりますよ。</p>
+<p class="ln teacher" data-t="226.38"><span class="t" data-t="follow" tabindex="0" role="button" aria-label="フォローの説明を見る">フォロー</span>していただくと、<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span>の理解がぐっと深まりますよ。</p>
 <p class="ln teacher" data-t="230.88">世界一わかりやすいスマホニュース、てらこ先生でした。また木曜日の朝に、お会いしましょう。</p>
   </article>
   <div class="soft"><h2>今日のおさらい</h2><ol><li>メールのマークは「送り主の確認がとれた」という目印のひとつ。中身はまず自分で読みましょう</li><li>メールの中のリンクには触れず、いつも使っている公式アプリやホームページから確かめます</li><li>怪しいと感じたら、読むのをやめるか、削除。決めきれないときは家族や教室で一緒に見ましょう</li></ol><p class="hw"><b>今日やってみること</b>　いつも使う携帯会社のアプリが、ホーム画面のどこにあるか確かめて、すぐ押せる場所に置いておく</p></div>
@@ -386,7 +386,8 @@
       + '<a class="tip-m" href="#">くわしい解説 →</a>';
     tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     tip.querySelector('.tip-s').textContent = d.s;
-    tip.querySelector('.tip-m').href = d.u;
+    tip.querySelector('.tip-m').href = d.u || '#';
+    tip.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     tip.classList.add('on');
     var r = node.getBoundingClientRect();
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -401,7 +402,8 @@
   function openSheet(d){
     sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     sheet.querySelector('.tip-s').textContent = d.s;
-    sheet.querySelector('.tip-m').href = d.u;
+    sheet.querySelector('.tip-m').href = d.u || '#';
+    sheet.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     sheet.classList.add('on'); veil.classList.add('on');
   }
   function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
@@ -427,7 +429,7 @@
     var n = e.target.closest('.t'); if (!n) return;
     var d = G[n.getAttribute('data-t')]; if (!d) return;
     e.preventDefault();
-    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+    if (hoverable && d.u) { location.href = d.u; } else if (!hoverable) { openSheet(d); }
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') { hideTip(); closeSheet(); return; }

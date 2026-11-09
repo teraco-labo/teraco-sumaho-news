@@ -121,12 +121,12 @@
 <header class="hero"><div class="hero-inner"><div class="crumbs"><a href="../">世界一わかりやすいスマホニュース</a></div><h1>タブレット（タブレット）</h1><p>ことばの解説</p><nav class="top-nav"><a href="../">トップ</a><a href="../archive.html">これまでの回</a><a href="../terms/">用語集</a></nav></div></header>
 <main>
   <div class="easy"><span class="klbl">ひとことで言うと</span><p>スマホより画面が大きい、板のような形の機器です。</p></div>
-  <div class="detail"><span class="klbl">もう少しくわしく</span><p>指で画面を触って使うところは、<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span>と同じです。同じ<span class="t" data-t="google-account" tabindex="0" role="button" aria-label="Googleアカウントの説明を見る">Googleアカウント</span>で、スマホと<span class="t" data-t="browser-tab" tabindex="0" role="button" aria-label="タブの説明を見る">タブ</span>レットの両方に<span class="t" data-t="login" tabindex="0" role="button" aria-label="ログインの説明を見る">ログイン</span>することもできます。</p></div>
+  <div class="detail"><span class="klbl">もう少しくわしく</span><p>指で画面を触って使うところは、<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span>と同じです。同じ<span class="t" data-t="google-account" tabindex="0" role="button" aria-label="Googleアカウントの説明を見る">Googleアカウント</span>で、スマホとタブレットの両方に<span class="t" data-t="login" tabindex="0" role="button" aria-label="ログインの説明を見る">ログイン</span>することもできます。</p></div>
   
   <div class="detail"><span class="klbl">この言葉が出てきた回</span><div class="seen"><a href="../episodes/2026-11-03/">11月3日（火）　2分で点検　Gmailを守る「セキュリティ診断」を開いてみよう</a></div></div>
   <div class="links"><a href="./">用語集へ</a><a href="../">最新の回へ</a></div>
   <footer class="foot">わからないことは、教室で一緒に確かめましょう。<br><a href="https://lin.ee/WACibGu">てらこ先生｜スマホ教室てらこ の公式LINE</a></footer></main>
-<script type="application/json" id="glossary-data">{"browser-tab": {"n": "タブ", "r": "タブ", "s": "ブラウザで、ひとつのページを開いている枠のことです。", "u": "../terms/browser-tab.html"}, "google-account": {"n": "Googleアカウント", "r": "グーグルアカウント", "s": "Googleのサービスを使うための、あなた専用の登録です。", "u": "../terms/google-account.html"}, "login": {"n": "ログイン", "r": "ログイン", "s": "サービスを使う前に、「わたしです」と名乗って入ることです。", "u": "../terms/login.html"}, "sumaho": {"n": "スマホ", "r": "", "s": "「スマートフォン」を短くした言葉です。電話やメール、インターネットが使える、画面をさわって操作する携帯電話です。", "u": "../terms/sumaho.html"}}</script>
+<script type="application/json" id="glossary-data">{"google-account": {"n": "Googleアカウント", "r": "グーグルアカウント", "s": "Googleのサービスを使うための、あなた専用の登録です。", "u": "../terms/google-account.html"}, "login": {"n": "ログイン", "r": "ログイン", "s": "サービスを使う前に、「わたしです」と名乗って入ることです。", "u": "../terms/login.html"}, "sumaho": {"n": "スマホ", "r": "", "s": "「スマートフォン」を短くした言葉です。電話やメール、インターネットが使える、画面をさわって操作する携帯電話です。", "u": "../terms/sumaho.html"}}</script>
 
 <script>
 (function(){
@@ -151,7 +151,8 @@
       + '<a class="tip-m" href="#">くわしい解説 →</a>';
     tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     tip.querySelector('.tip-s').textContent = d.s;
-    tip.querySelector('.tip-m').href = d.u;
+    tip.querySelector('.tip-m').href = d.u || '#';
+    tip.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     tip.classList.add('on');
     var r = node.getBoundingClientRect();
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -166,7 +167,8 @@
   function openSheet(d){
     sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     sheet.querySelector('.tip-s').textContent = d.s;
-    sheet.querySelector('.tip-m').href = d.u;
+    sheet.querySelector('.tip-m').href = d.u || '#';
+    sheet.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     sheet.classList.add('on'); veil.classList.add('on');
   }
   function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
@@ -192,7 +194,7 @@
     var n = e.target.closest('.t'); if (!n) return;
     var d = G[n.getAttribute('data-t')]; if (!d) return;
     e.preventDefault();
-    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+    if (hoverable && d.u) { location.href = d.u; } else if (!hoverable) { openSheet(d); }
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') { hideTip(); closeSheet(); return; }

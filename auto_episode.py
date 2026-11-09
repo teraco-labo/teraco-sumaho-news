@@ -297,6 +297,7 @@ def save(date: str, ep: dict):
     notes = {k: ep.get(k) for k in ("title", "news", "lesson", "review", "homework", "sources", "fact_check")}
     notes["terms"] = {k: (v.get("short") if isinstance(v, dict) else v) for k, v in (ep.get("terms") or {}).items()}
     _merge_glossary(ep.get("terms") or {})
+    _more_terms(ep["script"])
     notes.update({"number": max(nums or [0]) + 1, "date": date, "format": "一人語り・自動作成"})
     (d / "notes.json").write_text(json.dumps(notes, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if ep.get("readings"):
@@ -309,6 +310,22 @@ def save(date: str, ep: dict):
             if re.search(r"[A-Za-z]", k):
                 r.setdefault(k, v)
         rp.write_text(json.dumps(r, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def _more_terms(script: str):
+    """台本を読み直して、まだ説明の無い言葉を拾い、用語辞書に足す（2026-11-09 藤崎さん「もっと初心者向けにいっぱい注釈散りばめないと価値がない」）。
+    名前や長い言葉はひとかたまりで拾う（「ラマ・モッドチップ」の「チップ」だけに説明が付く取り違えを防ぐ）。失敗しても回は作る。"""
+    try:
+        sys.path.insert(0, os.environ.get("NEWS_REPO") or str(Path.home() / "ai-office/work/ai-news-digest"))
+        import glossary as AG
+        g = json.loads((HERE / "glossary.json").read_text(encoding="utf-8"))
+        known = [t["term"] for t in g["terms"]] + [a for t in g["terms"] for a in t.get("aliases", [])]
+        text = "\n".join(re.sub(r"^\[[^\]]+\]\s*", "", ln) for ln in script.splitlines() if not ln.startswith("## "))
+        got = AG.extract_terms(text, known, audience="スマホに不安があるシニアの方（漢字の言葉には強く、カタカナ語・英語・英字の名前が苦手）", n="30〜50")
+        _merge_glossary({t["term"]: {"reading": t.get("reading", ""), "short": t["short"], "category": "ことば"} for t in got})
+        log(f"説明の言葉を {len(got)} 語足しました")
+    except Exception as e:
+        log(f"説明の言葉の追加に失敗（回はそのまま作る）: {e}")
 
 
 def _merge_glossary(terms: dict):

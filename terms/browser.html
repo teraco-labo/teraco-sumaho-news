@@ -121,12 +121,12 @@
 <header class="hero"><div class="hero-inner"><div class="crumbs"><a href="../">世界一わかりやすいスマホニュース</a></div><h1>ブラウザ（ブラウザ）</h1><p>ことばの解説</p><nav class="top-nav"><a href="../">トップ</a><a href="../archive.html">これまでの回</a><a href="../terms/">用語集</a></nav></div></header>
 <main>
   <div class="easy"><span class="klbl">ひとことで言うと</span><p>ホームページを見るためのアプリです。</p></div>
-  <div class="detail"><span class="klbl">もう少しくわしく</span><p><span class="t" data-t="iphone" tabindex="0" role="button" aria-label="iPhoneの説明を見る">iPhone</span> の Safari や、<span class="t" data-t="android" tabindex="0" role="button" aria-label="Androidの説明を見る">Android</span> の Chrome などがあります。偽の警告が出たときは、ブラウザの<span class="t" data-t="browser-tab" tabindex="0" role="button" aria-label="タブの説明を見る">タブ</span>を閉じるか、ブラウザを終了して閲覧履歴を削除することで対処できると、<span class="t" data-t="ipa" tabindex="0" role="button" aria-label="IPAの説明を見る">IPA</span> が案内しています。</p></div>
+  <div class="detail"><span class="klbl">もう少しくわしく</span><p><span class="t" data-t="iphone" tabindex="0" role="button" aria-label="iPhoneの説明を見る">iPhone</span> の Safari や、<span class="t" data-t="android" tabindex="0" role="button" aria-label="Androidの説明を見る">Android</span> の Chrome などがあります。<span class="t" data-t="term-161" tabindex="0" role="button" aria-label="偽の警告の説明を見る">偽の警告</span>が出たときは、ブラウザの<span class="t" data-t="browser-tab" tabindex="0" role="button" aria-label="タブの説明を見る">タブ</span>を閉じるか、ブラウザを終了して閲覧履歴を削除することで<span class="t" data-t="term-169" tabindex="0" role="button" aria-label="対処の説明を見る">対処</span>できると、<span class="t" data-t="ipa" tabindex="0" role="button" aria-label="IPAの説明を見る">IPA</span> が案内しています。</p></div>
   
   <div class="detail"><span class="klbl">この言葉が出てきた回</span><div class="seen"><a href="../episodes/2026-11-05/">11月5日（木）　設定アプリで見てみよう　スマホの「ストレージ」</a></div></div>
   <div class="links"><a href="./">用語集へ</a><a href="../">最新の回へ</a></div>
   <footer class="foot">わからないことは、教室で一緒に確かめましょう。<br><a href="https://lin.ee/WACibGu">てらこ先生｜スマホ教室てらこ の公式LINE</a></footer></main>
-<script type="application/json" id="glossary-data">{"android": {"n": "Android", "r": "アンドロイド", "s": "スマホを動かす基本の仕組みのひとつです。Googleが作っています。", "u": "../terms/android.html"}, "browser-tab": {"n": "タブ", "r": "タブ", "s": "ブラウザで、ひとつのページを開いている枠のことです。", "u": "../terms/browser-tab.html"}, "ipa": {"n": "IPA", "r": "アイピーエー", "s": "情報処理推進機構の略です。情報セキュリティの注意喚起などを出しています。", "u": "../terms/ipa.html"}, "iphone": {"n": "iPhone", "r": "アイフォーン", "s": "アメリカのApple（アップル）という会社が作っているスマホです。", "u": "../terms/iphone.html"}}</script>
+<script type="application/json" id="glossary-data">{"android": {"n": "Android", "r": "アンドロイド", "s": "スマホを動かす基本の仕組みのひとつです。Googleが作っています。", "u": "../terms/android.html"}, "browser-tab": {"n": "タブ", "r": "タブ", "s": "ブラウザで、ひとつのページを開いている枠のことです。", "u": "../terms/browser-tab.html"}, "ipa": {"n": "IPA", "r": "アイピーエー", "s": "情報処理推進機構の略です。情報セキュリティの注意喚起などを出しています。", "u": "../terms/ipa.html"}, "iphone": {"n": "iPhone", "r": "アイフォーン", "s": "アメリカのApple（アップル）という会社が作っているスマホです。", "u": "../terms/iphone.html"}, "term-161": {"n": "偽の警告", "r": "ニセノケイコク", "s": "本物のふりをした、うその警告です。驚かせて、アプリを入れさせようとするものがあります。", "u": "../terms/term-161.html"}, "term-169": {"n": "対処", "r": "タイショ", "s": "困ったことが起きたときに、それに合わせて手を打つことです。", "u": "../terms/term-169.html"}}</script>
 
 <script>
 (function(){
@@ -151,7 +151,8 @@
       + '<a class="tip-m" href="#">くわしい解説 →</a>';
     tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     tip.querySelector('.tip-s').textContent = d.s;
-    tip.querySelector('.tip-m').href = d.u;
+    tip.querySelector('.tip-m').href = d.u || '#';
+    tip.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     tip.classList.add('on');
     var r = node.getBoundingClientRect();
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -166,7 +167,8 @@
   function openSheet(d){
     sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     sheet.querySelector('.tip-s').textContent = d.s;
-    sheet.querySelector('.tip-m').href = d.u;
+    sheet.querySelector('.tip-m').href = d.u || '#';
+    sheet.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     sheet.classList.add('on'); veil.classList.add('on');
   }
   function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
@@ -192,7 +194,7 @@
     var n = e.target.closest('.t'); if (!n) return;
     var d = G[n.getAttribute('data-t')]; if (!d) return;
     e.preventDefault();
-    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+    if (hoverable && d.u) { location.href = d.u; } else if (!hoverable) { openSheet(d); }
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') { hideTip(); closeSheet(); return; }

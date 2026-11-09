@@ -121,12 +121,12 @@
 <header class="hero"><div class="hero-inner"><div class="crumbs"><a href="../">世界一わかりやすいスマホニュース</a></div><h1>トークリスト（トークリスト）</h1><p>ことばの解説</p><nav class="top-nav"><a href="../">トップ</a><a href="../archive.html">これまでの回</a><a href="../terms/">用語集</a></nav></div></header>
 <main>
   <div class="easy"><span class="klbl">ひとことで言うと</span><p>LINEで、トークがずらりと並んでいる一覧の画面です。</p></div>
-  <div class="detail"><span class="klbl">もう少しくわしく</span><p><span class="t" data-t="line-talk" tabindex="0" role="button" aria-label="トークの説明を見る">トーク</span><span class="t" data-t="list" tabindex="0" role="button" aria-label="リストの説明を見る">リスト</span>でトークを<span class="t" data-t="tap" tabindex="0" role="button" aria-label="タップの説明を見る">タップ</span>すると<span class="t" data-t="talk-room" tabindex="0" role="button" aria-label="トークルームの説明を見る">トークルーム</span>が開き、<span class="t" data-t="long-press" tabindex="0" role="button" aria-label="長押しの説明を見る">長押し</span>すると<span class="t" data-t="line-preview" tabindex="0" role="button" aria-label="プレビューの説明を見る">プレビュー</span>が出ます。</p></div>
+  <div class="detail"><span class="klbl">もう少しくわしく</span><p>トークリストで<span class="t" data-t="line-talk" tabindex="0" role="button" aria-label="トークの説明を見る">トーク</span>を<span class="t" data-t="tap" tabindex="0" role="button" aria-label="タップの説明を見る">タップ</span>すると<span class="t" data-t="talk-room" tabindex="0" role="button" aria-label="トークルームの説明を見る">トークルーム</span>が開き、<span class="t" data-t="long-press" tabindex="0" role="button" aria-label="長押しの説明を見る">長押し</span>すると<span class="t" data-t="line-preview" tabindex="0" role="button" aria-label="プレビューの説明を見る">プレビュー</span>が出ます。</p></div>
   
   <div class="detail"><span class="klbl">この言葉が出てきた回</span><div class="seen"><a href="../episodes/2026-10-29/">10月29日（木）　長押しでそっと読む　LINEの「プレビュー」がAndroidでも</a></div></div>
   <div class="links"><a href="./">用語集へ</a><a href="../">最新の回へ</a></div>
   <footer class="foot">わからないことは、教室で一緒に確かめましょう。<br><a href="https://lin.ee/WACibGu">てらこ先生｜スマホ教室てらこ の公式LINE</a></footer></main>
-<script type="application/json" id="glossary-data">{"line-preview": {"n": "プレビュー", "r": "プレビュー", "s": "LINEで、トークを開く前に中身の一部を見られる機能です。メッセージは未読のままです。", "u": "../terms/line-preview.html"}, "line-talk": {"n": "トーク", "r": "トーク", "s": "LINEで、文字やスタンプでやりとりをする画面のことです。", "u": "../terms/line-talk.html"}, "list": {"n": "リスト", "r": "リスト", "s": "名前などを、上から順に並べたものです。", "u": "../terms/list.html"}, "long-press": {"n": "長押し", "r": "ながおし", "s": "画面に指を置いたまま、少し待つ操作です。", "u": "../terms/long-press.html"}, "talk-room": {"n": "トークルーム", "r": "トークルーム", "s": "LINEで、相手とのやりとりが並ぶ、ひとつひとつのお部屋のことです。", "u": "../terms/talk-room.html"}, "tap": {"n": "タップ", "r": "タップ", "s": "画面などを、指で軽くトンとたたくことです。", "u": "../terms/tap.html"}}</script>
+<script type="application/json" id="glossary-data">{"line-preview": {"n": "プレビュー", "r": "プレビュー", "s": "LINEで、トークを開く前に中身の一部を見られる機能です。メッセージは未読のままです。", "u": "../terms/line-preview.html"}, "line-talk": {"n": "トーク", "r": "トーク", "s": "LINEで、文字やスタンプでやりとりをする画面のことです。", "u": "../terms/line-talk.html"}, "long-press": {"n": "長押し", "r": "ながおし", "s": "画面に指を置いたまま、少し待つ操作です。", "u": "../terms/long-press.html"}, "talk-room": {"n": "トークルーム", "r": "トークルーム", "s": "LINEで、相手とのやりとりが並ぶ、ひとつひとつのお部屋のことです。", "u": "../terms/talk-room.html"}, "tap": {"n": "タップ", "r": "タップ", "s": "画面などを、指で軽くトンとたたくことです。", "u": "../terms/tap.html"}}</script>
 
 <script>
 (function(){
@@ -151,7 +151,8 @@
       + '<a class="tip-m" href="#">くわしい解説 →</a>';
     tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     tip.querySelector('.tip-s').textContent = d.s;
-    tip.querySelector('.tip-m').href = d.u;
+    tip.querySelector('.tip-m').href = d.u || '#';
+    tip.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     tip.classList.add('on');
     var r = node.getBoundingClientRect();
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -166,7 +167,8 @@
   function openSheet(d){
     sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     sheet.querySelector('.tip-s').textContent = d.s;
-    sheet.querySelector('.tip-m').href = d.u;
+    sheet.querySelector('.tip-m').href = d.u || '#';
+    sheet.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     sheet.classList.add('on'); veil.classList.add('on');
   }
   function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
@@ -192,7 +194,7 @@
     var n = e.target.closest('.t'); if (!n) return;
     var d = G[n.getAttribute('data-t')]; if (!d) return;
     e.preventDefault();
-    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+    if (hoverable && d.u) { location.href = d.u; } else if (!hoverable) { openSheet(d); }
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') { hideTip(); closeSheet(); return; }

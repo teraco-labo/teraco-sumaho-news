@@ -121,12 +121,12 @@
 <header class="hero"><div class="hero-inner"><div class="crumbs"><a href="../">世界一わかりやすいスマホニュース</a></div><h1>ストレージ（ストレージ）</h1><p>ことばの解説</p><nav class="top-nav"><a href="../">トップ</a><a href="../archive.html">これまでの回</a><a href="../terms/">用語集</a></nav></div></header>
 <main>
   <div class="easy"><span class="klbl">ひとことで言うと</span><p>写真やアプリ、データをしまっておく、スマホの中の保存場所です。</p></div>
-  <div class="detail"><span class="klbl">もう少しくわしく</span><p><span class="t" data-t="iphone" tabindex="0" role="button" aria-label="iPhoneの説明を見る">iPhone</span> では<span class="t" data-t="settings-app" tabindex="0" role="button" aria-label="設定アプリの説明を見る">設定アプリ</span>の「<span class="t" data-t="iphone-settings-general" tabindex="0" role="button" aria-label="一般の説明を見る">一般</span>」から「<span class="t" data-t="iphone-storage" tabindex="0" role="button" aria-label="iPhoneストレージの説明を見る">iPhoneストレージ</span>」を選ぶと、使っている量を確かめられます。<span class="t" data-t="android" tabindex="0" role="button" aria-label="Androidの説明を見る">Android</span> では設定アプリの「ストレージ」から確かめられます。</p></div>
+  <div class="detail"><span class="klbl">もう少しくわしく</span><p><span class="t" data-t="iphone" tabindex="0" role="button" aria-label="iPhoneの説明を見る">iPhone</span> では<span class="t" data-t="settings-app" tabindex="0" role="button" aria-label="設定アプリの説明を見る">設定アプリ</span>の「<span class="t" data-t="iphone-settings-general" tabindex="0" role="button" aria-label="一般の説明を見る">一般</span>」から「<span class="t" data-t="iphone-storage" tabindex="0" role="button" aria-label="iPhoneストレージの説明を見る">iPhoneストレージ</span>」を選ぶと、<span class="t" data-t="term-172" tabindex="0" role="button" aria-label="使っている量の説明を見る">使っている量</span>を確かめられます。<span class="t" data-t="android" tabindex="0" role="button" aria-label="Androidの説明を見る">Android</span> では設定アプリの「ストレージ」から確かめられます。</p></div>
   
   <div class="detail"><span class="klbl">この言葉が出てきた回</span><div class="seen"><a href="../episodes/2026-11-05/">11月5日（木）　設定アプリで見てみよう　スマホの「ストレージ」</a></div></div>
   <div class="links"><a href="./">用語集へ</a><a href="../">最新の回へ</a></div>
   <footer class="foot">わからないことは、教室で一緒に確かめましょう。<br><a href="https://lin.ee/WACibGu">てらこ先生｜スマホ教室てらこ の公式LINE</a></footer></main>
-<script type="application/json" id="glossary-data">{"android": {"n": "Android", "r": "アンドロイド", "s": "スマホを動かす基本の仕組みのひとつです。Googleが作っています。", "u": "../terms/android.html"}, "iphone": {"n": "iPhone", "r": "アイフォーン", "s": "アメリカのApple（アップル）という会社が作っているスマホです。", "u": "../terms/iphone.html"}, "iphone-settings-general": {"n": "一般", "r": "いっぱん", "s": "iPhone の設定アプリの中にある項目のひとつです。", "u": "../terms/iphone-settings-general.html"}, "iphone-storage": {"n": "iPhoneストレージ", "r": "アイフォーンストレージ", "s": "iPhone で、ストレージの使い方を確かめる画面です。", "u": "../terms/iphone-storage.html"}, "settings-app": {"n": "設定アプリ", "r": "せっていアプリ", "s": "スマホのいろいろな設定を変えたり確かめたりするアプリです。", "u": "../terms/settings-app.html"}}</script>
+<script type="application/json" id="glossary-data">{"android": {"n": "Android", "r": "アンドロイド", "s": "スマホを動かす基本の仕組みのひとつです。Googleが作っています。", "u": "../terms/android.html"}, "iphone": {"n": "iPhone", "r": "アイフォーン", "s": "アメリカのApple（アップル）という会社が作っているスマホです。", "u": "../terms/iphone.html"}, "iphone-settings-general": {"n": "一般", "r": "いっぱん", "s": "iPhone の設定アプリの中にある項目のひとつです。", "u": "../terms/iphone-settings-general.html"}, "iphone-storage": {"n": "iPhoneストレージ", "r": "アイフォーンストレージ", "s": "iPhone で、ストレージの使い方を確かめる画面です。", "u": "../terms/iphone-storage.html"}, "settings-app": {"n": "設定アプリ", "r": "せっていアプリ", "s": "スマホのいろいろな設定を変えたり確かめたりするアプリです。", "u": "../terms/settings-app.html"}, "term-172": {"n": "使っている量", "r": "ツカッテイルリョウ", "s": "アプリや写真が、ストレージの中でどれだけ場所を使っているかを示した数字です。", "u": "../terms/term-172.html"}}</script>
 
 <script>
 (function(){
@@ -151,7 +151,8 @@
       + '<a class="tip-m" href="#">くわしい解説 →</a>';
     tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     tip.querySelector('.tip-s').textContent = d.s;
-    tip.querySelector('.tip-m').href = d.u;
+    tip.querySelector('.tip-m').href = d.u || '#';
+    tip.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     tip.classList.add('on');
     var r = node.getBoundingClientRect();
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -166,7 +167,8 @@
   function openSheet(d){
     sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     sheet.querySelector('.tip-s').textContent = d.s;
-    sheet.querySelector('.tip-m').href = d.u;
+    sheet.querySelector('.tip-m').href = d.u || '#';
+    sheet.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     sheet.classList.add('on'); veil.classList.add('on');
   }
   function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
@@ -192,7 +194,7 @@
     var n = e.target.closest('.t'); if (!n) return;
     var d = G[n.getAttribute('data-t')]; if (!d) return;
     e.preventDefault();
-    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+    if (hoverable && d.u) { location.href = d.u; } else if (!hoverable) { openSheet(d); }
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') { hideTip(); closeSheet(); return; }

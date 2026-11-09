@@ -193,9 +193,9 @@
   <p class="read-hint">線が引いてある言葉を押すと、説明が出ます。文を押すと、そこから聴けます。</p>
   <article>
 <h2>今日のお話</h2>
-<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすい<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span><span class="t" data-t="news" tabindex="0" role="button" aria-label="ニュースの説明を見る">ニュース</span>、てらこ先生です。</p>
+<p class="ln teacher" data-t="0.0">みなさん、おはようございます。世界一わかりやすいスマホニュース、てらこ先生です。</p>
 <p class="ln teacher" data-t="5.88">今日お伝えするのは、携帯会社を名乗る、<span class="t" data-t="nisemono-message" tabindex="0" role="button" aria-label="偽物のメッセージの説明を見る">偽物のメッセージ</span>のお話です。だまされないための<span class="t" data-t="kotsu" tabindex="0" role="button" aria-label="コツの説明を見る">コツ</span>を、お伝えします。</p>
-<p class="ln teacher" data-t="14.14">その前に、まずは本物のニュースから。<span class="t" data-t="docomo" tabindex="0" role="button" aria-label="ドコモの説明を見る">ドコモ</span>が公式に発表した、料金のお知らせです。</p>
+<p class="ln teacher" data-t="14.14">その前に、まずは本物の<span class="t" data-t="news" tabindex="0" role="button" aria-label="ニュースの説明を見る">ニュース</span>から。<span class="t" data-t="docomo" tabindex="0" role="button" aria-label="ドコモの説明を見る">ドコモ</span>が公式に発表した、料金のお知らせです。</p>
 <p class="ln teacher" data-t="20.88">実はこのニュースが、今日のお話とつながっています。</p>
 <h2>まずは本物のニュース</h2>
 <p class="ln teacher" data-t="25.2">ドコモが9月25日に、公式に発表しました。</p>
@@ -226,7 +226,7 @@
 <p class="ln teacher" data-t="165.94">だから、本物かどうか分からなくても、押さない。これがいちばん大事です。</p>
 <p class="ln teacher" data-t="171.78">ふたつめ。確かめたいときは、自分で開く。</p>
 <p class="ln teacher" data-t="175.98">いつも使っている、携帯会社のアプリを、自分で開いてください。ドコモなら「<span class="t" data-t="my-docomo" tabindex="0" role="button" aria-label="My docomoの説明を見る">My docomo</span>」です。</p>
-<p class="ln teacher" data-t="182.74">アプリというのは、スマホの画面に並んでいる、小さな絵のボタンのことです。<span class="t" data-t="line" tabindex="0" role="button" aria-label="LINEの説明を見る">LINE</span>や<span class="t" data-t="camera" tabindex="0" role="button" aria-label="カメラの説明を見る">カメラ</span>と同じ仲間です。</p>
+<p class="ln teacher" data-t="182.74">アプリというのは、<span class="t" data-t="sumaho" tabindex="0" role="button" aria-label="スマホの説明を見る">スマホ</span>の画面に並んでいる、小さな絵のボタンのことです。<span class="t" data-t="line" tabindex="0" role="button" aria-label="LINEの説明を見る">LINE</span>や<span class="t" data-t="camera" tabindex="0" role="button" aria-label="カメラの説明を見る">カメラ</span>と同じ仲間です。</p>
 <p class="ln teacher" data-t="190.48">本当に料金が高くなっていれば、アプリの中でちゃんと確かめられます。</p>
 <p class="ln teacher" data-t="195.9">電話で聞くときも、メッセージに書いてある番号には、かけません。ショップの番号に、自分でかけます。</p>
 <p class="ln teacher" data-t="203.08">みっつめ。もし入れてしまったら、すぐ相談する。</p>
@@ -384,7 +384,8 @@
       + '<a class="tip-m" href="#">くわしい解説 →</a>';
     tip.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     tip.querySelector('.tip-s').textContent = d.s;
-    tip.querySelector('.tip-m').href = d.u;
+    tip.querySelector('.tip-m').href = d.u || '#';
+    tip.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     tip.classList.add('on');
     var r = node.getBoundingClientRect();
     var w = tip.offsetWidth, h = tip.offsetHeight;
@@ -399,7 +400,8 @@
   function openSheet(d){
     sheet.querySelector('.tip-n').textContent = d.r ? (d.n + '（' + d.r + '）') : d.n;
     sheet.querySelector('.tip-s').textContent = d.s;
-    sheet.querySelector('.tip-m').href = d.u;
+    sheet.querySelector('.tip-m').href = d.u || '#';
+    sheet.querySelector('.tip-m').style.display = d.u ? '' : 'none';
     sheet.classList.add('on'); veil.classList.add('on');
   }
   function closeSheet(){ sheet.classList.remove('on'); veil.classList.remove('on'); }
@@ -425,7 +427,7 @@
     var n = e.target.closest('.t'); if (!n) return;
     var d = G[n.getAttribute('data-t')]; if (!d) return;
     e.preventDefault();
-    if (hoverable) { location.href = d.u; } else { openSheet(d); }
+    if (hoverable && d.u) { location.href = d.u; } else if (!hoverable) { openSheet(d); }
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') { hideTip(); closeSheet(); return; }
