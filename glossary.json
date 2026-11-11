@@ -2303,6 +2303,248 @@
       "detail": "ここでは、ドコモが持っているお客さまの情報が、不正アクセスによって外の人の手に渡ったことを言います。「情報漏えい（ろうえい）」とも言います。",
       "related": [],
       "status": "published"
+    },
+    {
+      "slug": "apple",
+      "term": "Apple",
+      "reading": "アップル",
+      "aliases": [],
+      "category": "ことば",
+      "short": "iPhoneやiPadを作っているアメリカの会社です。",
+      "detail": "iPhone、iPad、パソコンのMacなどを作っています。iPhoneの中のソフトウェア「iOS」も、Appleが作って配っています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "support-page",
+      "term": "サポートページ",
+      "reading": "",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "会社が、使い方や大切なお知らせをのせているホームページです。",
+      "detail": "製品の使い方や、困ったときの手順、更新のお知らせなどがまとめられています。今回のiOS 27.2.1の中身も、Appleのサポートページで公開されました。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "software",
+      "term": "ソフトウェア",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホを動かしている「中身」のことです。",
+      "detail": "スマホの本体（機械）に対して、中で動いている仕組みやアプリのことを言います。アップデートは、このソフトウェアを新しくすることです。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "ios-27-2-1",
+      "term": "iOS 27.2.1",
+      "reading": "アイオーエス ニジュウナナ テン ニ テン イチ",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhone向けの新しいソフトウェアの番号です。",
+      "detail": "Appleが2026年11月9日に公開しました。iPhone 11から後の機種が対象で、安全にかかわる9件の手直しが入っています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "iphone-11",
+      "term": "iPhone 11",
+      "reading": "アイフォーン イレブン",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "AppleのiPhoneの機種のひとつです。",
+      "detail": "iOS 27.2.1は、iPhone 11と、それより後に出た機種が対象です。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "ipad",
+      "term": "iPad",
+      "reading": "アイパッド",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "Appleのタブレットです。",
+      "detail": "iPhoneより画面が大きい、板のような形の機械です。今回はiPad向けにも「iPadOS 27.2.1」が出ています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "bluetooth",
+      "term": "Bluetooth",
+      "reading": "ブルートゥース",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "イヤホンなどを、線を使わずにスマホとつなぐ仕組みです。",
+      "detail": "ワイヤレスイヤホンや、車のオーディオなどとつなぐときに使います。今回のiOS 27.2.1では、Bluetoothにかかわる安全の手直しも入っています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "earphones",
+      "term": "イヤホン",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "耳に入れて音を聞く道具です。",
+      "detail": "線でつなぐものと、Bluetoothで線なしでつなぐものがあります。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "simple",
+      "term": "シンプル",
+      "reading": "",
+      "aliases": [],
+      "category": "ことば",
+      "short": "「かんたん」「すっきりしている」という意味です。",
+      "detail": "英語の言葉で、手順や作りがむずかしくないことを言います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "wi-fi",
+      "term": "Wi-Fi",
+      "reading": "ワイファイ",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "線を使わずにインターネットにつなぐ仕組みです。",
+      "detail": "おうちのルーターなどにつなぐと、携帯会社のデータ通信の量を使わずにインターネットが使えます。AppleもGoogleも、アップデートはWi-Fiにつないで行うようすすめています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "icloud",
+      "term": "iCloud",
+      "reading": "アイクラウド",
+      "aliases": [],
+      "category": "アプリ",
+      "short": "Appleのインターネット上の保管場所です。",
+      "detail": "写真や連絡先などを、インターネットの向こう側に預けておけます。Appleは、アップデートの前にiCloudかパソコンでバックアップをとるようすすめています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "backup",
+      "term": "バックアップ",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "写真などの大切なデータの控えをとっておくことです。",
+      "detail": "スマホの中のデータを、別の場所にも写しておくことです。Appleはアップデートの前に、iCloudかパソコンでバックアップをとるようすすめています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "percent",
+      "term": "パーセント",
+      "reading": "",
+      "aliases": [],
+      "category": "ことば",
+      "short": "全体を100としたときの割合です。",
+      "detail": "電池の残りは、満タンを100パーセントとして表されます。GoogleはAndroidのアップデートの前に、75パーセント以上の充電をすすめています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "software-update-iphone",
+      "term": "ソフトウェアアップデート",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhoneのソフトウェアを新しくするための画面です。",
+      "detail": "設定アプリの「一般」の中にあります。ここで新しい更新を確かめたり、自動アップデートを設定したりできます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "system",
+      "term": "システム",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "Androidの設定アプリの中にある、スマホ全体にかかわる項目です。",
+      "detail": "Googleのヘルプでは、「システム」の中に「ソフトウェア アップデート」があると案内しています。機種によって表示が少し違います。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "software-update-android",
+      "term": "ソフトウェア アップデート",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "Androidのソフトウェアを新しくするための項目です。",
+      "detail": "Googleのヘルプでは、設定アプリの「システム」の中にあると案内しています。通知を消してしまったときも、ここから更新できます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "download",
+      "term": "ダウンロード",
+      "reading": "",
+      "aliases": [],
+      "category": "インターネット",
+      "short": "インターネットからデータを受け取ることです。",
+      "detail": "アップデートでは、まず新しいソフトウェアをダウンロードしてから、スマホにインストールします。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "install",
+      "term": "インストール",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "受け取ったソフトウェアやアプリを、スマホに入れることです。",
+      "detail": "iPhoneのアップデートでは「ダウンロードしてインストール」をタップすると、受け取りから入れるところまで進みます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "restart",
+      "term": "再起動",
+      "reading": "さいきどう",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "スマホの電源を一度切って、また入れ直すことです。",
+      "detail": "Googleのヘルプでは、Pixel以外のAndroid機種は、アップデートのインストール中に自動で再起動すると案内しています。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "automatic-updates",
+      "term": "自動アップデート",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhoneのアップデートを自動で入れるための設定の場所です。",
+      "detail": "設定アプリの「一般」→「ソフトウェアアップデート」→「自動アップデート」にあります。この中の「自動インストール」をオンにすると、充電中でWi-Fiにつながっている夜に入れてくれ、その前に通知が届きます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "automatic-install",
+      "term": "自動インストール",
+      "reading": "",
+      "aliases": [],
+      "category": "スマホの基本",
+      "short": "iPhoneのアップデートを、夜のうちに自動で入れてくれる設定です。",
+      "detail": "「自動アップデート」の中にあります。オンにすると、iPhoneが充電中でWi-Fiにつながっている夜に、ダウンロードとインストールをしてくれます。入れる前には通知が届きます。",
+      "related": [],
+      "status": "published"
+    },
+    {
+      "slug": "term-224",
+      "term": "ダウンロードしてインストール",
+      "reading": "",
+      "aliases": [],
+      "category": "ことば",
+      "short": "iPhone の「ソフトウェアアップデート」の画面に出るボタンの名前です。押すと、新しいソフトウェアを受け取って、スマホに入れる作業が始まります。",
+      "detail": "iPhone の「ソフトウェアアップデート」の画面に出るボタンの名前です。押すと、新しいソフトウェアを受け取って、スマホに入れる作業が始まります。",
+      "related": [],
+      "status": "published"
     }
   ]
 }

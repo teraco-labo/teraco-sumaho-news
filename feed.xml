@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Tue, 10 Nov 2026 04:09:34 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 12 Nov 2026 04:06:18 +0900</lastBuildDate>
+  <item>
+    <title>第13回 設定アプリで確かめよう　スマホの「アップデート」</title>
+    <itunes:title>第13回 設定アプリで確かめよう　スマホの「アップデート」</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-12/</link>
+    <description>今日のテーマ：iPhone・Androidでソフトウェアのアップデートを確かめて進める方法。きっかけのニュース：Appleが11月9日、iPhone向けの「iOS 27.2.1」を公開。Bluetoothやメッセージなど、安全にかかわる9件を直した。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-12/ ／ 公式LINE → https://lin.ee/WACibGu</description>
+    <itunes:summary>今日のテーマ：iPhone・Androidでソフトウェアのアップデートを確かめて進める方法。きっかけのニュース：Appleが11月9日、iPhone向けの「iOS 27.2.1」を公開。Bluetoothやメッセージなど、安全にかかわる9件を直した。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-12/ ／ 公式LINE → https://lin.ee/WACibGu</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-12/audio.mp3?v=1a1aaed4" length="2641024" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-12/audio.mp3</guid>
+    <pubDate>Thu, 12 Nov 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>13</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:04:24</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第12回 しおりで安心　公式ページは「ブックマーク」から開こう</title>
     <itunes:title>第12回 しおりで安心　公式ページは「ブックマーク」から開こう</itunes:title>
