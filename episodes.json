@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-17",
+  "number": 14,
+  "title": "第14回 つながり直しのボタン　「機内モード」のオンとオフ",
+  "description": "今日のテーマ：機内モードのボタンの場所を知り、オン→10秒待つ→オフで通信をつなぎ直す（iPhone・Android 両方）。きっかけのニュース：ドコモが2026年11月16日に、5G SA の通信障害の回復を公式に発表（同日10時2分〜15時58分。再起動と機内モードのオン・オフをすすめる案内あり）。",
+  "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-17/",
+  "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-17/audio.mp3",
+  "size": 2887620,
+  "duration": 289,
+  "ver": "7f983261"
+ },
+ {
   "date": "2026-11-12",
   "number": 13,
   "title": "第13回 設定アプリで確かめよう　スマホの「アップデート」",
