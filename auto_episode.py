@@ -126,7 +126,16 @@ def claude(prompt: str, system: str, tools=("WebFetch", "WebSearch"), timeout=18
 
 
 def _json(text: str) -> dict:
-    return json.loads(text[text.index("{"): text.rindex("}") + 1])
+    """返事の JSON を読む。崩れていたら（文中の " など）、中身は変えずに直させて1回だけ読み直す
+    （2026-11-19 台本の JSON が崩れて、その日の回が作れなかった）"""
+    try:
+        return json.loads(text[text.index("{"): text.rindex("}") + 1])
+    except Exception as e:
+        log(f"JSON の形が崩れていたので直させます: {e}")
+        fixed = claude("次の JSON は形が崩れています。中身（文言）は1文字も変えずに、正しい JSON だけを返してください。"
+                       "文字列の中の二重引用符は「」に置き換えてください。前置き・コードフェンスは書かないでください。\n\n" + text,
+                       "返事は JSON だけです。", tools=())
+        return json.loads(fixed[fixed.index("{"): fixed.rindex("}") + 1])
 
 
 RULES = """\
