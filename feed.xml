@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Thu, 19 Nov 2026 08:11:30 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 04:08:19 +0900</lastBuildDate>
+  <item>
+    <title>第16回 設定アプリで確かめよう　アカウントを守る「2段階認証」</title>
+    <itunes:title>第16回 設定アプリで確かめよう　アカウントを守る「2段階認証」</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-24/</link>
+    <description>今日のテーマ：設定アプリから、Google アカウントと Apple Account の2段階認証がオンになっているか確かめる（iPhone・Android 両方）。きっかけのニュース：PayPay公式サポートが2026年11月19日、GoogleやApple、Yahoo! JAPANのアカウントを乗っ取ってPayPayで支払う手口についてXで注意を呼びかけ、2段階認証の設定などをすすめた。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-24/ ／ 公式LINE → https://lin.ee/WACibGu</description>
+    <itunes:summary>今日のテーマ：設定アプリから、Google アカウントと Apple Account の2段階認証がオンになっているか確かめる（iPhone・Android 両方）。きっかけのニュース：PayPay公式サポートが2026年11月19日、GoogleやApple、Yahoo! JAPANのアカウントを乗っ取ってPayPayで支払う手口についてXで注意を呼びかけ、2段階認証の設定などをすすめた。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-24/ ／ 公式LINE → https://lin.ee/WACibGu</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-24/audio.mp3?v=31af522e" length="2633448" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-24/audio.mp3</guid>
+    <pubDate>Tue, 24 Nov 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>16</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:04:23</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第15回 知らない相手のSMSは「ブロック」と「報告」でさっと片づけよう</title>
     <itunes:title>第15回 知らない相手のSMSは「ブロック」と「報告」でさっと片づけよう</itunes:title>

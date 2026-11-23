@@ -1,5 +1,16 @@
 [
  {
+  "date": "2026-11-24",
+  "number": 16,
+  "title": "第16回 設定アプリで確かめよう　アカウントを守る「2段階認証」",
+  "description": "今日のテーマ：設定アプリから、Google アカウントと Apple Account の2段階認証がオンになっているか確かめる（iPhone・Android 両方）。きっかけのニュース：PayPay公式サポートが2026年11月19日、GoogleやApple、Yahoo! JAPANのアカウントを乗っ取ってPayPayで支払う手口についてXで注意を呼びかけ、2段階認証の設定などをすすめた。",
+  "page": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-24/",
+  "url": "https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-24/audio.mp3",
+  "size": 2633448,
+  "duration": 263,
+  "ver": "31af522e"
+ },
+ {
   "date": "2026-11-19",
   "number": 15,
   "title": "第15回 知らない相手のSMSは「ブロック」と「報告」でさっと片づけよう",
