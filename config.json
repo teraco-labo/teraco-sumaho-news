@@ -13,6 +13,6 @@
   "feed_url": "https://teraco-labo.github.io/teraco-sumaho-news/feed.xml",
   "player_url": "https://teraco-labo.github.io/teraco-sumaho-news/",
   "substack_url": "https://teracosensei.substack.com/s/sumaho-news",
-  "new_feed_url": "https://anchor.fm/s/11878a410/podcast/rss",
-  "_new_feed_url_説明": "2026-10-13 Spotify for Creators にホストを移した（文字起こしを出すため。藤崎さん「スマホニュースで試してみて」）。古い feed.xml に itunes:new-feed-url を書いて、Apple などを新しい RSS へ引っ越させる。新しい回は Spotify for Creators に上げる（ここに置くだけでは届かない）"
+  "new_feed_url": "https://anchor.fm/s/11a9ac700/podcast/rss",
+  "_new_feed_url_説明": "2026-11-25 Spotify for Creators への切り替えをやり直し、取り込みが完了（16回）。新しい RSS は 11a9ac700。10/13 の試しの住所（11878a410）は 404 になっていたので差し替えた。古い feed.xml に itunes:new-feed-url を書くのが、Spotify の言う「リダイレクト」。切り替え後は、新しい回は vp_daily.py が Spotify for Creators に直接上げる（ここに置くだけでは届かない）。藤崎さん「AI ニュースみたいにしなきゃだね。お願いします」"
 }
