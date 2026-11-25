@@ -19,7 +19,22 @@
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
   <itunes:category text="Education"><itunes:category text="How To"/></itunes:category>
-  <lastBuildDate>Wed, 25 Nov 2026 21:06:08 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 26 Nov 2026 04:08:01 +0900</lastBuildDate>
+  <item>
+    <title>第17回 レジ前ですっと選ぶ　PayPayの「支払い方法」を切りかえよう</title>
+    <itunes:title>第17回 レジ前ですっと選ぶ　PayPayの「支払い方法」を切りかえよう</itunes:title>
+    <link>https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-26/</link>
+    <description>今日のテーマ：PayPayアプリで、今の支払い方法を見て、「PayPay残高」と「クレジット」を切りかえる。きっかけのニュース：PayPayが2026年11月25日、同日20:05頃から「PayPayクレジット」でのお支払い等のメンテナンスを実施と公式に発表（PayPay残高・PayPayカードでのお支払いは利用可）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-26/ ／ 公式LINE → https://lin.ee/WACibGu</description>
+    <itunes:summary>今日のテーマ：PayPayアプリで、今の支払い方法を見て、「PayPay残高」と「クレジット」を切りかえる。きっかけのニュース：PayPayが2026年11月25日、同日20:05頃から「PayPayクレジット」でのお支払い等のメンテナンスを実施と公式に発表（PayPay残高・PayPayカードでのお支払いは利用可）。 文字で読む（むずかしい言葉の説明つき）→ https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-26/ ／ 公式LINE → https://lin.ee/WACibGu</itunes:summary>
+    <enclosure url="https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-26/audio.mp3?v=d4c8703c" length="2338787" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://teraco-labo.github.io/teraco-sumaho-news/episodes/2026-11-26/audio.mp3</guid>
+    <pubDate>Thu, 26 Nov 2026 06:00:00 +0900</pubDate>
+    <itunes:author>てらこ先生</itunes:author>
+    <itunes:episode>17</itunes:episode>
+    <itunes:episodeType>full</itunes:episodeType>
+    <itunes:duration>00:03:54</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+  </item>
   <item>
     <title>第16回 設定アプリで確かめよう　アカウントを守る「2段階認証」</title>
     <itunes:title>第16回 設定アプリで確かめよう　アカウントを守る「2段階認証」</itunes:title>
